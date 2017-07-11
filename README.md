@@ -9,7 +9,7 @@ AngularFire with token authentication on Node backend server
   $ npm install
   ```
 
-2. Create a free Firebase account at https://firebase.google.com
+2. Create a free Firebase account at [https://firebase.google.com](https://firebase.google.com)
 
 3. Create a project from your Firebase account console
 
