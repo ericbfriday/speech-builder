@@ -3,7 +3,8 @@ myApp.controller('LettersController', function(ListService) {
      
     const vm = this;
     
-    vm.letterList = ListService.letterList;
+    vm.lettersList = ListService.lettersList;
+    vm.capitalLettersList = ListService.capitalLettersList;
 
     vm.getLetters = function(){
         console.log('Inside getLetters function/letters controller');

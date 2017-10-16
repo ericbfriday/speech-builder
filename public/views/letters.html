@@ -1,12 +1,12 @@
 <section ng-init="lc.getLetters()">
     <div>
         <md-content class="md-padding" layout-xs="column" layout="row">
-            <div flex-xs flex-gt-xs="33" layout="row">
+            <div flex-xs flex-gt-xs="50" layout="row">
                 
-                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                <md-card ng-repeat="letter in lc.lettersList.data" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
                     <md-card-title>
                         <md-card-title-text>
-                            <span class="md-headline">Letter Here as Expression</span>
+                            <span class="md-headline">{{letter.letter}}</span>
                             <!-- <span class="md-subhead">Large</span> -->
                         </md-card-title-text>
                         <!-- <md-card-title-media>
