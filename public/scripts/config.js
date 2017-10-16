@@ -31,11 +31,12 @@
 
 /////////////////////////////////////////////////////////
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAU9OZTcXLQpS0VheZz7Xy-UpqLGBKlXlY",
-  authDomain: "sigma-test-run.firebaseapp.com",
-  databaseURL: "https://sigma-test-run.firebaseio.com",
-  storageBucket: "sigma-test-run.appspot.com",
-  messagingSenderId: "279228406571"
-};
-firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyBKGK6DI8mSWjCfXNPW61PrEuYZnCe3DXQ",
+    authDomain: "speech-builder.firebaseapp.com",
+    databaseURL: "https://speech-builder.firebaseio.com",
+    projectId: "speech-builder",
+    storageBucket: "speech-builder.appspot.com",
+    messagingSenderId: "994874601447"
+  };
+  firebase.initializeApp(config);
