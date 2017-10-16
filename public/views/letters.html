@@ -1,0 +1,24 @@
+<section ng-init="lc.getLetters()">
+    <div>
+        <md-content class="md-padding" layout-xs="column" layout="row">
+            <div flex-xs flex-gt-xs="33" layout="row">
+                
+                <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Letter Here as Expression</span>
+                            <!-- <span class="md-subhead">Large</span> -->
+                        </md-card-title-text>
+                        <!-- <md-card-title-media>
+                            <div class="md-media-lg card-media"></div>
+                        </md-card-title-media> -->
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="center center">
+                        <md-button>See Words</md-button>
+                    </md-card-actions>
+                </md-card>
+
+            </div>
+        </md-content>
+    </div>
+</section>

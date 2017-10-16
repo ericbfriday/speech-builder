@@ -1,17 +1,22 @@
 var express = require('express');
-var app = express();
+const app = express();
 require('dotenv').config();
-var path = require('path');
-var bodyParser = require('body-parser');
-var decoder = require('./modules/decoder');
-var privateData = require('./routes/private-data');
+const path = require('path');
+const bodyParser = require('body-parser');
+const decoder = require('./modules/decoder');
+const privateData = require('./routes/private-data');
+const wordLookup = require('./routes/wordLookup');
+const port = process.env.PORT || 8080;
 
 app.get('/', function(req, res){
-  res.sendFile(path.resolve('./public/views/index.html'));
+  res.sendFile(path.resolve('./public/index.html'));
 });
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
+
+// Runs word lookup function
+app.use('/wordLookup', wordLookup);
 
 // Decodes the token in the request header and attaches the decoded token to the request.
 app.use(decoder.token);
@@ -26,8 +31,6 @@ Other branches in the nodeFire repository show how to do that. */
 // This is the route for your secretData. The request gets here after it has been authenticated.
 app.use("/privateData", privateData);
 
-var portDecision = process.env.PORT || 5000;
-
-app.listen(portDecision, function(){
-  console.log("Listening on port: ", portDecision);
+app.listen(port, function(){
+  console.log("Listening on port: ", port);
 });
