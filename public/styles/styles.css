@@ -1,3 +1,19 @@
-.card-media {
-    background-color: #999999; 
+md-nav-bar.md-default-theme .md-nav-bar, md-nav-bar .md-nav-bar{
+    background-color: yellow;
+}
+
+.landing-page-text {
+    padding: 20px 20px 20px 20px;
+}
+
+.md-padding {
+    padding: 0px 0px 16px 0px;
+}
+
+.private-data-text {
+    margin:  20px 20px 20px 20px;
+}
+
+.padding-20 {
+    padding: 20px 20px 20px 20px;
 }

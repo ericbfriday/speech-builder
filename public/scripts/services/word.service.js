@@ -13,7 +13,7 @@ myApp.service('WordService', function($http){
             data: wordIn
         };
         // empties definitions array for new entries by setting length to 0
-        sv.definitions.length = 0;
+        sv.definitions.data.length = 0;
         // console.log('logging wordToDefine (service) ', sv.wordToDefine);
         $http ({
             method: 'POST',
@@ -44,6 +44,10 @@ myApp.service('WordService', function($http){
                     // console.log('loggin sv.definitions ->', sv.definitions); 
                 }
             }
+
+            // sv.phoneticSpelling = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
+            // console.log('logging phoneticSpelling ', phoneticSpelling);
+            
 
             // used below for troubleshooting
             // console.log('logging response.data.results.lexicalEntries in word.service POST route', sv.wordResponse);

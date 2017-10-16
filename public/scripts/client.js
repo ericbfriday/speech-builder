@@ -6,10 +6,10 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
   $mdThemingProvider
   .theme('default')
-  .primaryPalette('blue')
+  .primaryPalette('yellow')
   .accentPalette('blue')
   .warnPalette('red')
-  .backgroundPalette('grey');
+  .backgroundPalette('yellow');
 
   $routeProvider.when('/', {
       templateUrl: 'views/home.html',
