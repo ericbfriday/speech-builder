@@ -1,11 +1,11 @@
 <section ng-init="wlc.getWordList()">
         <div>
             <md-content class="md-padding" layout-xs="column" layout="row">
-                <div flex-xs flex-gt-xs="33" layout="column"> <!-- Probably need to restructure layout for final proj -->
-                    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+                <div flex-xs flex-gt-xs="50" layout="column"> <!-- Probably need to restructure layout for final proj -->
+                    <md-card ng-repeat="word in wlc.wordList.data">
                         <md-card-title>
-                            <md-card-title-text>
-                                <span class="md-headline">Word Here as Expression <br> {{word}} </span>
+                            <md-card-title-text style="text-transform: uppercase;">
+                                <span class="md-headline">{{word.study_word}} </span>
                                 <!-- <span class="md-subhead">Large</span> -->
                             </md-card-title-text>
                             <!-- <md-card-title-media>

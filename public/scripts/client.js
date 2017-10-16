@@ -23,9 +23,15 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
   }).when('/wordlist', {
       templateUrl: 'views/wordlist.html',
       controller: 'WordListController as wlc'
+    }).when('/privateData', {
+        templateUrl: 'views/privateData.html',
+        controller: 'AuthController as ac'    
     }).when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'AuthController as ac'      
+        controller: 'AuthController as ac'    
+    // }).when('/reporting', {
+    //     templateUrl: 'views/reporting.html',
+    //     controller: 'ReportingController as rc'
   }).otherwise({
       redirectTo: '/'
   });

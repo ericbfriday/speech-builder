@@ -2,7 +2,7 @@
   <!-- Audio Testing -->
 
   <input type="text" placeholder="Word to search for" ng-model="wc.wordIn">
-  <button ng-click="wc.wordSearch(wc.wordIn)">Search</button>
+  <md-button ng-click="wc.wordSearch(wc.wordIn)">Search</md-button>
   <hr>
   <h1>Phonetic Spelling</h1>
   <p ng-repeat="pronunciations in wc.word.data.lexicalEntries">{{pronunciations}}</p>

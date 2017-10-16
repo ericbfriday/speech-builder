@@ -34,7 +34,7 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
         });
       } else {
         console.log('Not logged in or not authorized.');
-        self.secretData = "Log in to get some secret data.";
+        self.secretData = "You are not authorized to view this content. Please log in.";
       }
     });
   
