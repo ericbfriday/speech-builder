@@ -1,8 +1,8 @@
 <section ng-init="wlc.getWordList()">
         <div>
-            <md-content class="md-padding" layout-xs="column" layout="row">
-                <div flex-xs flex-gt-xs="50" layout="column"> <!-- Probably need to restructure layout for final proj -->
-                    <md-card ng-repeat="word in wlc.wordList.data">
+            <md-content class="md-padding">
+                <div flex-xs flex flex-gt-xs="33"  layout-xs="column" layout="row" layout-wrap> <!-- Probably need to restructure layout for final proj -->
+                    <md-card ng-repeat="word in wlc.wordList.data" >
                         <md-card-title>
                             <md-card-title-text style="text-transform: uppercase;">
                                 <span class="md-headline">{{word.study_word}} </span>
