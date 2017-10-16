@@ -3,7 +3,6 @@ const router = require('express').Router();
 const bodyParser = require('body-parser');
 const request = require('request'); 
 require('dotenv').config();
-// var path = require('path');
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({
