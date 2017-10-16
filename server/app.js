@@ -7,6 +7,7 @@ const decoder = require('./modules/decoder');
 const privateData = require('./routes/private-data');
 const wordLookup = require('./routes/wordLookup');
 const port = process.env.PORT || 8080;
+const pool = require('./modules/pool');
 
 app.get('/', function(req, res){
   res.sendFile(path.resolve('./public/index.html'));
