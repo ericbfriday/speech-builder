@@ -7,9 +7,9 @@ myApp.controller('LettersController', function(ListService) {
 
     vm.getLetters = function(){
         console.log('Inside getLetters function/letters controller');
-        
+        ListService.getLetters();
     };
 
 
-    
+
  });

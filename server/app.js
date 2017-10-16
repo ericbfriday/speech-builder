@@ -6,10 +6,9 @@ const bodyParser = require('body-parser');
 const decoder = require('./modules/decoder');
 const privateData = require('./routes/private-data');
 const wordLookup = require('./routes/wordLookup');
-const wordList = reqire('./routes/words');
+const wordList = require('./routes/words');
 const lettersList = require('./routes/letters');
 const port = process.env.PORT || 8080;
-const pool = require('./modules/pool');
 
 app.get('/', function(req, res){
   res.sendFile(path.resolve('./public/index.html'));

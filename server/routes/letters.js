@@ -3,7 +3,7 @@ const router = require('express').Router();
 const bodyParser = require('body-parser');
 const request = require('request'); 
 require('dotenv').config();
-const pool = require('./modules/pool');
+const pool = require('../modules/pool');
 
 router.get('/', function (req, res) {
     console.log('in the letters get');
