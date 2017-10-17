@@ -2,7 +2,6 @@
     <div>
         <md-content class="md-padding">
             <div flex-xs flex flex-gt-xs="33" layout-xs="column" layout="row" layout-wrap>
-                <!-- Probably need to restructure layout for final proj -->
                 <md-card ng-repeat="word in wlc.wordList.data">
                     <md-card-title>
                         <md-card-title-text style="text-transform: uppercase;">
@@ -11,7 +10,7 @@
                         </md-card-title-text>
                     </md-card-title>
                     <md-card-actions layout="row" layout-align="center center">
-                        <md-button class="md-raised md-primary">Details</md-button>
+                        <md-button class="md-raised md-primary" ng-click="wlc.detailPopup($event, word)">Details</md-button>
                         <md-button class="md-raised md-primary">Play Audio</md-button>
                     </md-card-actions>
                 </md-card>
