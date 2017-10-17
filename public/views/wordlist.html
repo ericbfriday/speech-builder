@@ -1,23 +1,21 @@
 <section ng-init="wlc.getWordList()">
-        <div>
-            <md-content class="md-padding">
-                <div flex-xs flex flex-gt-xs="33"  layout-xs="column" layout="row" layout-wrap> <!-- Probably need to restructure layout for final proj -->
-                    <md-card ng-repeat="word in wlc.wordList.data" >
-                        <md-card-title>
-                            <md-card-title-text style="text-transform: uppercase;">
-                                <span class="md-headline">{{word.study_word}} </span>
-                                <!-- <span class="md-subhead">Large</span> -->
-                            </md-card-title-text>
-                            <!-- <md-card-title-media>
-                                <div class="md-media-lg card-media"></div>
-                            </md-card-title-media> -->
-                        </md-card-title>
-                        <md-card-actions layout="row" layout-align="center center">
-                            <md-button>Details</md-button>
-                            <md-button>Play Audio</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-            </md-content>
-        </div>
-    </section>
+    <div>
+        <md-content class="md-padding">
+            <div flex-xs flex flex-gt-xs="33" layout-xs="column" layout="row" layout-wrap>
+                <!-- Probably need to restructure layout for final proj -->
+                <md-card ng-repeat="word in wlc.wordList.data">
+                    <md-card-title>
+                        <md-card-title-text style="text-transform: uppercase;">
+                            <span class="md-headline" style="text-align: center;">{{word.study_word}} </span>
+                            <!-- <span class="md-subhead">Large</span> -->
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="center center">
+                        <md-button class="md-raised md-primary">Details</md-button>
+                        <md-button class="md-raised md-primary">Play Audio</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </md-content>
+    </div>
+</section>

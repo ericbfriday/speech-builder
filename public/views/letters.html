@@ -1,7 +1,7 @@
 <section ng-init="lc.getLetters()">
     <div>
         <md-content class="md-padding" layout-xs="column" layout="row">
-            <div flex-xs flex-gt-xs="50" layout="row">
+            <div flex-xs flex flex-gt-xs="100" layout-xs="column" layout="row" layout-wrap>
                 <md-card ng-repeat="letter in lc.lettersList.data">
                     <md-card-title>
                         <!-- <md-card-title-text  style="text-transform: uppercase;">
@@ -9,11 +9,15 @@
                             <span class="md-subhead">Example 2</span>
                         </md-card-title-text> -->
                         <md-card-title-media>
-                            <div class="md-media-lg card-media"><img src="/images/{{letter.letter}}.png" alt="{{letter.letter}}"></div>
+                            <div class="md-media-lg card-media">
+                                <span style="font-size: 4.83em; text-align: center; height: 152px; display: table-cell; vertical-align: middle;">
+                                    <img src="/images/{{letter.letter}}.png" alt="{{letter.letter}}">
+                                </span>
+                            </div>
                         </md-card-title-media>
                     </md-card-title>
                     <md-card-actions layout="row" layout-align="center center">
-                        <md-button>See Words</md-button>
+                        <md-button class="md-raised md-primary">See Words</md-button>
                     </md-card-actions>
                 </md-card>
             </div>

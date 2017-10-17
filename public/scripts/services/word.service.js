@@ -5,6 +5,7 @@ myApp.service('WordService', function($http){
     sv.wordResponse = {data: []};
     sv.mp3URL = {};
     sv.definitions = {data: []};
+    sv.phoneticSpelling = {data: []};
 
     sv.findDefinition = function(wordIn) {
         // console.log('logging wordIn (service) ', wordIn);
@@ -12,7 +13,7 @@ myApp.service('WordService', function($http){
             word: wordIn,
             data: wordIn
         };
-        // empties definitions array for new entries by setting length to 0
+        // empties definitions array for new entries by declaring a length of 0
         sv.definitions.data.length = 0;
         // console.log('logging wordToDefine (service) ', sv.wordToDefine);
         $http ({
@@ -23,14 +24,17 @@ myApp.service('WordService', function($http){
             console.log('response', response);
             sv.wordResponse.data = response.data.results[0];
 
-            //URL extraction logic below
+            // MP3 URL extraction logic below
             if (response.data.results[0].lexicalEntries[0].pronunciations[0].audioFile != undefined){
                 sv.mp3URL.data = response.data.results[0].lexicalEntries[0].pronunciations[0].audioFile;
             } else {
                 sv.mp3URL.data = response.data.results[0].lexicalEntries[0].pronunciations[1].audioFile;
             }
             // console.log('Logging sv.mp3URL in word.service POST route', sv.mp3URL);
-            // end URL extraction logic
+            // end MP3 URL extraction logic
+
+            sv.phoneticSpelling = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
+            console.log('logging phoneticSpelling ', sv.phoneticSpelling);
 
             // Definition extraction logic below
             // provides shorter location for array looping
@@ -43,11 +47,7 @@ myApp.service('WordService', function($http){
                     sv.definitions.data.push(sv.definitionLocation[i].senses[j].definitions[j]);
                     // console.log('loggin sv.definitions ->', sv.definitions); 
                 }
-            }
-
-            // sv.phoneticSpelling = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
-            // console.log('logging phoneticSpelling ', phoneticSpelling);
-            
+            }         
 
             // used below for troubleshooting
             // console.log('logging response.data.results.lexicalEntries in word.service POST route', sv.wordResponse);

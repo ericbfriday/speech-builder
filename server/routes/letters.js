@@ -6,7 +6,7 @@ require('dotenv').config();
 const pool = require('../modules/pool');
 
 router.get('/', function (req, res) {
-    console.log('in the letters get');
+    // console.log('in the letters get');
     pool.connect(function (conErr, client, done){
         if (conErr){
             console.log(conErr);
@@ -18,7 +18,7 @@ router.get('/', function (req, res) {
                     console.log(queryErr);
                     res.sendStatus(500);
                 } else {
-                    console.log(resultObj.rows);
+                    // console.log(resultObj.rows);
                     res.send(resultObj.rows);
                 }
             });
