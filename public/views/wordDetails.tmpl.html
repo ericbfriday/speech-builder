@@ -18,12 +18,13 @@
                 <!-- URL for MP3 Extraction -->
                 <h3>Audio</h3>
                 <p>{{wc.mp3URL.data}}</p>
+                <md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
                 <!-- <audio controls>
                         <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
-                      </audio> -->
-                <div ng-repeat="audio in event.audios">
+                      </audio>
+                    <div ng-repeat="audio in event.audios">
                     <div audios code="audio"></div>
-                </div>
+                </div> -->
                 <hr>
                 <!-- Definition Lookup -->
                 <h3>Definition</h3>
