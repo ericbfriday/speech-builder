@@ -14,8 +14,8 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
   $routeProvider.when('/', {
       templateUrl: 'views/home.html',
      controller: 'HomeController as hc'
-  }).when('/word', {
-      templateUrl: 'views/word.html',
+  }).when('/wordLookup', {
+      templateUrl: 'views/wordLookup.html',
       controller: 'WordController as wc'
   }).when('/letters', {
       templateUrl: 'views/letters.html',

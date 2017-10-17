@@ -1,8 +1,8 @@
-<md-dialog aria-label="{{word}} details">
+<md-dialog aria-label="Word details">
     <form ng-cloak ng-controller="WordController as wc">
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>{{word}}</h2>
+                <h2 style="text-transform: uppercase;">{{wc.studyWord}}</h2>
                 <span flex></span>
                 <!-- <md-button class="md-icon-button" ng-click="cancel()">
                 <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -12,11 +12,11 @@
 
         <md-dialog-content>
             <div class="md-dialog-content">
-                <h1>Phonetic Spelling</h1>
-                <p ng-repeat="pronunciations in wc.word.data.lexicalEntries">{{pronunciations}}</p>
+                <h3>Phonetic Spelling</h3>
+                <p>{{wc.phoneticSpelling.data}}</p>
                 <hr>
                 <!-- URL for MP3 Extraction -->
-                <h1>Audio</h1>
+                <h3>Audio</h3>
                 <p>{{wc.mp3URL.data}}</p>
                 <!-- <audio controls>
                         <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
@@ -26,8 +26,10 @@
                 </div>
                 <hr>
                 <!-- Definition Lookup -->
-                <h1>Definition</h1>
-                <div ng-repeat="def in wc.definitions.data">{{def}}</div>
+                <h3>Definition</h3>
+                <ul>
+                <div ng-repeat="def in wc.definitions.data"><li>{{def}}</li></div>
+            </ul>
             </div>
         </md-dialog-content>
 

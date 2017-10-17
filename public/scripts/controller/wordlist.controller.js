@@ -7,7 +7,15 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.wordResponse = WordService.wordResponse;
     vm.mp3URL = WordService.mp3URL;
     vm.definitions = WordService.definitions;
+    vm.phoneticSpelling = WordService.phoneticSpelling;
 
+
+    // vm.playSound=function(input){
+    //     $scope.audio={};
+    //     soundFetch.getSound(input).success(function(data){
+    //         $scope.audio=data;
+    //     });
+    // };
 
     vm.getWordList = function () {
         console.log('Inside getWordList function/WordList controller');
@@ -25,12 +33,14 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
             clickOutsideToClose: true,
             fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
         });
+
         vm.wordSearch = function (word) {
             vm.studyWord = word.study_word;
             console.log('logging studyWord, ', vm.studyWord);
               WordService.findDefinition(vm.studyWord);
-            // vm.mp3URL = WordService.wordResponse.data.lexicalEntries.pronunciations[0].audioFile;
+            vm.mp3URL = WordService.wordResponse.data.lexicalEntries.pronunciations[0].audioFile;
         };
+
         // runs wordSearch on clicked word
         vm.wordSearch(word);
     };
