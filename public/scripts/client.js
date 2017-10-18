@@ -17,9 +17,11 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
   }).when('/wordLookup', {
       templateUrl: 'views/wordLookup.html',
       controller: 'WordController as wc'
-  }).when('/letters', {
-      templateUrl: 'views/letters.html',
-      controller: 'LettersController as lc'
+      // /letters NO LONGER NEEDED AS FUNCTIONALITY HAS BEEN
+      // MERGED WITH WORD LIST
+//   }).when('/letters', {
+//       templateUrl: 'views/letters.html',
+//       controller: 'LettersController as lc'
   }).when('/wordlist', {
       templateUrl: 'views/wordlist.html',
       controller: 'WordListController as wlc'

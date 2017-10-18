@@ -14,7 +14,6 @@ myApp.service('ListService', function ($http) {
     sv.getWords = function (letterObj) {
         sv.letter = letterObj.letter;
         console.log('in list.service.js getWords()', sv.letter);
-        
         $http({
             method: 'GET',
             url: '/words/' + sv.letter

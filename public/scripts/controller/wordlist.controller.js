@@ -9,6 +9,21 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.definitions = WordService.definitions;
     vm.phoneticSpelling = WordService.phoneticSpelling;
 
+    // testing transferering lettercontroller into wlc
+    vm.lettersList = ListService.lettersList;
+    vm.capitalLettersList = ListService.capitalLettersList;
+
+    vm.getLetters = function(){
+        console.log('Inside getLetters function/letters controller');
+        ListService.getLetters();
+    };
+
+    vm.getLetterWords = function(letter) {
+        console.log('letter ', letter);
+        ListService.getWords(letter);
+    };
+    // end test
+
     vm.getWordList = function () {
         console.log('Inside getWordList function/WordList controller');
         ListService.getWords();
