@@ -21,7 +21,7 @@ myApp.service('WordService', function($http){
             url: '/wordLookup',
             data: sv.wordToDefine
         }).then(function (response) {
-            console.log('response', response);
+            // console.log('response', response);
             sv.wordResponse.data = response.data.results[0];
 
             // MP3 URL extraction logic below
@@ -34,7 +34,7 @@ myApp.service('WordService', function($http){
             // end MP3 URL extraction logic
 
             sv.phoneticSpelling.data = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
-            console.log('logging phoneticSpelling ', sv.phoneticSpelling);
+            // console.log('logging phoneticSpelling ', sv.phoneticSpelling);
 
             // Definition extraction logic below
             // provides shorter location for array looping

@@ -1,28 +1,28 @@
 <!-- Letter List Below -->
 <div ng-init="wlc.getLetters()">
     <md-card>
-    <md-content class="md-padding" layout-xs="column" layout="row">
-        <div flex-xs flex flex-gt-xs="100" layout-xs="column" layout="row" layout-align="center center" layout-wrap>
-            <md-card ng-repeat="letter in wlc.lettersList.data">
-                <md-card-title>
-                    <md-card-title-media>
-                        <div class="md-media-lg card-media letterLogos">
-                           <img mat-card-image src="/images/{{letter.letter}}.png" alt="{{letter.letter}}">
-                        </div>
-                    </md-card-title-media>
-                </md-card-title>
-                <md-card-actions layout="row" layout-align="center center">
-                    <md-button class="md-raised md-primary" ng-click="wlc.getLetterWords(letter)" ng-href="#/wordlist">See Words</md-button>
-                </md-card-actions>
-            </md-card>
-        </div>
-    </md-content>
-</md-card>
+        <md-content class="md-padding" layout-xs="column" layout="row">
+            <div flex-xs flex flex-gt-xs="100" layout-xs="column" layout="row" layout-align="center center" layout-wrap>
+                <md-card ng-repeat="letter in wlc.lettersList.data">
+                    <md-card-title>
+                        <md-card-title-media>
+                            <div class="md-media-lg card-media letterLogos">
+                                <img mat-card-image src="/images/{{letter.letter}}.png" alt="{{letter.letter}}">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="center center">
+                        <md-button class="md-raised md-primary" ng-click="wlc.getLetterWords(letter); gotoElement(wordList)" ng-href="#/wordlist">See Words</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </md-content>
+    </md-card>
 </div>
 <!-- End letter list -->
 
 <!-- Word List Below -->
-<md-content class="md-padding">
+<md-content class="md-padding" id="wordList">
     <div flex-xs flex flex-gt-xs="33" layout-xs="column" layout="row" layout-wrap layout-align="center center">
         <md-card ng-repeat="word in wlc.wordList.data">
             <md-card-title>
@@ -31,7 +31,7 @@
                     <!-- <span class="md-subhead">Large</span> -->
                 </md-card-title-text>
             </md-card-title>
-            <md-card-actions layout="row" layout-align="center center">
+            <md-card-actions layout="row" layout-align="center end">
                 <md-button class="md-raised md-primary" ng-click="wlc.detailPopup($event, word)">Details</md-button>
                 <!-- <md-button class="md-raised md-primary" ng-click="wc.playAudio()">Play Audio</md-button> -->
             </md-card-actions>
