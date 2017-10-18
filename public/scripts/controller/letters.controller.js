@@ -11,6 +11,11 @@ myApp.controller('LettersController', function(ListService) {
         ListService.getLetters();
     };
 
+    vm.getLetterWords = function(letter) {
+        console.log('letter ', letter);
+        ListService.getWords(letter);
+    };
+
 
 
  });

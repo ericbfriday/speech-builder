@@ -5,8 +5,9 @@ const request = require('request');
 require('dotenv').config();
 const pool = require('../modules/pool');
 
-router.get('/', function (req, res) {
-    console.log('in the words get');
+router.get('/:letter', function (req, res) {
+    console.log('in the words get. Letter -> ', req.params);
+    letter = req.params.letter;
     pool.connect(function (conErr, client, done){
         if (conErr){
             console.log(conErr);

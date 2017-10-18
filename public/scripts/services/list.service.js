@@ -11,12 +11,13 @@ myApp.service('ListService', function ($http) {
         data: []
     };
 
-    sv.getWords = function () {
-        console.log('in list.service.js getWords()');
-
+    sv.getWords = function (letterObj) {
+        sv.letter = letterObj.letter;
+        console.log('in list.service.js getWords()', sv.letter);
+        
         $http({
             method: 'GET',
-            url: '/words'
+            url: '/words/' + sv.letter
         }).then(function (response) {
             console.log('response', response);
             sv.wordList.data = response.data;
