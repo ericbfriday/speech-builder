@@ -9,16 +9,14 @@
   <hr>
   <!-- URL for MP3 Extraction -->
   <h1>Audio</h1>
-  <p>{{wc.mp3URL.data}}</p>
-  <hr>
-  <!-- <audio controls>
-      <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio> -->
-    <div ng-repeat="audio in event.audios">
-        <div audios code="audio"></div>
-    </div>
+  <span flex></span>
+  <md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
   <hr>
   <!-- Definition Lookup -->
   <h1>Definition</h1>
-  <div ng-repeat="def in wc.definitions.data">{{def}}</div>
+  <ul>
+    <div class="definition" ng-repeat="def in wc.definitions.data">
+      <li>{{def}}</li>
+    </div>
+  </ul>
 </section>
