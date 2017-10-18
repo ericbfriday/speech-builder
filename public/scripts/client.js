@@ -6,16 +6,16 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
   $mdThemingProvider
   .theme('default')
-  .primaryPalette('yellow')
-  .accentPalette('blue')
+  .primaryPalette('indigo')
+  .accentPalette('pink')
   .warnPalette('red')
-  .backgroundPalette('yellow');
+  .backgroundPalette('grey');
 
   $routeProvider.when('/', {
       templateUrl: 'views/home.html',
      controller: 'HomeController as hc'
-  }).when('/word', {
-      templateUrl: 'views/word.html',
+  }).when('/wordLookup', {
+      templateUrl: 'views/wordLookup.html',
       controller: 'WordController as wc'
   }).when('/letters', {
       templateUrl: 'views/letters.html',
@@ -32,23 +32,10 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
     // }).when('/reporting', {
     //     templateUrl: 'views/reporting.html',
     //     controller: 'ReportingController as rc'
+    }).when('/thanks', {
+        templateUrl: 'views/thanks.html',
+        controller: 'HomeController as hc'
   }).otherwise({
       redirectTo: '/'
   });
-});
-
-myApp.directive('audios', function($sce) {
-  return {
-    restrict: 'A',
-    scope: { code:'=' },
-    replace: true,
-    template: '<audio ng-src="{{wc.mp3URL}}" controls></audio>',
-    link: function (scope) {
-        scope.$watch('code', function (newVal, oldVal) {
-           if (newVal !== undefined) {
-               scope.url = $sce.trustAsResourceUrl(newVal);
-           }
-        });
-    }
-  };
 });

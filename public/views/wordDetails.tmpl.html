@@ -1,0 +1,44 @@
+<md-dialog aria-label="Word details">
+    <form ng-cloak ng-controller="WordController as wc">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2 style="text-transform: uppercase;">{{wc.studyWord}}</h2>
+                <span flex></span>
+                <!-- <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+              </md-button> -->
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <h3>Phonetic Spelling</h3>
+                <p>{{wc.phoneticSpelling.data}}</p>
+                <hr>
+                <!-- URL for MP3 Extraction -->
+                <h3>Audio</h3>
+                <!-- <p>{{wc.mp3URL.data}}</p> -->
+                <span flex></span><md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
+                <!-- <audio controls>
+                        <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
+                      </audio>
+                    <div ng-repeat="audio in event.audios">
+                    <div audios code="audio"></div>
+                </div> -->
+                <hr>
+                <!-- Definition Lookup -->
+                <h3>Definition</h3>
+                <ul>
+                <div ng-repeat="def in wc.definitions.data"><li>{{def}}</li></div>
+            </ul>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="done()">
+                Done
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

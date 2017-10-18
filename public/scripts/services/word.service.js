@@ -5,7 +5,7 @@ myApp.service('WordService', function($http){
     sv.wordResponse = {data: []};
     sv.mp3URL = {};
     sv.definitions = {data: []};
-    sv.phoneticSpelling = {data: []};
+    sv.phoneticSpelling = {data: ""};
 
     sv.findDefinition = function(wordIn) {
         // console.log('logging wordIn (service) ', wordIn);
@@ -33,7 +33,7 @@ myApp.service('WordService', function($http){
             // console.log('Logging sv.mp3URL in word.service POST route', sv.mp3URL);
             // end MP3 URL extraction logic
 
-            sv.phoneticSpelling = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
+            sv.phoneticSpelling.data = response.data.results[0].lexicalEntries[0].pronunciations[0].phoneticSpelling;
             console.log('logging phoneticSpelling ', sv.phoneticSpelling);
 
             // Definition extraction logic below
