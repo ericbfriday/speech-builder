@@ -1,24 +1,29 @@
 <section class="padding-20">
   <!-- Audio Testing -->
-
-  <input type="text" placeholder="Word to search for" ng-model="wc.wordIn">
-  <md-button ng-click="wc.wordSearch(wc.wordIn)">Search</md-button>
-  <hr>
-  <h1>Phonetic Spelling</h1>
-  <p ng-repeat="pronunciations in wc.word.data.lexicalEntries">{{pronunciations}}</p>
-  <hr>
-  <!-- URL for MP3 Extraction -->
-  <h1>Audio</h1>
-  <p>{{wc.mp3URL.data}}</p>
-  <hr>
-  <!-- <audio controls>
-      <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio> -->
-    <div ng-repeat="audio in event.audios">
-        <div audios code="audio"></div>
-    </div>
-  <hr>
-  <!-- Definition Lookup -->
-  <h1>Definition</h1>
-  <div ng-repeat="def in wc.definitions.data">{{def}}</div>
+  <md-content class- "md-padding">
+    <md-card>
+      <md-card-title>
+        <md-card-title-text>
+          <input type="text" placeholder="Word to search for" ng-model="wc.wordIn">
+          <md-button class="md-raised" ng-click="wc.wordSearch(wc.wordIn)">Search</md-button>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+      <h1>Phonetic Spelling</h1>
+      <p>{{wc.phoneticSpelling.data}}</p>
+      <hr>
+      <h1>Audio</h1>
+      <span flex></span>
+      <md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
+      <hr>
+      <!-- Definition Lookup -->
+      <h1>Definition</h1>
+      <ul>
+        <div class="definition" ng-repeat="def in wc.definitions.data">
+          <li>{{def}}.</li>
+        </div>
+      </ul>
+    </md-card-content>
+    </md-card>
+  </md-content>
 </section>
