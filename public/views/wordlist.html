@@ -1,12 +1,13 @@
 <!-- Letter List Below -->
 <div ng-init="wlc.getLetters()">
+    <md-card>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex flex-gt-xs="100" layout-xs="column" layout="row" layout-align="center center" layout-wrap>
             <md-card ng-repeat="letter in wlc.lettersList.data">
                 <md-card-title>
                     <md-card-title-media>
                         <div class="md-media-lg card-media letterLogos">
-                                <img mat-card-image src="/images/{{letter.letter}}.png" alt="{{letter.letter}}">
+                           <img mat-card-image src="/images/{{letter.letter}}.png" alt="{{letter.letter}}">
                         </div>
                     </md-card-title-media>
                 </md-card-title>
@@ -16,6 +17,7 @@
             </md-card>
         </div>
     </md-content>
+</md-card>
 </div>
 <!-- End letter list -->
 
