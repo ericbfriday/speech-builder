@@ -21,6 +21,7 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.getLetterWords = function(letter) {
         console.log('letter ', letter);
         ListService.getWords(letter);
+
     };
     // end test
 
