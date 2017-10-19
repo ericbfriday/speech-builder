@@ -1,4 +1,4 @@
-myApp.controller('WordListController', function (ListService, WordService, $mdDialog) {
+myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll) {
     console.log('in WordListController Controller');
 
     const vm = this;
@@ -21,6 +21,7 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.getLetterWords = function(letter) {
         console.log('letter ', letter);
         ListService.getWords(letter);
+
     };
     // end test
 
@@ -57,4 +58,10 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
             $mdDialog.hide();
         };
     }
+
+    vm.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+     };
+
 });
