@@ -1,0 +1,2070 @@
+id,study_word,study_letter,study_letter_location,study_word_syllables
+,run,r,beginning,1
+,rice,r,beginning,1
+,rat,r,beginning,1
+,rag,r,beginning,1
+,rake,r,beginning,1
+,red,r,beginning,1
+,wrist,r,beginning,1
+,raisin,r,beginning,2
+,rabbit,r,beginning,2
+,ribbon,r,beginning,2
+,radio,r,beginning,3
+,rocket,r,beginning,2
+,ranch,r,beginning,1
+,rich,r,beginning,1
+,race,r,beginning,1
+,ring,r,beginning,1
+,rain,r,beginning,1
+,rug,r,beginning,1
+,ran,r,beginning,1
+,write,r,beginning,1
+,rip,r,beginning,1
+,recess,r,beginning,2
+,rock,r,beginning,1
+,read,r,beginning,1
+,wrap,r,beginning,1
+,sit,s,beginning,1
+,soup,s,beginning,1
+,salt,s,beginning,1
+,seal,s,beginning,1
+,sick,s,beginning,1
+,sing,s,beginning,1
+,sun,s,beginning,1
+,save,s,beginning,1
+,seed,s,beginning,1
+,seat,s,beginning,1
+,city,s,beginning,1
+,said,s,beginning,1
+,sad,s,beginning,1
+,sorry,s,beginning,1
+,soap,s,beginning,1
+,sock,s,beginning,1
+,sail,s,beginning,1
+,sour,s,beginning,1
+,sign,s,beginning,1
+,sand,s,beginning,1
+,soft,s,beginning,1
+,seven,s,beginning,1
+,sink,s,beginning,1
+,son,s,beginning,1
+,safe,s,beginning,1
+,ceiling,s,beginning,2
+,center,s,beginning,2
+,circle,s,beginning,2
+,city,s,beginning,2
+,cycle,s,beginning,2
+,saddle,s,beginning,2
+,sadly,s,beginning,2
+,safety,s,beginning,2
+,sailboat,s,beginning,2
+,salad,s,beginning,2
+,sandwich,s,beginning,2
+,scissors,s,beginning,2
+,seafood,s,beginning,2
+,seat belt,s,beginning,2
+,second,s,beginning,2
+,senior,s,beginning,2
+,sewing,s,beginning,2
+,singer,s,beginning,2
+,soccer,s,beginning,2
+,subtract,s,beginning,2
+,celebrate,s,beginning,3
+,centipede,s,beginning,3
+,Central Park,s,beginning,3
+,cereal,s,beginning,3
+,cinnamon,s,beginning,3
+,citizen,s,beginning,3
+,city hall,s,beginning,3
+,sea lion,s,beginning,3
+,self-control,s,beginning,3
+,separate,s,beginning,3
+,signature,s,beginning,3
+,soccer ball,s,beginning,3
+,soda pop,s,beginning,3
+,sour cream,s,beginning,3
+,suggestion,s,beginning,3
+,summary,s,beginning,3
+,sunflower,s,beginning,3
+,syllable,s,beginning,3
+,sympathize,s,beginning,3
+,synonym,s,beginning,3
+,beside,s,middle,2
+,blossom,s,middle,2
+,bracelet,s,middle,2
+,chasing,s,middle,2
+,decide,s,middle,2
+,dissect,s,middle,2
+,dresser,s,middle,2
+,eyesight,s,middle,2
+,faucet,s,middle,2
+,fossil,s,middle,2
+,glasses,s,middle,2
+,guessing,s,middle,2
+,kissing,s,middle,2
+,lesson,s,middle,2
+,listen,s,middle,2
+,message,s,middle,2
+,racing,s,middle,2
+,receipt,s,middle,2
+,reset,s,middle,2
+,whistle,s,middle,2
+,bicycle,s,middle,3
+,courtesy,s,middle,3
+,December,s,middle,3
+,deceptive,s,middle,3
+,decimal,s,middle,3
+,descendant,s,middle,3
+,dinosaur,s,middle,3
+,disagree,s,middle,3
+,disappear,s,middle,3
+,discipline,s,middle,3
+,disobey,s,middle,3
+,gasoline,s,middle,3
+,grasshopper,s,middle,3
+,medicine,s,middle,3
+,officer,s,middle,3
+,passenger,s,middle,3
+,principal,s,middle,3
+,recipe,s,middle,3
+,recycle,s,middle,3
+,tennis shoes,s,middle,3
+,address,s,end,2
+,anxious,s,end,2
+,birdhouse,s,end,2
+,bookcase,s,end,2
+,campus,s,end,2
+,careless,s,end,2
+,cautious,s,end,2
+,decrease,s,end,2
+,doghouse,s,end,2
+,famous,s,end,2
+,lettuce,s,end,2
+,minus,s,end,2
+,necklace,s,end,2
+,office,s,end,2
+,police,s,end,2
+,practice,s,end,2
+,shoelace,s,end,2
+,tennis,s,end,2
+,walrus,s,end,2
+,White House,s,end,2
+,ambitious,s,end,3
+,apple juice,s,end,3
+,Columbus,s,end,3
+,contagious,s,end,3
+,courageous,s,end,3
+,courteous,s,end,3
+,curious,s,end,3
+,dangerous,s,end,3
+,delicious,s,end,3
+,embarrass,s,end,3
+,enormous,s,end,3
+,fabulous,s,end,3
+,generous,s,end,3
+,happiness,s,end,3
+,introduce,s,end,3
+,lemon juice,s,end,3
+,nutritious,s,end,3
+,octopus,s,end,3
+,poisonous,s,end,3
+,wilderness,s,end,3
+,run,r,beginning,1
+,rice,r,beginning,1
+,rat,r,beginning,1
+,rag,r,beginning,1
+,rake,r,beginning,1
+,red,r,beginning,1
+,wrist,r,beginning,1
+,raisin,r,beginning,2
+,rabbit,r,beginning,2
+,ribbon,r,beginning,2
+,radio,r,beginning,3
+,rocket,r,beginning,2
+,ranch,r,beginning,1
+,rich,r,beginning,1
+,race,r,beginning,1
+,ring,r,beginning,1
+,rain,r,beginning,1
+,rug,r,beginning,1
+,ran,r,beginning,1
+,write,r,beginning,1
+,rip,r,beginning,1
+,recess,r,beginning,2
+,rock,r,beginning,1
+,read,r,beginning,1
+,wrap,r,beginning,1
+,sit,s,beginning,1
+,soup,s,beginning,1
+,salt,s,beginning,1
+,seal,s,beginning,1
+,sick,s,beginning,1
+,sing,s,beginning,1
+,sun,s,beginning,1
+,save,s,beginning,1
+,seed,s,beginning,1
+,seat,s,beginning,1
+,city,s,beginning,1
+,said,s,beginning,1
+,sad,s,beginning,1
+,sorry,s,beginning,1
+,soap,s,beginning,1
+,sock,s,beginning,1
+,sail,s,beginning,1
+,sour,s,beginning,1
+,sign,s,beginning,1
+,sand,s,beginning,1
+,soft,s,beginning,1
+,seven,s,beginning,1
+,sink,s,beginning,1
+,son,s,beginning,1
+,safe,s,beginning,1
+,ceiling,s,beginning,2
+,center,s,beginning,2
+,circle,s,beginning,2
+,city,s,beginning,2
+,cycle,s,beginning,2
+,saddle,s,beginning,2
+,sadly,s,beginning,2
+,safety,s,beginning,2
+,sailboat,s,beginning,2
+,salad,s,beginning,2
+,sandwich,s,beginning,2
+,scissors,s,beginning,2
+,seafood,s,beginning,2
+,seat belt,s,beginning,2
+,second,s,beginning,2
+,senior,s,beginning,2
+,sewing,s,beginning,2
+,singer,s,beginning,2
+,soccer,s,beginning,2
+,subtract,s,beginning,2
+,celebrate,s,beginning,3
+,centipede,s,beginning,3
+,Central Park,s,beginning,3
+,cereal,s,beginning,3
+,cinnamon,s,beginning,3
+,citizen,s,beginning,3
+,city hall,s,beginning,3
+,sea lion,s,beginning,3
+,self-control,s,beginning,3
+,separate,s,beginning,3
+,signature,s,beginning,3
+,soccer ball,s,beginning,3
+,soda pop,s,beginning,3
+,sour cream,s,beginning,3
+,suggestion,s,beginning,3
+,summary,s,beginning,3
+,sunflower,s,beginning,3
+,syllable,s,beginning,3
+,sympathize,s,beginning,3
+,synonym,s,beginning,3
+,beside,s,middle,2
+,blossom,s,middle,2
+,bracelet,s,middle,2
+,chasing,s,middle,2
+,decide,s,middle,2
+,dissect,s,middle,2
+,dresser,s,middle,2
+,eyesight,s,middle,2
+,faucet,s,middle,2
+,fossil,s,middle,2
+,glasses,s,middle,2
+,guessing,s,middle,2
+,kissing,s,middle,2
+,lesson,s,middle,2
+,listen,s,middle,2
+,message,s,middle,2
+,racing,s,middle,2
+,receipt,s,middle,2
+,reset,s,middle,2
+,whistle,s,middle,2
+,bicycle,s,middle,3
+,courtesy,s,middle,3
+,December,s,middle,3
+,deceptive,s,middle,3
+,decimal,s,middle,3
+,descendant,s,middle,3
+,dinosaur,s,middle,3
+,disagree,s,middle,3
+,disappear,s,middle,3
+,discipline,s,middle,3
+,disobey,s,middle,3
+,gasoline,s,middle,3
+,grasshopper,s,middle,3
+,medicine,s,middle,3
+,officer,s,middle,3
+,passenger,s,middle,3
+,principal,s,middle,3
+,recipe,s,middle,3
+,recycle,s,middle,3
+,tennis shoes,s,middle,3
+,address,s,end,2
+,anxious,s,end,2
+,birdhouse,s,end,2
+,bookcase,s,end,2
+,campus,s,end,2
+,careless,s,end,2
+,cautious,s,end,2
+,decrease,s,end,2
+,doghouse,s,end,2
+,famous,s,end,2
+,lettuce,s,end,2
+,minus,s,end,2
+,necklace,s,end,2
+,office,s,end,2
+,police,s,end,2
+,practice,s,end,2
+,shoelace,s,end,2
+,tennis,s,end,2
+,walrus,s,end,2
+,White House,s,end,2
+,ambitious,s,end,3
+,apple juice,s,end,3
+,Columbus,s,end,3
+,contagious,s,end,3
+,courageous,s,end,3
+,courteous,s,end,3
+,curious,s,end,3
+,dangerous,s,end,3
+,delicious,s,end,3
+,embarrass,s,end,3
+,enormous,s,end,3
+,fabulous,s,end,3
+,generous,s,end,3
+,happiness,s,end,3
+,introduce,s,end,3
+,lemon juice,s,end,3
+,nutritious,s,end,3
+,octopus,s,end,3
+,poisonous,s,end,3
+,wilderness,s,end,3
+,carrot,r,middle,2
+,bird,r,middle,1
+,earring,r,middle,2
+,horse,r,middle,1
+,iron,r,middle,1
+,arm,r,middle,1
+,giraffe,r,middle,2
+,fork,r,middle,1
+,shirt,r,middle,1
+,lizard,r,middle,2
+,fairy,r,middle,2
+,pirate,r,middle,2
+,scissors,r,middle,2
+,turtle,r,middle,2
+,camera,r,middle,3
+,party,r,middle,2
+,nurse,r,middle,1
+,worm,r,middle,1
+,walrus,r,middle,2
+,park,r,middle,1
+,syrup,r,middle,2
+,zero,r,middle,2
+,corn,r,middle,1
+,barn,r,middle,1
+,earth,r,middle,1
+,four,r,end,1
+,bear,r,end,1
+,deer,r,end,1
+,ear,r,end,1
+,tear,r,end,1
+,pear,r,end,1
+,jar,r,end,1
+,alligator,r,end,4
+,doctor,r,end,2
+,feather,r,end,2
+,dollar,r,end,2
+,mother,r,end,2
+,hammer,r,end,2
+,ladder,r,end,2
+,car,r,end,1
+,chair,r,end,1
+,door,r,end,1
+,tire,r,end,1
+,hair,r,end,1
+,beaver,r,end,2
+,letter,r,end,2
+,kangaroo,r,end,3
+,dinosaur,r,end,3
+,flower,r,end,2
+,father,r,end,2
+,rabbit,r,beginning,2
+,raccoon,r,beginning,2
+,rainbow,r,beginning,2
+,raincoat,r,beginning,2
+,rainy,r,beginning,2
+,raisin,r,beginning,2
+,Reading,r,beginning,2
+,reason,r,beginning,2
+,repeat,r,beginning,2
+,rescue,r,beginning,2
+,respect,r,beginning,2
+,review,r,beginning,2
+,ripping,r,beginning,2
+,robin,r,beginning,2
+,robot,r,beginning,2
+,rocket,r,beginning,2
+,rotten,r,beginning,2
+,rotten,r,beginning,2
+,roundup,r,beginning,2
+,royal,r,beginning,2
+,running,r,beginning,2
+,wrestle,r,beginning,2
+,wrinkle,r,beginning,2
+,wrist watch,r,beginning,2
+,writing,r,beginning,2
+,racquet ball,r,beginning,3
+,radio,r,beginning,3
+,rational,r,beginning,3
+,rattlesnake,r,beginning,3
+,reaction,r,beginning,3
+,realize,r,beginning,3
+,really,r,beginning,3
+,rebellious,r,beginning,3
+,recognize,r,beginning,3
+,recommend,r,beginning,3
+,recycle,r,beginning,3
+,reelect,r,beginning,3
+,regulate,r,beginning,3
+,relative,r,beginning,3
+,religion,r,beginning,3
+,removal,r,beginning,3
+,residence,r,beginning,3
+,respectful,r,beginning,3
+,reunion,r,beginning,3
+,Rhode Island,r,beginning,3
+,ridicule,r,beginning,3
+,right handed,r,beginning,3
+,rolling pin,r,beginning,3
+,runaway,r,beginning,3
+,wresting match,r,beginning,3
+,reality,r,beginning,4
+,reasonable,r,beginning,4
+,recipient,r,beginning,4
+,recognition,r,beginning,4
+,recollection,r,beginning,4
+,regulation,r,beginning,4
+,relationship,r,beginning,4
+,repetition,r,beginning,4
+,reputation,r,beginning,4
+,residential,r,beginning,4
+,resolution,r,beginning,4
+,respectable,r,beginning,4
+,revolution,r,beginning,4
+,ridiculous,r,beginning,4
+,riding safety,r,beginning,4
+,Rocky Mountains,r,beginning,4
+,rutabaga,r,beginning,4
+,rationality,r,beginning,5
+,reciprocity,r,beginning,5
+,recommendation,r,beginning,5
+,respiratory,r,beginning,5
+,roasting marshmallows,r,beginning,5
+,Roman Catholic,r,beginning,5
+,Roman numeral,r,beginning,5
+,reconciliation,r,beginning,6
+,reconsideration,r,beginning,6
+,around,r,middle,2
+,arrange,r,middle,2
+,arrest,r,middle,2
+,arrive,r,middle,2
+,arrow,r,middle,2
+,berry,r,middle,2
+,borrow,r,middle,2
+,carrot,r,middle,2
+,cherry,r,middle,2
+,chorus,r,middle,2
+,correct,r,middle,2
+,dairy,r,middle,2
+,earring,r,middle,2
+,erase,r,middle,2
+,errand,r,middle,2
+,flooring,r,middle,2
+,forest,r,middle,2
+,garage,r,middle,2
+,giraffe,r,middle,2
+,hearing,r,middle,2
+,married,r,middle,2
+,orange,r,middle,2
+,parrot,r,middle,2
+,squirrel,r,middle,2
+,stories,r,middle,2
+,aerobics,r,middle,3
+,battery,r,middle,3
+,blueberry,r,middle,3
+,camera,r,middle,3
+,canary,r,middle,3
+,caramel,r,middle,3
+,celery,r,middle,3
+,cereal,r,middle,3
+,cherry pie,r,middle,3
+,coloring,r,middle,3
+,correction,r,middle,3
+,diary,r,middle,3
+,direction,r,middle,3
+,embarrass,r,middle,3
+,encourage,r,middle,3
+,Florida,r,middle,3
+,furious,r,middle,3
+,gorilla,r,middle,3
+,incorrect,r,middle,3
+,kangaroo,r,middle,3
+,memorize,r,middle,3
+,parakeet,r,middle,3
+,separate,r,middle,3
+,storybook,r,middle,3
+,tomorrow,r,middle,3
+,America,r,middle,4
+,area code,r,middle,4
+,arithmetic,r,middle,4
+,Arizona,r,middle,4
+,authority,r,middle,4
+,category,r,middle,4
+,Colorado,r,middle,4
+,decoration,r,middle,4
+,dictionary,r,middle,4
+,encouragement,r,middle,4
+,everybody,r,middle,4
+,interruption,r,middle,4
+,January,r,middle,4
+,macaroni,r,middle,4
+,maple syrup,r,middle,4
+,memorial,r,middle,4
+,necessary,r,middle,4
+,operation,r,middle,4
+,orangutan,r,middle,4
+,perimeter,r,middle,4
+,secondary,r,middle,4
+,security,r,middle,4
+,variety,r,middle,4
+,voluntary,r,middle,4
+,waffle iron,r,middle,4
+,auditorium,r,middle,5
+,cafeteria,r,middle,5
+,elementary,r,middle,5
+,imaginary,r,middle,5
+,irresistible,r,middle,5
+,Memorial Day,r,middle,5
+,necessarily,r,middle,5
+,respiratory,r,middle,5
+,vegetarian,r,middle,5
+,verification,r,middle,5
+,vocabulary,r,middle,5
+,voluntarily,r,middle,5
+,Mediterranean,r,middle,6
+,peculiarity,r,middle,6
+,admire,r,end,2
+,before,r,end,2
+,beware,r,end,2
+,cashier,r,end,2
+,compare,r,end,2
+,downpour,r,end,2
+,drugstore,r,end,2
+,endure,r,end,2
+,expire,r,end,2
+,explore,r,end,2
+,guitar,r,end,2
+,ignore,r,end,2
+,indoor,r,end,2
+,inspire,r,end,2
+,jaguar,r,end,2
+,mature,r,end,2
+,memoir,r,end,2
+,New Year,r,end,2
+,nightmare,r,end,2
+,North Star,r,end,2
+,nowhere,r,end,2
+,outdoor,r,end,2
+,seashore,r,end,2
+,secure,r,end,2
+,space bar,r,end,2
+,amateur,r,end,3
+,anywhere,r,end,3
+,Baltimore,r,end,3
+,candy bar,r,end,3
+,Delaware,r,end,3
+,dinosaur,r,end,3
+,disappear,r,end,3
+,falling star,r,end,3
+,handlebar,r,end,3
+,insecure,r,end,3
+,insincere,r,end,3
+,manicure,r,end,3
+,millionaire,r,end,3
+,pioneer,r,end,3
+,questionnaire,r,end,3
+,salad bar,r,end,3
+,shooting star,r,end,3
+,sophomore,r,end,3
+,souvenir,r,end,3
+,sycamore,r,end,3
+,unaware,r,end,3
+,volunteer,r,end,3
+,conquistador,r,end,4
+,El Salvador,r,end,4
+,U.S.S.R.,r,end,4
+,ceiling,s,beginning,2
+,center,s,beginning,2
+,circle,s,beginning,2
+,city,s,beginning,2
+,cycle,s,beginning,2
+,saddle,s,beginning,2
+,sadly,s,beginning,2
+,safety,s,beginning,2
+,sailboat,s,beginning,2
+,salad,s,beginning,2
+,sandwich,s,beginning,2
+,scissors,s,beginning,2
+,seafood,s,beginning,2
+,seat belt,s,beginning,2
+,second,s,beginning,2
+,senior,s,beginning,2
+,sewing,s,beginning,2
+,singer,s,beginning,2
+,soccer,s,beginning,2
+,subtract,s,beginning,2
+,celebrate,s,beginning,3
+,centipede,s,beginning,3
+,Central Park,s,beginning,3
+,cereal,s,beginning,3
+,cinnamon,s,beginning,3
+,citizen,s,beginning,3
+,city hall,s,beginning,3
+,sea lion,s,beginning,3
+,self-control,s,beginning,3
+,separate,s,beginning,3
+,signature,s,beginning,3
+,soccer ball,s,beginning,3
+,soda pop,s,beginning,3
+,sour cream,s,beginning,3
+,suggestion,s,beginning,3
+,summary,s,beginning,3
+,sunflower,s,beginning,3
+,syllable,s,beginning,3
+,sympathize,s,beginning,3
+,synonym,s,beginning,3
+,celebration,s,beginning,4
+,cemetery,s,beginning,4
+,ceremony,s,beginning,4
+,certified mail,s,beginning,4
+,psychology,s,beginning,4
+,safety glasses,s,beginning,4
+,satellite dish,s,beginning,4
+,secretary,s,beginning,4
+,secondary,s,beginning,4
+,seeing-eye dog,s,beginning,4
+,separation,s,beginning,4
+,sewing machine,s,beginning,4
+,subdivision,s,beginning,4
+,superficial,s,beginning,4
+,superior,s,beginning,4
+,supermarket,s,beginning,4
+,supervision,s,beginning,4
+,symbolical,s,beginning,4
+,symmetrical,s,beginning,4
+,sympathetic,s,beginning,4
+,civilization,s,beginning,5
+,psychological,s,beginning,5
+,self-analysis,s,beginning,5
+,superintendent,s,beginning,5
+,supervisory,s,beginning,5
+,Systematically,s,beginning,6
+,beside,s,middle,2
+,blossom,s,middle,2
+,bracelet,s,middle,2
+,chasing,s,middle,2
+,decide,s,middle,2
+,dissect,s,middle,2
+,dresser,s,middle,2
+,eyesight,s,middle,2
+,faucet,s,middle,2
+,fossil,s,middle,2
+,glasses,s,middle,2
+,guessing,s,middle,2
+,kissing,s,middle,2
+,lesson,s,middle,2
+,listen,s,middle,2
+,message,s,middle,2
+,racing,s,middle,2
+,receipt,s,middle,2
+,reset,s,middle,2
+,whistle,s,middle,2
+,bicycle,s,middle,3
+,courtesy,s,middle,3
+,December,s,middle,3
+,deceptive,s,middle,3
+,decimal,s,middle,3
+,descendant,s,middle,3
+,dinosaur,s,middle,3
+,disagree,s,middle,3
+,disappear,s,middle,3
+,discipline,s,middle,3
+,disobey,s,middle,3
+,gasoline,s,middle,3
+,grasshopper,s,middle,3
+,medicine,s,middle,3
+,officer,s,middle,3
+,passenger,s,middle,3
+,principal,s,middle,3
+,recipe,s,middle,3
+,recycle,s,middle,3
+,tennis shoes,s,middle,3
+,accuracy,s,middle,4
+,associate,s,middle,4
+,capacity,s,middle,4
+,disadvantage,s,middle,4
+,impossible,s,middle,4
+,jealousy,s,middle,4
+,Minnesota,s,middle,4
+,participate,s,middle,4
+,policewoman,s,middle,4
+,potassium,s,middle,4
+,presidency,s,middle,4
+,undecided,s,middle,4
+,unicycle,s,middle,4
+,velocity,s,middle,4
+,vice-president,s,middle,4
+,vitamin C,s,middle,4
+,animosity,s,middle,5
+,association,s,middle,5
+,classification,s,middle,5
+,curiosity,s,middle,5
+,disobedient,s,middle,5
+,electricity,s,middle,5
+,necessarily,s,middle,5
+,potato salad,s,middle,5
+,precipitation,s,middle,5
+,unnecessary,s,middle,5
+,vice presidency,s,middle,5
+,water moccasin,s,middle,5
+,address,s,end,2
+,anxious,s,end,2
+,birdhouse,s,end,2
+,bookcase,s,end,2
+,campus,s,end,2
+,careless,s,end,2
+,cautious,s,end,2
+,decrease,s,end,2
+,doghouse,s,end,2
+,famous,s,end,2
+,lettuce,s,end,2
+,minus,s,end,2
+,necklace,s,end,2
+,office,s,end,2
+,police,s,end,2
+,practice,s,end,2
+,shoelace,s,end,2
+,tennis,s,end,2
+,walrus,s,end,2
+,White House,s,end,2
+,ambitious,s,end,3
+,apple juice,s,end,3
+,Columbus,s,end,3
+,contagious,s,end,3
+,courageous,s,end,3
+,courteous,s,end,3
+,curious,s,end,3
+,dangerous,s,end,3
+,delicious,s,end,3
+,embarrass,s,end,3
+,enormous,s,end,3
+,fabulous,s,end,3
+,generous,s,end,3
+,happiness,s,end,3
+,introduce,s,end,3
+,lemon juice,s,end,3
+,nutritious,s,end,3
+,octopus,s,end,3
+,poisonous,s,end,3
+,wilderness,s,end,3
+,adventurous,s,end,4
+,anonymous,s,end,4
+,camera case,s,end,4
+,continuous,s,end,4
+,diagnosis,s,end,4
+,hilarious,s,end,4
+,miraculous,s,end,4
+,nevertheless,s,end,4
+,opera house,s,end,4
+,praying mantis,s,end,4
+,ridiculous,s,end,4
+,table tennis,s,end,4
+,tomato juice,s,end,4
+,unanimous,s,end,4
+,victorious,s,end,4
+,appendicitis,s,end,5
+,hippopotamus,s,end,5
+,magnifying glass,s,end,5
+,metamorphosis,s,end,5
+,simultaneous,s,end,5
+,tuberculosis,s,end,5
+,leaf,l,beginning,1
+,lamp,l,beginning,1
+,laugh,l,beginning,1
+,leak,l,beginning,1
+,list,l,beginning,1
+,long,l,beginning,1
+,letter,l,beginning,2
+,light,l,beginning,1
+,land,l,beginning,1
+,ladybug,l,beginning,3
+,listen,l,beginning,2
+,lock,l,beginning,1
+,look,l,beginning,1
+,love,l,beginning,1
+,lemon,l,beginning,2
+,lamb,l,beginning,1
+,leg,l,beginning,1
+,lips,l,beginning,1
+,log,l,beginning,1
+,lunch,l,beginning,1
+,lazy,l,beginning,1
+,lion,l,beginning,1
+,lake,l,beginning,1
+,lucky,l,beginning,2
+,late,l,beginning,1
+,belly,l,middle,2
+,sailing,l,middle,2
+,balloon,l,middle,2
+,alarm,l,middle,2
+,police,l,middle,2
+,salad,l,middle,2
+,pillow,l,middle,2
+,wallet,l,middle,2
+,eleven,l,middle,3
+,calendar,l,middle,3
+,family,l,middle,3
+,wallpaper,l,middle,3
+,sea lion,l,middle,3
+,silly,l,middle,2
+,pilot,l,middle,2
+,dollar,l,middle,2
+,island,l,middle,2
+,olive,l,middle,2
+,jelly,l,middle,2
+,shoelace,l,middle,2
+,elbow,l,middle,2
+,elephant,l,middle,3
+,violin,l,middle,3
+,toilet,l,middle,2
+,envelope,l,middle,3
+,ball,l,end,1
+,mail,l,end,1
+,nail,l,end,1
+,seal,l,end,2
+,pool,l,end,1
+,muscle,l,end,2
+,fall,l,end,1
+,shell,l,end,1
+,tail,l,end,1
+,call,l,end,1
+,yell,l,end,1
+,tall,l,end,1
+,heel,l,end,1
+,tool,l,end,1
+,bowl,l,end,1
+,bell,l,end,1
+,whale,l,end,1
+,owl,l,end,1
+,hill,l,end,1
+,pencil,l,end,2
+,towel,l,end,2
+,wheel,l,end,1
+,hole,l,end,1
+,wall,l,end,1
+,spell,l,end,1
+,ladder,l,beginning,2
+,lady,l,beginning,2
+,largest,l,beginning,2
+,last name,l,beginning,2
+,laughing,l,beginning,2
+,laundry,l,beginning,2
+,lazy,l,beginning,2
+,learning,l,beginning,2
+,leaving,l,beginning,2
+,lemon,l,beginning,2
+,lesson,l,beginning,2
+,letter,l,beginning,2
+,lightning,l,beginning,2
+,listen,l,beginning,2
+,lizard,l,beginning,2
+,lotion,l,beginning,2
+,loving,l,beginning,2
+,lucky,l,beginning,2
+,lunchtime,l,beginning,2
+,lying,l,beginning,2
+,Labor Day,l,beginning,3
+,ladybug,l,beginning,3
+,laundromat,l,beginning,3
+,lawnmower,l,beginning,3
+,leadership,l,beginning,3
+,leftovers,l,beginning,3
+,lemonade,l,beginning,3
+,lemon juice,l,beginning,3
+,liberty,l,beginning,3
+,library,l,beginning,3
+,licorice,l,beginning,3
+,life jacket,l,beginning,3
+,lima beans,l,beginning,3
+,limited,l,beginning,3
+,living room,l,beginning,3
+,location,l,beginning,3
+,London Bridge,l,beginning,3
+,long distance,l,beginning,3
+,longitude,l,beginning,3
+,loudspeaker,l,beginning,3
+,laminated,l,beginning,4
+,lavatory,l,beginning,4
+,law abiding,l,beginning,4
+,legality,l,beginning,4
+,legitimate,l,beginning,4
+,Liberty Bell,l,beginning,4
+,librarian,l,beginning,4
+,life preserver,l,beginning,4
+,limitation,l,beginning,4
+,literature,l,beginning,4
+,Little Dipper,l,beginning,4
+,locomotive,l,beginning,4
+,Los Angeles,l,beginning,4
+,loving kindness,l,beginning,4
+,luxurious,l,beginning,4
+,laboratory,l,beginning,5
+,liability,l,beginning,5
+,Lithuania,l,beginning,5
+,longitudinal,l,beginning,5
+,Louisiana,l,beginning,5
+,alarm,l,middle,2
+,alive,l,middle,2
+,balloon,l,middle,2
+,believe,l,middle,2
+,belong,l,middle,2
+,bowling,l,middle,2
+,ceiling,l,middle,2
+,colors,l,middle,2
+,dollar,l,middle,2
+,eyelash,l,middle,2
+,gallon,l,middle,2
+,hello,l,middle,2
+,jelly,l,middle,2
+,July,l,middle,2
+,molar,l,middle,2
+,olive,l,middle,2
+,pillows,l,middle,2
+,police,l,middle,2
+,salad,l,middle,2
+,smaller,l,middle,2
+,Alaska,l,middle,3
+,allergic,l,middle,3
+,bologna,l,middle,3
+,broccoli,l,middle,3
+,buffalo,l,middle,3
+,calendar,l,middle,3
+,celebrate,l,middle,3
+,celery,l,middle,3
+,challenges,l,middle,3
+,coloring,l,middle,3
+,Delaware,l,middle,3
+,elephant,l,middle,3
+,holiday,l,middle,3
+,marshmallows,l,middle,3
+,Olympics,l,middle,3
+,photo lab,l,middle,3
+,polar bear,l,middle,3
+,roller skates,l,middle,3
+,talented,l,middle,3
+,violin,l,middle,3
+,ability,l,middle,4
+,accelerate,l,middle,4
+,Alabama,l,middle,4
+,alligator,l,middle,4
+,aluminum,l,middle,4
+,California,l,middle,4
+,caterpillar,l,middle,4
+,celebration,l,middle,4
+,chocolate chip,l,middle,4
+,Colorado,l,middle,4
+,curriculum,l,middle,4
+,elevator,l,middle,4
+,intelligent,l,middle,4
+,military,l,middle,4
+,population,l,middle,4
+,reality,l,middle,4
+,relationship,l,middle,4
+,roller skating,l,middle,4
+,semicolon,l,middle,4
+,water colors,l,middle,4
+,acceleration,l,middle,5
+,accidentally,l,middle,5
+,articulation,l,middle,5
+,electricity,l,middle,5
+,immediately,l,middle,5
+,occasionally,l,middle,5
+,personality,l,middle,5
+,popularity,l,middle,5
+,possibility,l,middle,5
+,qualification,l,middle,5
+,roller skating rink,l,middle,5
+,similarity,l,middle,5
+,unbelievable,l,middle,5
+,unreliable,l,middle,5
+,vocabulary,l,middle,5
+,individually,l,middle,6
+,revolutionary,l,middle,6
+,theoretically,l,middle,6
+,variability,l,middle,6
+,April,l,end,2
+,baseball,l,end,2
+,Brazil,l,end,2
+,cancel,l,end,2
+,detail,l,end,2
+,eggshell,l,end,2
+,eyeball,l,end,2
+,fire drill,l,end,2
+,football,l,end,2
+,kickball,l,end,2
+,misspell,l,end,2
+,muscle,l,end,2
+,pencil,l,end,2
+,repeat,l,end,2
+,reptile,l,end,2
+,schedule,l,end,2
+,seashell,l,end,2
+,snowball,l,end,2
+,towel,l,end,2
+,vowel,l,end,2
+,annual,l,end,3
+,baby doll,l,end,3
+,basketball,l,end,3
+,denial,l,end,3
+,factual,l,end,3
+,Ferris wheel,l,end,3
+,fingernail,l,end,3
+,hospital,l,end,3
+,manual,l,end,3
+,musical,l,end,3
+,punctual,l,end,3
+,racquet ball,l,end,3
+,rock-n-roll,l,end,3
+,ski patrol,l,end,3
+,snowmobile,l,end,3
+,soccer ball,l,end,3
+,summer school,l,end,3
+,swimming pool,l,end,3
+,tetherball,l,end,3
+,visual,l,end,3
+,certified mail,l,end,4
+,Liberty Bell,l,end,4
+,nursery school,l,end,4
+,tutorial,l,end,4
+,unusual,l,end,4
+,vice-principal,l,end,4
+,ceremonial,l,end,5
+,editorial,l,end,5
+,individual,l,end,5
+,intellectual,l,end,5
+,Roman numeral,l,end,5
+,testimonial,l,end,5
+,teeth,t,beginning,1
+,tire,t,beginning,1
+,toast,t,beginning,1
+,toy,t,beginning,1
+,teacher,t,beginning,2
+,two,t,beginning,1
+,toad,t,beginning,1
+,tiger,t,beginning,2
+,turkey,t,beginning,2
+,taco,t,beginning,2
+,tool,t,beginning,1
+,tooth,t,beginning,1
+,toe,t,beginning,1
+,talk,t,beginning,1
+,towel,t,beginning,2
+,turtle,t,beginning,2
+,team,t,beginning,1
+,take,t,beginning,1
+,tall,t,beginning,1
+,taste,t,beginning,1
+,tub,t,beginning,1
+,touch,t,beginning,1
+,top,t,beginning,1
+,tongue,t,beginning,1
+,time,t,beginning,1
+,button,t,middle,2
+,guitar,t,middle,2
+,kitten,t,middle,2
+,mittens,t,middle,2
+,potato,t,middle,3
+,eighteen,t,middle,2
+,rotten,t,middle,2
+,hotel,t,middle,2
+,cotton,t,middle,2
+,motel,t,middle,2
+,beauty,t,middle,2
+,better,t,middle,2
+,city,t,middle,2
+,butter,t,middle,2
+,little,t,middle,2
+,butterfly,t,middle,3
+,tomatoe,t,middle,3
+,biting,t,middle,2
+,Saturday,t,middle,3
+,water,t,middle,2
+,bat,t,end,1
+,boat,t,end,1
+,cat,t,end,1
+,fruit,t,end,1
+,goat,t,end,1
+,hat,t,end,1
+,coat,t,end,1
+,light,t,end,1
+,nut,t,end,1
+,chocolate,t,end,3
+,eat,t,end,1
+,bite,t,end,1
+,cut,t,end,1
+,cute,t,end,1
+,feet,t,end,1
+,get,t,end,1
+,sit,t,end,1
+,right,t,end,1
+,not,t,end,1
+,late,t,end,1
+,kite,t,end,1
+,hot,t,end,1
+,hat,t,end,1
+,wet,t,end,1
+,white,t,end,1
+,table,t,beginning,2
+,taken,t,beginning,2
+,talent,t,beginning,2
+,teacher,t,beginning,2
+,teamwork,t,beginning,2
+,tennis,t,beginning,2
+,Texas,t,beginning,2
+,ticket,t,beginning,2
+,tiny,t,beginning,2
+,tired,t,beginning,2
+,tissue,t,beginning,2
+,toaster,t,beginning,2
+,today,t,beginning,2
+,toilet,t,beginning,2
+,tonight,t,beginning,2
+,toothpaste,t,beginning,2
+,towel,t,beginning,2
+,T-shirt,t,beginning,2
+,turkey,t,beginning,2
+,turtle,t,beginning,2
+,tablecloth,t,beginning,3
+,talented,t,beginning,3
+,talkative,t,beginning,3
+,tangerine,t,beginning,3
+,teachable,t,beginning,3
+,teacher's aide,t,beginning,3
+,teddy bear,t,beginning,3
+,teenager,t,beginning,3
+,telephone,t,beginning,3
+,tennis ball,t,beginning,3
+,tennis court,t,beginning,3
+,tennis shoes,t,beginning,3
+,terrific,t,beginning,3
+,together,t,beginning,3
+,tomorrow,t,beginning,3
+,tornado,t,beginning,3
+,tortilla,t,beginning,3
+,typical,t,beginning,3
+,table tennis,t,beginning,4
+,tape recorder,t,beginning,4
+,telephone book,t,beginning,4
+,telephone booth,t,beginning,4
+,telephone pole,t,beginning,4
+,television,t,beginning,4
+,temperature,t,beginning,4
+,territory,t,beginning,4
+,technicality,t,beginning,5
+,tuberculosis,t,beginning,5
+,batter,t,middle,2
+,beauty,t,middle,2
+,better,t,middle,2
+,brighter,t,middle,2
+,Britain,t,middle,2
+,butter,t,middle,2
+,button,t,middle,2
+,cheetah,t,middle,2
+,daughter,t,middle,2
+,eating,t,middle,2
+,guitar,t,middle,2
+,heater,t,middle,2
+,hotel,t,middle,2
+,hotter,t,middle,2
+,kitten,t,middle,2
+,lettuce,t,middle,2
+,photos,t,middle,2
+,pretty,t,middle,2
+,sweater,t,middle,2
+,written,t,middle,2
+,attitude,t,middle,3
+,beautiful,t,middle,3
+,bike safety,t,middle,3
+,bus saftety,t,middle,3
+,huttonhole,t,middle,3
+,computer,t,middle,3
+,cottage cheese,t,middle,3
+,excited,t,middle,3
+,fairy tale,t,middle,3
+,forgotten,t,middle,3
+,hospital,t,middle,3
+,hot water,t,middle,3
+,invited,t,middle,3
+,Jupiter,t,middle,3
+,photograph,t,middle,3
+,potato,t,middle,3
+,Saturday,t,middle,3
+,talkative,t,middle,3
+,tomato,t,middle,3
+,visitor,t,middle,3
+,alligator,t,middle,4
+,baby sitter,t,middle,4
+,beauty salon,t,middle,4
+,boating safety,t,middle,4
+,calculator,t,middle,4
+,competitor,t,middle,4
+,educator,t,middle,4
+,elevator,t,middle,4
+,escalator,t,middle,4
+,peanut butter,t,middle,4
+,potato chips,t,middle,4
+,thermometer,t,middle,4
+,United States,t,middle,4
+,vegetables,t,middle,4
+,vitamin C,t,middle,4
+,walking safety,t,middle,4
+,water safety,t,middle,4
+,denominator,t,middle,5
+,deteriorate,t,middle,5
+,hippopotamus,t,middle,5
+,hot water bottle,t,middle,5
+,hot water heater,t,middle,5
+,potato salad,t,middle,5
+,refrigerator,t,middle,5
+,saltwater taffy,t,middle,5
+,about,t,end,2
+,basket,t,end,2
+,Boy Scout,t,end,2
+,bracelet,t,end,2
+,closet,t,end,2
+,concrete,t,end,2
+,create,t,end,2
+,delete,t,end,2
+,exit,t,end,2
+,flashlight,t,end,2
+,forget,t,end,2
+,grapefruit,t,end,2
+,jacket,t,end,2
+,minute,t,end,2
+,parrot,t,end,2
+,peanut,t,end,2
+,pocket,t,end,2
+,quiet,t,end,2
+,rabbit,t,end,2
+,toilet,t,end,2
+,accurate,t,end,3
+,alphabet,t,end,3
+,apricot,t,end,3
+,astronaut,t,end,3
+,calculate,t,end,3
+,celebrate,t,end,3
+,chocolate,t,end,3
+,coconut,t,end,3
+,cookie sheet,t,end,3
+,cowboy boot,t,end,3
+,educate,t,end,3
+,hibernate,t,end,3
+,incomplete,t,end,3
+,laundromat,t,end,3
+,parking lot,t,end,3
+,riverboat,t,end,3
+,roller skate,t,end,3
+,substitute,t,end,3
+,thermostat,t,end,3
+,violet,t,end,3
+,accelerate,t,end,4
+,accumulate,t,end,4
+,cooperate,t,end,4
+,Easter basket,t,end,4
+,refrigerate,t,end,4
+,shopping basket,t,end,4
+,supermarket,t,end,4
+,unfortunate,t,end,4
+,dad,d,beginning,1
+,dark,d,beginning,1
+,day,d,beginning,1
+,dime,d,beginning,1
+,do,d,beginning,1
+,done,d,beginning,1
+,dust,d,beginning,1
+,dot,d,beginning,1
+,dive,d,beginning,1
+,dance,d,beginning,1
+,desk,d,beginning,1
+,dish,d,beginning,1
+,dog,d,beginning,1
+,doll,d,beginning,1
+,duck,d,beginning,1
+,door,d,beginning,1
+,dentist,d,beginning,2
+,doctor,d,beginning,2
+,dinner,d,beginning,2
+,down,d,beginning,1
+,dig,d,beginning,1
+,dove,d,beginning,1
+,dear,d,beginning,1
+,does,d,beginning,1
+,date,d,beginning,1
+,medicine,d,middle,3
+,ladder,d,middle,2
+,radio,d,middle,3
+,reading,d,middle,2
+,wedding,d,middle,2
+,lady,d,middle,2
+,spider,d,middle,2
+,daddy,d,middle,2
+,feeding,d,middle,2
+,body,d,middle,2
+,kindergarten,d,middle,4
+,birthday,d,middle,2
+,riding,d,middle,2
+,Thursday,d,middle,2
+,baby doll,d,middle,3
+,calendar,d,middle,3
+,Canada,d,middle,3
+,idea,d,middle,3
+,ready,d,middle,2
+,shadow,d,middle,2
+,Tuesday,d,middle,2
+,louder,d,middle,2
+,hidden,d,middle,2
+,hiding,d,middle,2
+,speeding,d,middle,2
+,food,d,end,1
+,hand,d,end,1
+,mud,d,end,1
+,bed,d,end,1
+,sand,d,end,1
+,add,d,end,1
+,bad,d,end,1
+,bread,d,end,1
+,did,d,end,1
+,dad,d,end,1
+,cried,d,end,1
+,glad,d,end,1
+,grade,d,end,1
+,good,d,end,1
+,hide,d,end,1
+,kid,d,end,1
+,loud,d,end,1
+,mad,d,end,1
+,read,d,end,1
+,wood,d,end,1
+,sad,d,end,1
+,ride,d,end,1
+,red,d,end,1
+,played,d,end,1
+,side,d,end,1
+,daisy,d,beginning,2
+,dancer,d,beginning,2
+,danger,d,beginning,2
+,daughter,d,beginning,2
+,decide,d,beginning,2
+,defend,d,beginning,2
+,demand,d,beginning,2
+,denim,d,beginning,2
+,dentist,d,beginning,2
+,deny,d,beginning,2
+,design,d,beginning,2
+,dessert,d,beginning,2
+,dinner,d,beginning,2
+,doctor,d,beginning,2
+,doghouse,d,beginning,2
+,dollar,d,beginning,2
+,doorbell,d,beginning,2
+,doughnut,d,beginning,2
+,dozen,d,beginning,2
+,duckling,d,beginning,2
+,dangerous,d,beginning,3
+,decided,d,beginning,3
+,decorate,d,beginning,3
+,deep fryer,d,beginning,3
+,Delaware,d,beginning,3
+,delicate,d,beginning,3
+,demanding,d,beginning,3
+,demonstrate,d,beginning,3
+,deposit,d,beginning,3
+,desperate,d,beginning,3
+,dialect,d,beginning,3
+,diary,d,beginning,3
+,different,d,beginning,3
+,dinosaur,d,beginning,3
+,diploma,d,beginning,3
+,disconnect,d,beginning,3
+,dishwasher,d,beginning,3
+,document,d,beginning,3
+,dog collar,d,beginning,3
+,duplicate,d,beginning,3
+,dandelion,d,beginning,4
+,definition,d,beginning,4
+,democracy,d,beginning,4
+,demolition,d,beginning,4
+,destination,d,beginning,4
+,diagnosis,d,beginning,4
+,diagonal,d,beginning,4
+,dictionary,d,beginning,4
+,difficulty,d,beginning,4
+,directory,d,beginning,4
+,disadvantage,d,beginning,4
+,discriminate,d,beginning,4
+,dyslexia,d,beginning,4
+,deteriorate,d,beginning,5
+,disability,d,beginning,5
+,disagreeable,d,beginning,5
+,disciplinary,d,beginning,5
+,dissatisfaction,d,beginning,5
+,disorganization,d,beginning,6
+,disorientation,d,beginning,6
+,disqualification,d,beginning,6
+,bedding,d,middle,2
+,birthday,d,middle,2
+,bleeding,d,middle,2
+,body,d,middle,2
+,cider,d,middle,2
+,daddy,d,middle,2
+,dead end,d,middle,2
+,feeding,d,middle,2
+,headache,d,middle,2
+,hidden,d,middle,2
+,hot dog,d,middle,2
+,ladder,d,middle,2
+,lady,d,middle,2
+,pudding,d,middle,2
+,reading,d,middle,2
+,ready,d,middle,2
+,spider,d,middle,2
+,Sweden,d,middle,2
+,Thursday,d,middle,2
+,Wednesday,d,middle,2
+,baby doll,d,middle,3
+,Bermuda,d,middle,3
+,Canada,d,middle,3
+,cheddar cheese,d,middle,3
+,cheerleaders,d,middle,3
+,comedy,d,middle,3
+,Father's Day,d,middle,3
+,Florida,d,middle,3
+,honeydew,d,middle,3
+,Idaho,d,middle,3
+,medicine,d,middle,3
+,Mother's Day,d,middle,3
+,nobody,d,middle,3
+,radio,d,middle,3
+,soda pop,d,middle,3
+,somebody,d,middle,3
+,spider web,d,middle,3
+,video,d,middle,3
+,anybody,d,middle,4
+,auditory,d,middle,4
+,avocado,d,middle,4
+,Cambodia,d,middle,4
+,Colorado,d,middle,4
+,North Dakota,d,middle,4
+,riding safety,d,middle,4
+,scuba diver,d,middle,4
+,scuba diving,d,middle,4
+,South Dakota,d,middle,4
+,video game,d,middle,4
+,afraid,d,end,2
+,ahead,d,end,2
+,bedspread,d,end,2
+,beside,d,end,2
+,crowded,d,end,2
+,decade,d,end,2
+,decide,d,end,2
+,divide,d,end,2
+,dog food,d,end,2
+,firewood,d,end,2
+,first aid,d,end,2
+,inside,d,end,2
+,instead,d,end,2
+,junk food,d,end,2
+,outside,d,end,2
+,railroad,d,end,2
+,salad,d,end,2
+,seafood,d,end,2
+,succeed,d,end,2
+,zip code,d,end,2
+,accepted,d,end,3
+,attitude,d,end,3
+,brotherhood,d,end,3
+,centipede,d,end,3
+,chicken feed,d,end,3
+,Chinese food,d,end,3
+,copperhead,d,end,3
+,expected,d,end,3
+,fishing rod,d,end,3
+,gingerbread,d,end,3
+,Hollywood,d,end,3
+,lemonade,d,end,3
+,neighborhood,d,end,3
+,pony ride,d,end,3
+,talented,d,end,3
+,teacher's aide,d,end,3
+,tossed salad,d,end,3
+,united,d,end,3
+,visited,d,end,3
+,water bed,d,end,3
+,waffle,w,beginning,2
+,wagon,w,beginning,2
+,waiting,w,beginning,2
+,wake-up,w,beginning,2
+,walking,w,beginning,2
+,wallet,w,beginning,2
+,walnut,w,beginning,2
+,walrus,w,beginning,2
+,warning,w,beginning,2
+,washer,w,beginning,2
+,water,w,beginning,2
+,weather,w,beginning,2
+,wedding,w,beginning,2
+,weekend,w,beginning,2
+,welcome,w,beginning,2
+,window,w,beginning,2
+,winter,w,beginning,2
+,wisdom,w,beginning,2
+,women,w,beginning,2
+,working,w,beginning,2
+,walking stick,w,beginning,3
+,wallpaper,w,beginning,3
+,wandering,w,beginning,3
+,Washington,w,beginning,3
+,water bed,w,beginning,3
+,waterfall,w,beginning,3
+,waterproof,w,beginning,3
+,water ski,w,beginning,3
+,water snake,w,beginning,3
+,weatherman,w,beginning,3
+,wedding ring,w,beginning,3
+,well-mannered,w,beginning,3
+,windbreaker,w,beginning,3
+,wintertime,w,beginning,3
+,wire cutter,w,beginning,3
+,wisdom teeth,w,beginning,3
+,wonderful,w,beginning,3
+,woodcutter,w,beginning,3
+,woodpecker,w,beginning,3
+,Wyoming,w,beginning,3
+,washing machine,w,beginning,4
+,watercolors,w,beginning,4
+,water faucet,w,beginning,4
+,water lily,w,beginning,4
+,watermelon,w,beginning,4
+,water skiing,w,beginning,4
+,West Virginia,w,beginning,4
+,window shopping,w,beginning,4
+,wishy washy,w,beginning,4
+,wonderfully,w,beginning,4
+,word processor,w,beginning,4
+,always,w,middle,2
+,awake,w,middle,2
+,award,w,middle,2
+,cobweb,w,middle,2
+,driveway,w,middle,2
+,highway,w,middle,2
+,homework,w,middle,2
+,housework,w,middle,2
+,jaguar,w,middle,2
+,kiwi,w,middle,2
+,mouthwash,w,middle,2
+,pathway,w,middle,2
+,raceway,w,middle,2
+,reward,w,middle,2
+,school work,w,middle,2
+,seaweed,w,middle,2
+,Sea World,w,middle,2
+,sidewalk,w,middle,2
+,someone,w,middle,2
+,worldwide,w,middle,2
+,awaken,w,middle,3
+,candle wax,w,middle,3
+,Chihuahua,w,middle,3
+,chuck wagon,w,middle,3
+,hardware store,w,middle,3
+,Hawaii,w,middle,3
+,high water,w,middle,3
+,Hollywood,w,middle,3
+,microwave,w,middle,3
+,Milky Way,w,middle,3
+,one-way street,w,middle,3
+,pocket watch,w,middle,3
+,rewarded,w,middle,3
+,sandwiches,w,middle,3
+,spider web,w,middle,3
+,tidal wave,w,middle,3
+,unaware,w,middle,3
+,walk away,w,middle,3
+,wide awake,w,middle,3
+,wishing well,w,middle,3
+,covered wagon,w,middle,4
+,rewardable,w,middle,4
+,station wagon,w,middle,4
+,water wagon,w,middle,4
+,weeping willow,w,middle,4
+,welcome wagon,w,middle,4
+,No end words,w,end,0
+,pencil,p,beginning,2
+,party,p,beginning,2
+,pig,p,beginning,1
+,pickle,p,beginning,2
+,pony,p,beginning,2
+,penny,p,beginning,2
+,penguin,p,beginning,2
+,parrot,p,beginning,2
+,pizza,p,beginning,2
+,pirate,p,beginning,2
+,pet,p,beginning,1
+,paint,p,beginning,1
+,peach,p,beginning,1
+,picnic,p,beginning,2
+,piano,p,beginning,3
+,pants,p,beginning,1
+,pie,p,beginning,1
+,parade,p,beginning,2
+,park,p,beginning,1
+,pass,p,beginning,1
+,past,p,beginning,1
+,paid,p,beginning,1
+,pear,p,beginning,1
+,paw,p,beginning,1
+,point,p,beginning,1
+,diaper,p,middle,2
+,hippo,p,middle,2
+,apple,p,middle,2
+,teepee,p,middle,2
+,wallpaper,p,middle,3
+,grasshopper,p,middle,3
+,zipper,p,middle,2
+,mopping,p,middle,2
+,super,p,middle,2
+,octopus,p,middle,3
+,soapy,p,middle,2
+,dripping,p,middle,2
+,teapot,p,middle,2
+,typewriter,p,middle,3
+,zookeeper,p,middle,3
+,copy,p,middle,2
+,depend,p,middle,2
+,dustpan,p,middle,2
+,happy,p,middle,2
+,paper,p,middle,2
+,open,p,middle,2
+,napkin,p,middle,2
+,napping,p,middle,2
+,toothpaste,p,middle,2
+,sleeping,p,middle,2
+,lamp,p,end,1
+,mop,p,end,1
+,soup,p,end,1
+,ship,p,end,1
+,sheep,p,end,1
+,tape,p,end,1
+,asleep,p,end,2
+,rope,p,end,1
+,checkup,p,end,2
+,envelope,p,end,3
+,hoop,p,end,1
+,stop,p,end,1
+,shop,p,end,1
+,ketchup,p,end,2
+,cup,p,end,1
+,tape,p,end,1
+,up,p,end,1
+,pipe,p,end,1
+,wrap,p,end,1
+,trap,p,end,1
+,cap,p,end,1
+,top,p,end,1
+,sweep,p,end,1
+,soap,p,end,1
+,pop,p,end,1
+,package,p,beginning,2
+,paddle,p,beginning,2
+,painful,p,beginning,2
+,painted,p,beginning,2
+,pancake,p,beginning,2
+,paper,p,beginning,2
+,parade,p,beginning,2
+,parent,p,beginning,2
+,parking,p,beginning,2
+,parrot,p,beginning,2
+,passing,p,beginning,2
+,password,p,beginning,2
+,peacock,p,beginning,2
+,peanut,p,beginning,2
+,pencil,p,beginning,2
+,penguin,p,beginning,2
+,people,p,beginning,2
+,pizza,p,beginning,2
+,pocket,p,beginning,2
+,popcorn,p,beginning,2
+,Pacific,p,beginning,3
+,pajamas,p,beginning,3
+,papaya,p,beginning,3
+,passenger,p,beginning,3
+,passionate,p,beginning,3
+,Pearl Harbor,p,beginning,3
+,penalty,p,beginning,3
+,penmanship,p,beginning,3
+,peppermint,p,beginning,3
+,persevere,p,beginning,3
+,personal,p,beginning,3
+,piano,p,beginning,3
+,piggybank,p,beginning,3
+,pillowcase,p,beginning,3
+,pineapple,p,beginning,3
+,policeman,p,beginning,3
+,Portugal,p,beginning,3
+,post office,p,beginning,3
+,potato,p,beginning,3
+,public school,p,beginning,3
+,pacifier,p,beginning,4
+,pardonable,p,beginning,4
+,parenthesis,p,beginning,4
+,participate,p,beginning,4
+,peanut butter,p,beginning,4
+,peninsula,p,beginning,4
+,perfectionist,p,beginning,4
+,perishable,p,beginning,4
+,personable,p,beginning,4
+,personalize,p,beginning,4
+,personalized,p,beginning,4
+,pistachio,p,beginning,4
+,poison ivy,p,beginning,4
+,police station,p,beginning,4
+,pomegranate,p,beginning,4
+,potato chips,p,beginning,4
+,punctuation,p,beginning,4
+,punishable,p,beginning,4
+,Panama Canal,p,beginning,5
+,pandemonium,p,beginning,5
+,particularly,p,beginning,5
+,pediatrician,p,beginning,5
+,Pennsylvania,p,beginning,5
+,perfectionism,p,beginning,5
+,perpendicular,p,beginning,5
+,personality,p,beginning,5
+,possibility,p,beginning,5
+,apart,p,middle,2
+,chopping,p,middle,2
+,copy,p,middle,2
+,coupon,p,middle,2
+,crockpot,p,middle,2
+,dipping,p,middle,2
+,happy,p,middle,2
+,napkin,p,middle,2
+,opened,p,middle,2
+,paper,p,middle,2
+,pepper,p,middle,2
+,Ping Pong,p,middle,2
+,popcorn,p,middle,2
+,puppet,p,middle,2
+,report,p,middle,2
+,sleeping,p,middle,2
+,stopping,p,middle,2
+,toothpaste,p,middle,2
+,zip code,p,middle,2
+,zipper,p,middle,2
+,apartment,p,middle,3
+,apple pie,p,middle,3
+,capital,p,middle,3
+,cherry pie,p,middle,3
+,copperhead,p,middle,3
+,diaper,p,middle,3
+,frying pan,p,middle,3
+,grasshopper,p,middle,3
+,newspaper,p,middle,3
+,octopus,p,middle,3
+,peppermint,p,middle,3
+,pineapple,p,middle,3
+,reporter,p,middle,3
+,separate,p,middle,3
+,slippery,p,middle,3
+,soda pop,p,middle,3
+,Superman,p,middle,3
+,superstar,p,middle,3
+,tropical,p,middle,3
+,woodpecker,p,middle,3
+,apologize,p,middle,4
+,apology,p,middle,4
+,disappearance,p,middle,4
+,disposable,p,middle,4
+,flipping a coin,p,middle,4
+,paper cutter,p,middle,4
+,paper towels,p,middle,4
+,superior,p,middle,4
+,supermarket,p,middle,4
+,tissue paper,p,middle,4
+,Winnie the Pooh,p,middle,4
+,wrapping paper,p,middle,4
+,happy go lucky,p,middle,5
+,hippopotmus,p,middle,5
+,metropolitan,p,middle,5
+,opinionated,p,middle,5
+,opportunity,p,middle,5
+,unpopulated,p,middle,5
+,asleep,p,end,2
+,backup,p,end,2
+,book drop,p,end,2
+,bus stop,p,end,2
+,clean up,p,end,2
+,cough drop,p,end,2
+,doorstop,p,end,2
+,escape,p,end,2
+,flip flop,p,end,2
+,grown up,p,end,2
+,jump rope,p,end,2
+,ketchup,p,end,2
+,makeup,p,end,2
+,mousetrap,p,end,2
+,roundup,p,end,2
+,shortstop,p,end,2
+,sit up,p,end,2
+,syrup,p,end,2
+,toy shop,p,end,2
+,workshop,p,end,2
+,antelope,p,end,3
+,baseball cap,p,end,3
+,bcandy shop,p,end,3
+,city map,p,end,3
+,coffee cup,p,end,3
+,envelope,p,end,3
+,fingertip,p,end,3
+,fire escape,p,end,3
+,flower shop,p,end,3
+,gingersnap,p,end,3
+,laundry soap,p,end,3
+,leadership,p,end,3
+,lollipop,p,end,3
+,membership,p,end,3
+,oversleep,p,end,3
+,paper clip,p,end,3
+,penmanship,p,end,3
+,scholarship,p,end,3
+,sportsmanship,p,end,3
+,telescope,p,end,3
+,chocolate chip,p,end,4
+,citizenship,p,end,4
+,companionship,p,end,4
+,Little Bo Peep,p,end,4
+,measuring cup,p,end,4
+,potato chip,p,end,4
+,stereotype,p,end,4
+,tomato soup,p,end,4
+,bug,b,beginning,1
+,both,b,beginning,1
+,ball,b,beginning,1
+,bed,b,beginning,1
+,bee,b,beginning,1
+,berry,b,beginning,2
+,birthday,b,beginning,2
+,bath,b,beginning,1
+,boat,b,beginning,1
+,bottle,b,beginning,2
+,beard,b,beginning,1
+,bunny,b,beginning,2
+,busy,b,beginning,2
+,butter,b,beginning,2
+,button,b,beginning,2
+,boy,b,beginning,1
+,bus,b,beginning,1
+,banana,b,beginning,3
+,bird,b,beginning,1
+,bear,b,beginning,1
+,bike,b,beginning,1
+,bag,b,beginning,1
+,bat,b,beginning,1
+,bean,b,beginning,1
+,bone,b,beginning,1
+,robot,b,middle,2
+,cheeseburger,b,middle,3
+,baby,b,middle,2
+,strawberries,b,middle,3
+,ladybug,b,middle,3
+,cabin,b,middle,2
+,neighbor,b,middle,2
+,about,b,middle,2
+,above,b,middle,2
+,bobcat,b,middle,2
+,cobweb,b,middle,2
+,goodbye,b,middle,2
+,habit,b,middle,2
+,kickball,b,middle,2
+,marbles,b,middle,2
+,ribbon,b,middle,2
+,rabbit,b,middle,2
+,mailbox,b,middle,2
+,grabbing,b,middle,2
+,robin,b,middle,2
+,rubber,b,middle,2
+,alphabet,b,middle,3
+,peek-a-boo,b,middle,3
+,remember,b,middle,3
+,crab,b,end,1
+,cub,b,end,1
+,web,b,end,1
+,crib,b,end,1
+,ice cube,b,end,2
+,job,b,end,1
+,door knob,b,end,2
+,bib,b,end,1
+,club,b,end,1
+,grab,b,end,1
+,lab,b,end,1
+,rib,b,end,1
+,rub,b,end,1
+,sob,b,end,1
+,tube,b,end,1
+,shrub,b,end,1
+,scrub,b,end,1
+,swab,b,end,1
+,cab,b,end,1
+,cob,b,end,1
+,baby,b,beginning,2
+,backup,b,beginning,2
+,bacon,b,beginning,2
+,balloon,b,beginning,2
+,baseball,b,beginning,2
+,basket,b,beginning,2
+,because,b,beginning,2
+,bedroom,b,beginning,2
+,bedtime,b,beginning,2
+,before,b,beginning,2
+,begin,b,beginning,2
+,berry,b,beginning,2
+,biscuit,b,beginning,2
+,body,b,beginning,2
+,bookshelf,b,beginning,2
+,bucket,b,beginning,2
+,buddy,b,beginning,2
+,bunny,b,beginning,2
+,butter,b,beginning,2
+,button,b,beginning,2
+,baby doll,b,beginning,3
+,bakery,b,beginning,3
+,Baltimore,b,beginning,3
+,banana,b,beginning,3
+,basketball,b,beginning,3
+,battery,b,beginning,3
+,becoming,b,beginning,3
+,beginner,b,beginning,3
+,beginning,b,beginning,3
+,behavior,b,beginning,3
+,benefit,b,beginning,3
+,beverage,b,beginning,3
+,bicycle,b,beginning,3
+,bologna,b,beginning,3
+,bubble bath,b,beginning,3
+,bubble gum,b,beginning,3
+,buffalo,b,beginning,3
+,bus station,b,beginning,3
+,buttermilk,b,beginning,3
+,bacteria,b,beginning,4
+,baking powder,b,beginning,4
+,baking soda,b,beginning,4
+,beneficial,b,beginning,4
+,biography,b,beginning,4
+,biologist,b,beginning,4
+,biology,b,beginning,4
+,about,b,middle,2
+,above,b,middle,2
+,babies,b,middle,2
+,bobcat,b,middle,2
+,cabin,b,middle,2
+,cowboy,b,middle,2
+,cupboard,b,middle,2
+,Cuba,b,middle,2
+,debate,b,middle,2
+,good-bye,b,middle,2
+,hobby,b,middle,2
+,keyboard,b,middle,2
+,kickball,b,middle,2
+,labor,b,middle,2
+,mailbox,b,middle,2
+,maybe,b,middle,2
+,neighbor,b,middle,2
+,obey,b,middle,2
+,rabbit,b,middle,2
+,ribbon,b,middle,2
+,robin,b,middle,2
+,rubber,b,middle,2
+,subject,b,middle,2
+,tugboat,b,middle,2
+,toyboat,b,middle,2
+,above ground,b,middle,3
+,aerobics,b,middle,3
+,alphabet,b,middle,3
+,baydoll,b,middle,3
+,baby-sit,b,middle,3
+,baby talk,b,middle,3
+,basketball,b,middle,3
+,blackberry,b,middle,3
+,blueberry,b,middle,3
+,candy bar,b,middle,3
+,cheeseburger,b,middle,3
+,cowboy boots,b,middle,3
+,cowboy hat,b,middle,3
+,fabulous,b,middle,3
+,habitat,b,middle,3
+,hibernate,b,middle,3
+,Labor Day,b,middle,3
+,ladybug,b,middle,3
+,neighborhood,b,middle,3
+,nobody,b,middle,3
+,October,b,middle,3
+,rubber band,b,middle,3
+,somebody,b,middle,3
+,strawberry,b,middle,3
+,volleyball,b,middle,3
+,Alabama,b,middle,4
+,anybody,b,middle,4
+,neighborhood watch,b,middle,4
+,obedient,b,middle,4
+,observation,b,middle,4
+,5 Syllables,b,middle,4
+,disability,b,middle,4
+,obituary,b,middle,4
+,observatory,b,middle,4
+,submarine captain,b,middle,4
+,backrub,b,end,2
+,bathrobe,b,end,2
+,bathtube,b,end,2
+,book club,b,end,2
+,cobweb,b,end,2
+,corncob,b,end,2
+,describe,b,end,2
+,doorknob,b,end,2
+,ear lobe,b,end,2
+,golf club,b,end,2
+,ice cube,b,end,2
+,prescribe,b,end,2
+,sand crab,b,end,2
+,subscribe,b,end,2
+,wardrobe,b,end,2
+,cotton swab,b,end,3
+,country club,b,end,3
+,Four-H club,b,end,3
+,garden club,b,end,3
+,giant crab,b,end,3
+,inner tube,b,end,3
+,photo lab,b,end,3
+,reading lab,b,end,3
+,spider web,b,end,3
+,ticket club,b,end,3
+,writing lab,b,end,3
