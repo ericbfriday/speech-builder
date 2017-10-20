@@ -1,18 +1,18 @@
 <section>
     <md-content layout-padding>
-        <!-- <h1 ng-controller="WordListController as wlc"></h1> -->
+        <h1>Report for the word: {{wlc.wordList.data.study_word}}</h1> <!-- Pretty sure the expression here is wrong-->
         <form name="reportingForm">
             <div layout="row">
                 <md-input-container flex="50">
                     <label>Student Name</label>
                     <input name="name" ng-model="wlc.report.name">
                 </md-input-container>
-
                 <md-input-container flex="50">
                     <label>Study Word</label>
-                    <input name="word" ng-model="wlc.report.word">
+                    <input name="word" value="{{wlc.wordList.data.study_word}}" ng-model="wlc.report.word"> <!-- Pretty sure the expression here is wrong-->
                 </md-input-container>
             </div>
+            <!-- Begin Radio Button Section -->
             <div layout="row">
                 <div layout="column">
                     <md-radio-group ng-model="wlc.report.attempt1">
