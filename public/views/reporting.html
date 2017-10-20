@@ -1,0 +1,30 @@
+<section>
+    <md-content layout-padding>
+        <form name="reportingForm">
+            <div layout="row">
+                <md-input-container flex="50">
+                    <label>Name</label>
+                    <input name="name" ng-model="report.name">
+                </md-input-container>
+
+                <md-input-container flex="50">
+                    <label>word</label>
+                    <input name="word" ng-model="report.word">
+                </md-input-container>
+            </div>
+
+            <div layout="row">
+
+            </div>
+
+            <md-input-container class="md-block">
+                <label>Summary & Notes</label>
+                <textarea ng-model="report.summary" md-maxlength="900" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+
+            <div>
+                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+            </div>
+        </form>
+    </md-content>
+</section>
