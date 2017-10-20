@@ -64,4 +64,27 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
         $anchorScroll();
      };
 
+    //  DOING REPORTING CONTROLLER JAZZ BELOW THIS LINE!!!!
+    // MIGHT BE REFACTORED LATER.
+    
+        vm.report = {
+            studentName: '',
+            word: '',
+            summary: '',
+            attempt1: 'na',
+            attempt2: 'na',
+            attempt3: 'na',
+            attempt4: 'na',
+            attempt5: 'na',
+            attempt6: 'na',
+            attempt7: 'na',
+            attempt8: 'na',
+            attempt9: 'na',
+            attempt10: 'na'
+        };
+
+        vm.addReport = function() {
+            console.log('in wlc submit function', vm.report);
+            
+        };
 });

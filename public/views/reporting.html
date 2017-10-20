@@ -1,98 +1,123 @@
 <section>
     <md-content layout-padding>
-        <form name="reportingForm" ng-submit="submit()">
+        <!-- <h1 ng-controller="WordListController as wlc"></h1> -->
+        <form name="reportingForm">
             <div layout="row">
                 <md-input-container flex="50">
                     <label>Student Name</label>
-                    <input name="name" ng-model="rc.report.name">
+                    <input name="name" ng-model="wlc.report.name">
                 </md-input-container>
 
                 <md-input-container flex="50">
                     <label>Study Word</label>
-                    <input name="word" ng-model="rc.report.word">
+                    <input name="word" ng-model="wlc.report.word">
                 </md-input-container>
             </div>
             <div layout="row">
                 <div layout="column">
-                    <md-radio-group ng-model="rc.report.attempt1">
-                        <md-radio-button value="satisfactory">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                    <md-radio-group ng-model="wlc.report.attempt1">
+                        Attempt 1:
+                        <br />
+                        <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt2">
+                    <md-radio-group ng-model="wlc.report.attempt2">
+                        Attempt 2:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory" class="md-warn">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt3">
+                    <md-radio-group ng-model="wlc.report.attempt3">
+                        Attempt 3:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
+                    </md-radio-group>
+                </div>
+                <hr />
+                <div layout="column">
+                    <md-radio-group ng-model="wlc.report.attempt4">
+                        Attempt 4:
+                        <br />
+                        <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt4">
+                    <md-radio-group ng-model="wlc.report.attempt5">
+                        Attempt 5:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt5">
+                    <md-radio-group ng-model="wlc.report.attempt6">
+                        Attempt 6:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt6">
+                    <md-radio-group ng-model="wlc.report.attempt7">
+                        Attempt 7:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
+                    </md-radio-group>
+                </div>
+                <hr />
+                <div layout="column">
+                    <md-radio-group ng-model="wlc.report.attempt8">
+                        Attempt 8:
+                        <br />
+                        <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt7">
+                    <md-radio-group ng-model="wlc.report.attempt9">
+                        Attempt 9:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                     <hr />
-                    <md-radio-group ng-model="rc.report.attempt8">
+                    <md-radio-group ng-model="wlc.report.attempt10">
+                        Attempt 10:
+                        <br />
                         <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
-                    </md-radio-group>
-                    <hr />
-                    <md-radio-group ng-model="rc.report.attempt9">
-                        <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
-                    </md-radio-group>
-                    <hr />
-                    <md-radio-group ng-model="rc.report.attempt10">
-                        <md-radio-button value="satisfactory" class="md-primary">Satisfactory</md-radio-button>
-                        <md-radio-button value="prompted"> Prompted </md-radio-button>
-                        <md-radio-button value="unsatisfactory">Unsatisfactory</md-radio-button>
-                        <md-radio-button value="na">N/A</md-radio-button>
+                        <md-radio-button value="prompted" class="md-primary"> Prompted </md-radio-button>
+                        <md-radio-button value="unsatisfactory" class="md-primary">Unsatisfactory</md-radio-button>
+                        <md-radio-button value="na" class="md-primary">N/A</md-radio-button>
                     </md-radio-group>
                 </div>
             </div>
-
+            <hr />
             <md-input-container class="md-block">
                 <label>Summary & Notes</label>
-                <textarea ng-model="rc.report.summary" md-maxlength="900" rows="5" md-select-on-focus></textarea>
+                <textarea ng-model="wlc.report.summary" md-maxlength="900" rows="5" md-select-on-focus></textarea>
             </md-input-container>
 
             <div>
-                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+                <md-button class="md-raised md-primary" ng-click="wlc.addReport()">Submit</md-button>
             </div>
         </form>
     </md-content>

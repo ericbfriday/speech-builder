@@ -28,7 +28,7 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
         controller: 'AuthController as ac'    
     }).when('/reporting', {
         templateUrl: 'views/reporting.html',
-        controller: 'ReportingController as rc'
+        controller: 'WordListController as wlc'
     }).when('/thanks', {
         templateUrl: 'views/thanks.html',
         controller: 'HomeController as hc'
