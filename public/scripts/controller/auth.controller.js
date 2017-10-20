@@ -40,9 +40,30 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
   
     // This code runs when the user logs out
     self.logOut = function(){
-      auth.$signOut().then(function(){
-        console.log('Logging the user out!');
+      // OG sign out method below.
+      // auth.$signOut().then(function(){
+      //   console.log('Logging the user out!');
+      // });
+      self.deleteAllCookies();
+      // new sign out method below.
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log('log out successful!');
+      }).catch(function(error) {
+        // An error happened.
+        console.log('error logging the user out with google!', error);
       });
     };
+
+    self.deleteAllCookies = function () {
+      var cookies = document.cookie.split(";");
+  
+      for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          var eqPos = cookie.indexOf("=");
+          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+  }
   });
   

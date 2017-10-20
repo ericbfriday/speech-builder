@@ -13,7 +13,10 @@ admin.initializeApp({
     "auth_provider_x509_cert_url": process.env.FIREBASE_SERVICE_ACCOUNT_AUTH_PROVIDER_X509_CERT_URL,
     "client_x509_cert_url": process.env.FIREBASE_SERVICE_ACCOUNT_CLIENT_X509_CERT_URL
   }),
-  databaseURL: "https://speech-builder.firebaseio.com" // replace this line with your URL
+  databaseURL: "https://speech-builder.firebaseio.com", // replace this line with your URL
+  customParameters: {
+    prompt: 'select_account' 
+  }
 });
 
 /* This is where the magic happens. We pull the id_token off of the request,

@@ -18,5 +18,4 @@ myApp.controller('ReportingController', function ($http, $scope) {
         attempt9: 'na',
         attempt10: 'na'
     };
-
 });
