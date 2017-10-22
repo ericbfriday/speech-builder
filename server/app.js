@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use('/wordLookup', wordLookup);
 app.use('/words', wordList);
 app.use('/letters', lettersList);
-app.use("/reporting", reporting);
+
 
 // Decodes the token in the request header and attaches the decoded token to the request.
 app.use(decoder.token);
@@ -37,6 +37,7 @@ Other branches in the nodeFire repository show how to do that. */
 
 // This is the route for your secretData. The request gets here after it has been authenticated.
 app.use("/privateData", privateData);
+app.use("/reporting", reporting);
 
 
 app.listen(port, function(){
