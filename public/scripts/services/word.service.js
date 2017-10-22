@@ -58,15 +58,14 @@ myApp.service('WordService', function($http){
     };
 
     sv.opportunityReport = function (studyWord, outcome) {
-        console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
-        
-        // $http ({
-        //     method: 'POST',
-        //     url: '/report',
-        //     data: {word: studyWord, student: student, outcome: outcome}
-        // }).then(function (response) {
-
-        // });
+        // console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
+        $http ({
+            method: 'POST',
+            url: '/reporting',
+            data: {word: studyWord, student: sv.studentName.data, outcome: outcome}
+        }).then(function (response) {
+            console.log('Response for opportunityReport -> ', response);
+        });
     };
 
     sv.studentTracker = function(name) {
