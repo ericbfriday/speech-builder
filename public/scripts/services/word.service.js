@@ -5,7 +5,8 @@ myApp.service('WordService', function($http){
     sv.wordResponse = {data: []};
     sv.mp3URL = {};
     sv.definitions = {data: []};
-    sv.phoneticSpelling = {data: ""};
+    sv.phoneticSpelling = {data: ''};
+    sv.studentName = {data: ''};
 
     sv.findDefinition = function(wordIn) {
         // console.log('logging wordIn (service) ', wordIn);
@@ -55,4 +56,22 @@ myApp.service('WordService', function($http){
             
         });
     };
+
+    sv.opportunityReport = function (studyWord, outcome) {
+        console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
+        
+        // $http ({
+        //     method: 'POST',
+        //     url: '/report',
+        //     data: {word: studyWord, student: student, outcome: outcome}
+        // }).then(function (response) {
+
+        // });
+    };
+
+    sv.studentTracker = function(name) {
+        console.log('logging student name', name.name);
+        sv.studentName.data = name.name;
+    };
+
 });

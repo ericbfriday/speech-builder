@@ -5,10 +5,18 @@
 // $scope.currentNavItem = 'home';
 // } // end navCtrl()
 
-myApp.controller('NavBarController', function ($location) {
+myApp.controller('NavBarController', function ($location, WordService) {
     console.log('navbar controller loaded');
 
     var vm = this;
     vm.currentNavItem = $location.path();
+    vm.student = { name: ''};
+
+    vm.trackStudent = function(name){
+        vm.student.name = name;
+        console.log('vm.student.name ', vm.student.name);
+        
+        WordService.studentTracker(vm.student);
+    };
 
 });

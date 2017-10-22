@@ -19,4 +19,9 @@ myApp.controller('WordController', function(WordService) {
         var audio = new Audio(vm.mp3URL.data);
         audio.play();
     };
+
+    vm.opportunityReport = function(outcome) {
+        // console.log('Logging opportunity outcome', outcome);
+        WordService.opportunityReport(vm.studyWord, outcome);
+    }; 
  });

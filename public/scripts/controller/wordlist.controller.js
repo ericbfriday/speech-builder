@@ -64,7 +64,7 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
         $anchorScroll();
     };
 
-    //  DOING REPORTING CONTROLLER JAZZ BELOW THIS LINE!!!!
+    //  DOING OG REPORTING CONTROLLER JAZZ BELOW THIS LINE!!!!
     // MIGHT BE REFACTORED LATER.
     vm.report = {
         studentName: '',
