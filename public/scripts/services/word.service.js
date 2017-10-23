@@ -57,21 +57,21 @@ myApp.service('WordService', function($http){
         });
     };
 
-    sv.opportunityReport = function (studyWord, outcome) {
-        console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
+    // sv.opportunityReport = function (studyWord, outcome) {
+    //     console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
+        
+    //     // $http ({
+    //     //     method: 'POST',
+    //     //     url: '/reporting',
+    //     //     data: sv.reportObj
+    //     // }).then(function (response) {
+    //     //     console.log('Response for opportunityReport -> ', response);
+    //     // });
+    // };
 
-        // $http ({
-        //     method: 'POST',
-        //     url: '/reporting',
-        //     data: sv.reportObj
-        // }).then(function (response) {
-        //     console.log('Response for opportunityReport -> ', response);
-        // });
-    };
-
-    sv.studentTracker = function(name) {
-        console.log('logging student name', name.name);
-        sv.studentName.data = name.name;
-    };
+    // sv.studentTracker = function(name) {
+    //     console.log('logging student name', name.name);
+    //     sv.studentName.data = name.name;
+    // };
 
 });

@@ -15,7 +15,6 @@ app.get('/', function(req, res){
   res.sendFile(path.resolve('./public/index.html'));
 });
 
-
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
@@ -23,8 +22,7 @@ app.use(bodyParser.json());
 app.use('/wordLookup', wordLookup);
 app.use('/words', wordList);
 app.use('/letters', lettersList);
-app.use("/reporting", reporting);
-
+app.use('/reporting', reporting);
 
 // Decodes the token in the request header and attaches the decoded token to the request.
 app.use(decoder.token);

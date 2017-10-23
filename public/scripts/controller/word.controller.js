@@ -1,4 +1,4 @@
-myApp.controller('WordController', function(WordService) {
+myApp.controller('WordController', function(WordService, ReportingService) {
     console.log('in Word Controller');
 
     const vm = this;
@@ -22,6 +22,6 @@ myApp.controller('WordController', function(WordService) {
 
     vm.opportunityReport = function(outcome) {
         // console.log('Logging opportunity outcome', outcome);
-        WordService.opportunityReport(vm.studyWord, outcome);
+        ReportingService.opportunityReport(vm.studyWord, outcome);
     }; 
  });

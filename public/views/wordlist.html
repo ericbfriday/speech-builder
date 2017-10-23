@@ -3,7 +3,7 @@
     <md-card>
         <md-content class="md-padding" layout-xs="column" layout="row">
             <div flex-xs flex flex-gt-xs="100" layout-xs="column" layout="row" layout-align="center center" layout-wrap>
-                <md-card ng-repeat="letter in wlc.lettersList.data  | orderBy:'letter'">
+                <md-card ng-repeat="letter in wlc.lettersList.data | orderBy:'letter'">
                     <md-card-title>
                         <md-card-title-media>
                             <div class="md-media-md card-media letterLogos">
@@ -12,7 +12,7 @@
                         </md-card-title-media>
                     </md-card-title>
                     <md-card-actions layout="row" layout-align="center center">
-                        <md-button class="md-raised md-primary" ng-click="wlc.getLetterWords(letter); gotoElement(wordList)">See Words</md-button>
+                        <md-button class="md-raised md-primary" ng-click="wlc.getLetterWords(letter)">See Words</md-button>
                     </md-card-actions>
                 </md-card>
             </div>
@@ -34,7 +34,7 @@
                                 </md-card-title-text>
                             </md-card-title>
                             <md-card-actions layout="row" layout-align="center end">
-                                <md-button class="md-raised md-primary" ng-click="wlc.detailPopup($event, word)">Details</md-button>
+                                <md-button class="md-raised md-primary" ng-click="wlc.detailPopup($event, word, word.letter)">Details</md-button>
                             </md-card-actions>
                         </md-card>
                     </div>

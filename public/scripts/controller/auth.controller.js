@@ -12,7 +12,7 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
         console.log("Authentication failed: ", error);
       });
     };
-  
+
     // This code runs whenever the user changes authentication states
     // e.g. whevenever the user logs in or logs out
     // this is where we put most of our logic so that we don't duplicate
@@ -41,12 +41,11 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
     // This code runs when the user logs out
     self.logOut = function(){
       // OG sign out method below.
-      // auth.$signOut().then(function(){
-      //   console.log('Logging the user out!');
+      auth.$signOut().then(function(){
+        console.log('Logging the user out!');
       // });
-      self.deleteAllCookies();
       // new sign out method below.
-      firebase.auth().signOut().then(function() {
+      // firebase.auth().signOut().then(function() {
         // Sign-out successful.
         console.log('log out successful!');
       }).catch(function(error) {
@@ -54,16 +53,5 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
         console.log('error logging the user out with google!', error);
       });
     };
-
-    self.deleteAllCookies = function () {
-      var cookies = document.cookie.split(";");
-  
-      for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i];
-          var eqPos = cookie.indexOf("=");
-          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      }
-  }
   });
   

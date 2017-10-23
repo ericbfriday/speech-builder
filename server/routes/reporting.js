@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const request = require('request'); 
 require('dotenv').config();
 const pool = require('../modules/pool');
+// const firebase = require('firebase');
+// const db = firebase.database();
 
 router.post('/', function (req, res) {
     // Data arrives as follows from word.service.js -> data: {word: studyWord, student: sv.studentName.data, outcome: outcome}
@@ -12,8 +14,9 @@ router.post('/', function (req, res) {
     student = req.body.student;
     outcome = req.body.outcome;
     instructor = req.body.instructor;
+    user_id = req.decodedToken.user_id;
     date = new Date();
-    console.log('Logging reporting POST route variables word, student, outcome, instructor, date -> ', word, student, outcome, instructor, date);
+    console.log('Logging reporting POST route variables word, student, outcome, instructor, date -> ', word, student, outcome, instructor, date, user_id);
     
     // commented out until Schema is established
     // pool.connect(function (conErr, client, done){

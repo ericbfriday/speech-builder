@@ -15,8 +15,7 @@ myApp.controller('NavBarController', function ($location, WordService) {
     vm.trackStudent = function(name){
         vm.student.name = name;
         console.log('vm.student.name ', vm.student.name);
-        
-        WordService.studentTracker(vm.student);
+        ReportingService.studentTracker(vm.student);
     };
 
 });
