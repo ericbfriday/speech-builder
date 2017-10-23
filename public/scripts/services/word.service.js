@@ -41,9 +41,9 @@ myApp.service('WordService', function($http){
             // provides shorter location for array looping
             sv.definitionLocation = response.data.results[0].lexicalEntries[0].entries;
             // loops through arrays to extract definitions
-            for (var i = 0; i < sv.definitionLocation.length; i ++){
+            for (var i = 0; i <= sv.definitionLocation.length; i ++){
                 // console.log('logging definitions ', sv.definitionLocation[i]);
-                for (var j = 0; j < sv.definitionLocation[i].senses.length; i++){
+                for (var j = 0; j <= sv.definitionLocation[i].senses.length; i++){
                     // console.log('loggin senses ', sv.definitionLocation[i].senses[j].definitions[j]);
                     sv.definitions.data.push(sv.definitionLocation[i].senses[j].definitions[j]);
                     // console.log('loggin sv.definitions ->', sv.definitions); 
@@ -58,14 +58,15 @@ myApp.service('WordService', function($http){
     };
 
     sv.opportunityReport = function (studyWord, outcome) {
-        // console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
-        $http ({
-            method: 'POST',
-            url: '/reporting',
-            data: {word: studyWord, student: sv.studentName.data, outcome: outcome}
-        }).then(function (response) {
-            console.log('Response for opportunityReport -> ', response);
-        });
+        console.log('logging word, student, and outcome -> ', studyWord, sv.studentName.data, outcome);
+
+        // $http ({
+        //     method: 'POST',
+        //     url: '/reporting',
+        //     data: sv.reportObj
+        // }).then(function (response) {
+        //     console.log('Response for opportunityReport -> ', response);
+        // });
     };
 
     sv.studentTracker = function(name) {

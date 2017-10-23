@@ -22,7 +22,7 @@ router.post('/', function (req, res) {
   };
   request(wordDefinition, function (error, response, body) {
     if (response && response.statusCode == 200) {
-      console.log('logging 200 inside wordLookup.js router ', response.statusCode);
+      // console.log('logging 200 inside wordLookup.js router ', response.statusCode);
       res.send(body);
     } else {
       res.sendStatus(500);
