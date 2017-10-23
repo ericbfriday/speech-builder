@@ -48,6 +48,12 @@ myApp.controller('ReportingController', function ($http, $scope) {
                             {letter: s, word: horse, totalAttempts: 11, satisfactory: 2, prompt: 3, unsatisfactory: 6},
                             {letter: s, word: salad, totalAttempts: 10, satisfactory: 3, prompt: 3, unsatisfactory: 4},
                             {letter: t, word: toy, totalAttempts: 16, satisfactory: 9, prompt: 5, unsatisfactory: 2}]
+            },
+            {name: Ted,
+            wordResults: [  {letter: b, word: banana, totalAttempts: 10, satisfactory: 3, prompt: 3, unsatisfactory: 4}, 
+                            {letter: s, word: horse, totalAttempts: 11, satisfactory: 2, prompt: 3, unsatisfactory: 6},
+                            {letter: s, word: salad, totalAttempts: 10, satisfactory: 3, prompt: 3, unsatisfactory: 4},
+                            {letter: t, word: toy, totalAttempts: 16, satisfactory: 9, prompt: 5, unsatisfactory: 2}]
         }]
     };
 

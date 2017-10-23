@@ -31,8 +31,6 @@ myApp.service('ListService', function ($http) {
         }).then(function (response) {
             // console.log('response', response);
             sv.lettersList.data = response.data;
-            // for (var i = 0; i < sv.lettersList.data.length - 1; i++) {
-            //     sv.capitalLettersList.data[i].letter = sv.lettersList.data[i].letter.toUpperCase();
         });
     };
 });
