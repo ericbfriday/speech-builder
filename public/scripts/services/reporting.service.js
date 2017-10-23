@@ -40,12 +40,13 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         $http.post('/reporting', sv.wordObj)
         .then((response) => {
             console.log('response -->', response);
-            if (response.status === 203) {
-                // ITEM CREATED!
+            if (response.status === 202) {
+                console.log('UPDATED!');
+            } else if (response.status === 201){
                 console.log('CREATED!');
+                
             } else {
                 console.log('Error in POST route reporting.service.js');
-                
             }
         }); // end POST
     };
