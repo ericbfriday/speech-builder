@@ -9,6 +9,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     };
     sv.studiedWords = [];
     sv.wordObj = {
+        instructor: '',
         studentName: sv.currentStudent.data,
         word: '',
         totalAttempts: 0,
@@ -19,6 +20,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
 
     sv.opportunityReport = function (studyWord, outcome) {
         // console.log('logging word, student, and outcome -> ', studyWord, sv.currentStudent.data, outcome);
+        sv.wordObj.instructor = firebase.auth().currentUser.uid;
         sv.wordObj.studentName = sv.currentStudent.data;
         sv.wordObj.word = studyWord;
         sv.wordObj.totalAttempts++;
