@@ -5,7 +5,7 @@
 // $scope.currentNavItem = 'home';
 // } // end navCtrl()
 
-myApp.controller('NavBarController', function ($location, WordService) {
+myApp.controller('NavBarController', function ($location, WordService, ReportingService) {
     console.log('navbar controller loaded');
 
     var vm = this;
