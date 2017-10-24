@@ -11,7 +11,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     sv.wordObj = {
         instructor: '',
         instructorName: '',
-        studentName: sv.currentStudent.data,
+        student: sv.currentStudent.data,
         date: '',
         word: '',
         result: ''//,
