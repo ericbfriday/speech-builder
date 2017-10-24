@@ -25,4 +25,9 @@ myApp.controller('WordController', function(WordService, ReportingService) {
         // console.log('Logging opportunity outcome', outcome);
         ReportingService.opportunityReport(vm.studyWord, outcome);
     }; 
+
+    vm.getReport = function(){
+        console.log('logging vm.getReport Call');
+        ReportingService.getReport();
+    };
  });

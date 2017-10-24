@@ -4,12 +4,27 @@ const bodyParser = require('body-parser');
 const request = require('request');
 require('dotenv').config();
 const pool = require('../modules/pool');
-// const firebase = require('firebase');
-// const db = firebase.database();
 
+router.post('/generate', function(req,res){
+    console.log('Logging req.body in reporting/generate -> ', req.body);
+    instructor = req.body.date;
+    instructorName = req.body.instructorName;
+    student = req.body.student;
+    date = req.body.date;
+
+    // CURRENTLY TESTING POST AND WRITING QUERY
+    pool.connect(function (conErr, client, done) {
+        if (conErr) {
+            console.log(conErr);
+            res.sendStatus(500);
+        } else {
+            values = [];
+            reportGenQueryString = "";
+        }
+    });
+});
 router.post('/', function (req, res) {
-    console.log('req.body log -> ', req.body);
-
+    // console.log('req.body log -> ', req.body);
     word = req.body.word;
     student = req.body.student;
     outcome = req.body.outcome;
@@ -35,7 +50,7 @@ router.post('/', function (req, res) {
                     console.log('Error in initial query for reporting.js POST route -> ', error);
                     res.sendStatus(500);
                 } else if (result.rowCount === 0) {
-                    console.log('Outcome not already in results DB -> ', result);
+                    // console.log('Outcome not already in results DB -> ', result);
                     client.query(insertQueryString, function (queryErr, resultObj) { // Queries DB to update appropriate outcomes
                         done();
                         if (queryErr) {

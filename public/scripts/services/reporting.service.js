@@ -25,6 +25,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         prompted: 0,
         unsatisfactory: 0
     };
+    sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''}
 
     var dateObj = new Date();
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -70,13 +71,23 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                     console.log('Catching error in POST route reporting.service.js -> ', response);
                 }
             }); // end POST
-    };
+    }; // end sv.opportunityReport
 
     sv.studentTracker = function (name) {
         console.log('logging student name', name.name);
         sv.currentStudent.data = name.name;
-    };
+    }; // end sv.studentTracker
 
-
+    sv.getReport = function(){
+        console.log('logging sv.getReport call');
+        sv.reportReqObj.instructor = firebase.auth().currentUser.uid;
+        sv.reportReqObj.instructorName = firebase.auth().currentUser.displayName;
+        sv.reportReqObj.student = sv.currentStudent.data;
+        sv.reportReqObj.date = newdate;
+        $http.post('/reporting/generate', sv.reportReqObj)
+        .then((response)=>{
+            console.log('Logging response inside getReport POST function -> ', response);
+        });
+    }; // end sv.getReport
 
 });

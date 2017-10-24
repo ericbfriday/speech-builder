@@ -1,4 +1,4 @@
-const myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'firebase', 'chart.js']);
+const myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'firebase']);
 console.log('myApp sourced');
 
 myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
@@ -31,7 +31,7 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
         controller: 'AuthController as ac'    
     }).when('/reporting', {
         templateUrl: 'views/reporting.html',
-        controller: 'WordListController as wlc'
+        controller: 'WordController as wc'
     }).when('/thanks', {
         templateUrl: 'views/thanks.html',
         controller: 'HomeController as hc'
