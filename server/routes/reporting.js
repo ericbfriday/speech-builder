@@ -7,22 +7,37 @@ const pool = require('../modules/pool');
 
 router.post('/generate', function(req,res){
     console.log('Logging req.body in reporting/generate -> ', req.body);
-    instructor = req.body.date;
+    instructor = req.body.instructor;
     instructorName = req.body.instructorName;
     student = req.body.student;
     date = req.body.date;
 
-    // CURRENTLY TESTING POST AND WRITING QUERY
     pool.connect(function (conErr, client, done) {
         if (conErr) {
             console.log(conErr);
             res.sendStatus(500);
         } else {
             values = [];
-            reportGenQueryString = "";
+            reportGenQueryString = "SELECT * FROM word_reports WHERE instructor = '" + instructor + "' AND student = '" + student + "';";
+            console.log('logging reportGenQueryString -> ', reportGenQueryString);
+            
+            client.query(reportGenQueryString, values, function (error, result) {
+                done();
+                if (error) {
+                    console.log('Error in initial query for reporting.js POST route -> ', error);
+                    res.sendStatus(500);
+                } else if (result.rowCount === 0) {
+                    console.log('No results found!');
+                    res.status(204).send(result); // 204 sends 'no content' status message but indicates OK connection.
+                } else {
+                console.log('logging result in reporting/generate route -> ', result);
+                res.send(result);
+                }
+            });
         }
     });
 });
+
 router.post('/', function (req, res) {
     // console.log('req.body log -> ', req.body);
     word = req.body.word;

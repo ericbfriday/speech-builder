@@ -86,8 +86,11 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         sv.reportReqObj.date = newdate;
         $http.post('/reporting/generate', sv.reportReqObj)
         .then((response)=>{
-            console.log('Logging response inside getReport POST function -> ', response);
+            // console.log('Logging response inside getReport POST function -> ', response);
+            sv.report.data = response.data;
+
+            console.log('logging report -> ', sv.report);
+            
         });
     }; // end sv.getReport
-
 });
