@@ -1,6 +1,5 @@
 myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll, $http) {
-    console.log('in WordListController Controller');
-
+    // console.log('in WordListController Controller');
     const vm = this;
     vm.wordList = ListService.wordList;
     vm.definition = WordService.definition;
@@ -9,8 +8,6 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.definitions = WordService.definitions;
     vm.phoneticSpelling = WordService.phoneticSpelling;
     vm.studyLetter = '';
-
-    // testing transferering lettercontroller into wlc
     vm.lettersList = ListService.lettersList;
     vm.capitalLettersList = ListService.capitalLettersList;
 
@@ -24,7 +21,6 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
         ListService.getWords(letter);
 
     };
-    // end test
 
     vm.getWordList = function () {
         console.log('Inside getWordList function/WordList controller');

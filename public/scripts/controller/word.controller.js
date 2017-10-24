@@ -8,6 +8,7 @@ myApp.controller('WordController', function(WordService, ReportingService) {
     vm.definitions = WordService.definitions;
     vm.studyWord = WordService.wordToDefine.word;
     vm.phoneticSpelling = WordService.phoneticSpelling;
+    vm.progress = ReportingService.progress;
 
     vm.wordSearch = function(wordIn) {
         vm.studyWord = wordIn;

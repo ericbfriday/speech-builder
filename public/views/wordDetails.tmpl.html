@@ -28,7 +28,8 @@
                 <!-- Word Success Tracking -->
                 <h3>Opportunity Reporting</h3>
                 <div class="tracking-popup">
-                    <md-button ng-click="wc.opportunityReport('satisfactory')">Satisfactory</md-button><md-button ng-click="wc.opportunityReport('prompted')">Prompted</md-button><md-button ng-click="wc.opportunityReport('unsatisfactory')">Unsatisfactory</md-button>
+                    <md-button ng-click="wc.opportunityReport('satisfactory')">Satisfactory({{wc.progress.satisfactory}})</md-button><md-button ng-click="wc.opportunityReport('prompted')">Prompted({{wc.progress.prompted}})</md-button><md-button ng-click="wc.opportunityReport('unsatisfactory')">Unsatisfactory({{wc.progress.unsatisfactory}})</md-button><br>
+                    <span style="padding: 0px 0px 0px 15px;">Total: {{wc.progress.totalAttempts}}</span>
                 </div>
             </div>
         </md-dialog-content>

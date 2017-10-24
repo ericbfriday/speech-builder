@@ -47,7 +47,15 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             .then((response) => {
                 // console.log('response -->', response.data.rows[0]);
                 if (response.status === 202) {
-                    sv.progress = response.data.rows[0];
+                    sv.progress.instructor = response.data.rows[0].instructor;
+                    sv.progress.student = response.data.rows[0].student;
+                    sv.progress.date = response.data.rows[0].date;
+                    sv.progress.word = response.data.rows[0].word;
+                    sv.progress.totalAttempts = response.data.rows[0].totalattempts;
+                    sv.progress.satisfactory = response.data.rows[0].satisfactory;
+                    sv.progress.prompted = response.data.rows[0].prompted;
+                    sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
+
                     console.log('UPDATED! -> ', sv.progress);
                 } else if (response.status === 201) {
                     sv.progress = response.data.rows[0];

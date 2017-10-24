@@ -42,7 +42,7 @@ router.post('/', function (req, res) {
                             console.log(queryErr);
                             res.sendStatus(500);
                         } else {
-                            console.log(resultObj);
+                            // console.log(resultObj);
                             res.status(201).send(resultObj);
                             return;
                         }
@@ -54,7 +54,7 @@ router.post('/', function (req, res) {
                             console.log('query error -> ', queryErr);
                             res.sendStatus(500);
                         } else {
-                            console.log('match found -> ', resultObj);
+                            // console.log('match found -> ', resultObj);
                             res.status(202).send(resultObj);
                         }
                     }); // end else for client.query if/else statement
