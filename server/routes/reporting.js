@@ -16,7 +16,7 @@ router.post('/', function (req, res) {
     date = req.body.date;
     queries = [instructor, instructorName, student, word, date]; // does not currently include outcome.
     updateQueryString = "UPDATE word_reports SET totalattempts = totalattempts + 1, " + outcome + " = " + outcome + " + 1 WHERE instructor = '" + instructor + "' AND student = '" + student + "' AND word = '" + word + "';";
-    insertQueryString = "";
+    insertQueryString = "INSERT INTO word_reports (instructor, instructorname, student, word, date, totalattempts, " + outcome + ") VALUES ('" + instructor + "', '" + instructorName + "', '" + student + "','" + word + "', '" + date + "','1','1');";
     // console.log('Logging reporting POST route variables word, student, outcome, instructor, date -> ', word, student, outcome, instructor, instructorName, date);
 
     pool.connect(function (conErr, client, done) {
@@ -29,24 +29,33 @@ router.post('/', function (req, res) {
                 if (queryErr) {
                     console.log(queryErr);
                     res.sendStatus(500);
-                } else {
+                } else { 
                     reports = resultObj.rows;
                     for (i = 0; i < reports.length; i++) {
                         if (reports[i].instructor == instructor && reports[i].student == student && reports[i].date == date && reports[i].word == word) {
                             client.query(updateQueryString, function (queryErr, resultObj) { // Queries DB to update appropriate outcomes
                             done();
                             if (queryErr) {
-                                console.log(queryErr);
+                                console.log('query error -> ', queryErr);
                                 res.sendStatus(500);
                             } else {
-                                console.log(resultObj);
+                                console.log('match found -> ', resultObj);
                                 res.sendStatus(202);
                             }
                             });
+                            break;
                         } else {
                             console.log('No Match Found.');
                             // client.query(insertQueryString, function (queryErr, resultObj) { // Queries DB to update appropriate outcomes
                             //     done();
+                            //     if (queryErr) {
+                            //         console.log(queryErr);
+                            //         res.sendStatus(500);
+                            //     } else {
+                            //         console.log(resultObj);
+                            //         res.sendStatus(201);
+                            //         return;
+                            //     }
                             // });
                         }
                     }
