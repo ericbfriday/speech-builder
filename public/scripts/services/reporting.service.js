@@ -7,7 +7,6 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     sv.currentStudent = {
         data: ''
     };
-    sv.studiedWords = [];
     sv.wordObj = {
         instructor: '',
         instructorName: '',
@@ -56,12 +55,19 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                     sv.progress.prompted = response.data.rows[0].prompted;
                     sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
 
-                    console.log('UPDATED! -> ', sv.progress);
+                    // console.log('UPDATED! -> ', sv.progress);
                 } else if (response.status === 201) {
-                    sv.progress = response.data.rows[0];
-                    console.log('CREATED! -> ', sv.progress);
+                    sv.progress.instructor = response.data.rows[0].instructor;
+                    sv.progress.student = response.data.rows[0].student;
+                    sv.progress.date = response.data.rows[0].date;
+                    sv.progress.word = response.data.rows[0].word;
+                    sv.progress.totalAttempts = response.data.rows[0].totalattempts;
+                    sv.progress.satisfactory = response.data.rows[0].satisfactory;
+                    sv.progress.prompted = response.data.rows[0].prompted;
+                    sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
+                    // console.log('CREATED! -> ', sv.progress);
                 } else {
-                    console.log('Error in POST route reporting.service.js -> ', response);
+                    console.log('Catching error in POST route reporting.service.js -> ', response);
                 }
             }); // end POST
     };

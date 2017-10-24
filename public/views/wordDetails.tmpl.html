@@ -11,15 +11,13 @@
         </md-toolbar>
 
         <md-dialog-content>
-            <div class="md-dialog-content"> <!-- is this necessary with the current wrapper? -->
+            <div class="md-dialog-content">
                 <h3>Phonetic Spelling</h3>
                 <p>{{wc.phoneticSpelling.data}}</p>
                 <hr>
-                <!-- Play audio button below. -->
-                <h3>Audio</h3>
+                <h3>Audio Pronunciation</h3>
                 <span flex></span><md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
                 <hr>
-                <!-- Definition Lookup -->
                 <h3>Definition</h3>
                 <ul>
                 <div class="definition" ng-repeat="def in wc.definitions.data"><li>{{def}}.</li></div>
@@ -29,7 +27,7 @@
                 <h3>Opportunity Reporting</h3>
                 <div class="tracking-popup">
                     <md-button ng-click="wc.opportunityReport('satisfactory')">Satisfactory({{wc.progress.satisfactory}})</md-button><md-button ng-click="wc.opportunityReport('prompted')">Prompted({{wc.progress.prompted}})</md-button><md-button ng-click="wc.opportunityReport('unsatisfactory')">Unsatisfactory({{wc.progress.unsatisfactory}})</md-button><br>
-                    <span style="padding: 0px 0px 0px 15px;">Total: {{wc.progress.totalAttempts}}</span>
+                    <span style="padding: 0px 0px 0px 14px;">Total Attempts: {{wc.progress.totalAttempts}}</span>
                 </div>
             </div>
         </md-dialog-content>
