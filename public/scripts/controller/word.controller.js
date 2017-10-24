@@ -1,5 +1,5 @@
 myApp.controller('WordController', function(WordService, ReportingService) {
-    console.log('in Word Controller');
+    // console.log('in Word Controller');
 
     const vm = this;
     vm.definition = WordService.definition;

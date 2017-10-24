@@ -13,18 +13,18 @@ myApp.service('ListService', function ($http) {
 
     sv.getWords = function (letterObj) {
         sv.letter = letterObj.letter;
-        console.log('in list.service.js getWords()', sv.letter);
+        // console.log('in list.service.js getWords()', sv.letter);
         $http({
             method: 'GET',
             url: '/words/' + sv.letter
         }).then(function (response) {
-            console.log('response', response);
+            // console.log('response', response);
             sv.wordList.data = response.data;
         });
     };
 
     sv.getLetters = function () {
-        console.log('in list.service.js getLetters()');
+        // console.log('in list.service.js getLetters()');
         $http({
             method: 'GET',
             url: '/letters'
