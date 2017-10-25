@@ -1,8 +1,11 @@
 const myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'firebase', 'md.data.table', 'chart.js']);
 console.log('myApp sourced');
 
-myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, ChartJsProvider) {
   $locationProvider.hashPrefix('');
+
+  ChartJsProvider
+  .setOptions({ chartColors: ['#64dd17', '#FDB45C', '#d32f2f', '#803690', '#00ADF9', '#949FB1', '#DCDCDC']});
 
   $mdThemingProvider
   .theme('default')

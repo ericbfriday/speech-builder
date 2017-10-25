@@ -26,19 +26,11 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         prompted: 0,
         unsatisfactory: 0
     };
-
     sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''};
     sv.soloReportReqObj = {instructor: '', word: '', student: ''};
-    sv.soloProgress = {
-        instructor: '',
-        student: '',
-        date: '',
-        word: '',
-        totalAttempts: 0,
-        satisfactory: 0,
-        prompted: 0,
-        unsatisfactory: 0
-    };
+    sv.soloProgress = {data: []};
+    sv.labels = [];
+    sv.data = [[],[],[]];
 
     var dateObj = new Date();
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -137,15 +129,23 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         sv.soloReportReqObj.word = word;
         $http.post('/reporting/solochart', sv.soloReportReqObj)
         .then((response) => {
-            console.log('logging solochart response -> ', response);
-            sv.soloProgress.instructor = response.data.rows[0].instructor;
-            sv.soloProgress.student = response.data.rows[0].student;
-            sv.soloProgress.date = response.data.rows[0].date;
-            sv.soloProgress.word = response.data.rows[0].word;
-            sv.soloProgress.totalAttempts = response.data.rows[0].totalattempts;
-            sv.soloProgress.satisfactory = response.data.rows[0].satisfactory;
-            sv.soloProgress.prompted = response.data.rows[0].prompted;
-            sv.soloProgress.unsatisfactory = response.data.rows[0].unsatisfactory;
+            sv.soloProgress = response.data.rows;
+            console.log('logging sv.soloProgress -> ', sv.soloProgress);
+            sv.chartDataUpdate(sv.soloProgress);
         });
-    };
+    }; // end getSoloReport
+
+    sv.chartDataUpdate = function (report) {
+        console.log('logging report in chartDataUpdate -> ', report);
+
+        for (let i = 0; i < report.length; i++){
+            // console.log('report[i].satisfactory', report[i].satisfactory);
+            sv.labels.push(report[i].date); // working as intended
+            sv.data[0].push(report[i].satisfactory);
+            sv.data[1].push(report[i].prompted);
+            sv.data[2].push(report[i].prompted);
+            // console.log('sv.data', sv.data);
+        }
+        // console.log('logging sv.labels and sv.data -> ', sv.labels, sv.data);
+    }; // end chartDataUpdate
 });

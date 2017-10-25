@@ -15,20 +15,20 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
   vm.soloWordSearch = function (wordIn) {
     vm.studyWord = wordIn;
     ReportingService.getSoloReport(vm.studyWord);
-    // console.log('log soloProgress ', vm.soloProgress);
+    // ReportingService.chartDataUpdate(vm.soloProgress);
+    };
+
+  vm.chartDataUpdate = function (report){
+
   };
  
   // need to list dates in ascending order
   // series labels correspond to $scope.data index 0, 1, 2.
-  $scope.labels = ['2017/10/22', '2017/10/23', '2017/10/24', '2017/10/25'];
+  $scope.labels = ReportingService.labels;
   $scope.series = ['Satisfactory', 'Prompted', 'Unsatisfactory'];
-  $scope.data = [
-    [12,6,7,8],
-    [8,4,2,2],
-    [4,1,1,0]
-  ];
+  $scope.data = ReportingService.data;
 
-    $scope.onClick = function (points, evt) {
+  $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
 
