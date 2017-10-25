@@ -1,3 +1,28 @@
 <section ng-init="wc.getReport()">
-    {{wc.report.data.rows}}
+    <div flex="20"></div>
+    <div md-padding flex="60">
+        <md-table-container>
+            <table md-table>
+                <thead md-head md-order="myOrder">
+                    <th md-column>Word</th>
+                    <th md-column md-numeric>Total Attempts</th>
+                    <th md-column md-numeric>Satisfactory</th>
+                    <th md-column md-numeric>Prompted</th>
+                    <th md-column md-numeric>Unsatisfactory</th>
+                    <th md-column>Date</th>
+                </thead>
+                <tbody md-body>
+                    <tr md-select="rows" md-select-id="word" md-auto-select ng-repeat="rows in wc.report.data.rows | orderBy:'-date'">
+                        <td md-cell>{{rows.word}}</td>
+                        <td md-cell>{{rows.totalattempts}}</td>
+                        <td md-cell>{{rows.satisfactory}}</td>
+                        <td md-cell>{{rows.prompted}}</td>
+                        <td md-cell>{{rows.unsatisfactory}}</td>
+                        <td md-cell>{{rows.date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+    </div>
+    <div flex="20"></div>
 </section>

@@ -31,4 +31,12 @@ myApp.controller('WordController', function(WordService, ReportingService) {
         console.log('logging vm.getReport Call');
         ReportingService.getReport();
     };
+
+    vm.selected = [];
+    
+    vm.query = {
+      order: 'word',
+      limit: 10,
+      page: 1
+    };
  });

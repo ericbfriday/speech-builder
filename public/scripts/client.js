@@ -1,4 +1,4 @@
-const myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'firebase']);
+const myApp = angular.module('myApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'firebase', 'md.data.table']);
 console.log('myApp sourced');
 
 myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
