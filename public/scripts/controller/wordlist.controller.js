@@ -43,7 +43,7 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
 
         vm.wordSearch = function (word) {
             vm.studyWord = word.study_word;
-            console.log('logging studyWord, ', vm.studyWord);
+            // console.log('logging studyWord, ', vm.studyWord);
             WordService.findDefinition(vm.studyWord);
             vm.mp3URL = WordService.wordResponse.data.lexicalEntries.pronunciations[0].audioFile;
         };

@@ -17,10 +17,6 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
     ReportingService.getSoloReport(vm.studyWord);
     // ReportingService.chartDataUpdate(vm.soloProgress);
     };
-
-  vm.chartDataUpdate = function (report){
-
-  };
  
   // need to list dates in ascending order
   // series labels correspond to $scope.data index 0, 1, 2.
@@ -38,13 +34,15 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
           id: 'y-axis-1',
           type: 'linear',
           display: true,
-          position: 'left'
+          position: 'left',
+          ticks: {min:0}
         },
         {
           id: 'y-axis-2',
           type: 'linear',
           display: true,
           position: 'left'
+          
         },
         {
           id: 'y-axis-3',
@@ -53,6 +51,7 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
           position: 'right'
         }
       ]
+      
     }
   };
 

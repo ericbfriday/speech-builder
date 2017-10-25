@@ -6,7 +6,7 @@ require('dotenv').config();
 const pool = require('../modules/pool');
 
 router.post('/generate', function(req,res){
-    console.log('Logging req.body in reporting/generate -> ', req.body);
+    // console.log('Logging req.body in reporting/generate -> ', req.body);
     instructor = req.body.instructor;
     instructorName = req.body.instructorName;
     student = req.body.student;
@@ -19,7 +19,7 @@ router.post('/generate', function(req,res){
         } else {
             values = [];
             reportGenQueryString = "SELECT * FROM word_reports WHERE instructor = '" + instructor + "' AND student = '" + student + "';";
-            console.log('logging reportGenQueryString -> ', reportGenQueryString);
+            // console.log('logging reportGenQueryString -> ', reportGenQueryString);
             
             client.query(reportGenQueryString, values, function (error, result) {
                 done();
@@ -30,7 +30,7 @@ router.post('/generate', function(req,res){
                     console.log('No results found!');
                     res.status(204).send(result); // 204 sends 'no content' status message but indicates OK connection.
                 } else {
-                console.log('logging result in reporting/generate route -> ', result);
+                // console.log('logging result in reporting/generate route -> ', result);
                 res.send(result);
                 }
             });
@@ -49,7 +49,7 @@ router.post('/solochart', function(req, res){
                 res.sendStatus(500);
         } else {
             values = [instructor, student, word];
-            queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 ORDER BY date DESC;";
+            queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 ORDER BY date ASC;";
             client.query(queryString, values, function(error, result) {
                 done();
                 if (error) {
@@ -90,7 +90,7 @@ router.post('/opportunityWord', function(req,res){
                     console.log('No results found!');
                     res.status(204).send(result); // 204 sends 'no content' status message but indicates OK connection.
                 } else {
-                    console.log('logging result in reporting.js -> ', result);
+                    // console.log('logging result in reporting.js -> ', result);
                     res.status(200).send(result);
                 }
             });
