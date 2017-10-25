@@ -27,7 +27,18 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         unsatisfactory: 0
     };
 
-    sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''}
+    sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''};
+    sv.soloReportReqObj = {instructor: '', word: '', student: ''};
+    sv.soloProgress = {
+        instructor: '',
+        student: '',
+        date: '',
+        word: '',
+        totalAttempts: 0,
+        satisfactory: 0,
+        prompted: 0,
+        unsatisfactory: 0
+    };
 
     var dateObj = new Date();
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -79,7 +90,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     }; // end sv.opportunityReport
 
     sv.studentTracker = function (name) {
-        console.log('logging student name', name.name);
+        // console.log('logging student name', name.name);
         sv.currentStudent.data = name.name;
     }; // end sv.studentTracker
 
@@ -108,7 +119,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         sv.progress.unsatisfactory = 0;
         $http.post('/reporting/opportunityWord', sv.opportunityWord)
         .then((response)=>{
-            console.log('logging response -> ', response);
+            // console.log('logging response -> ', response);
             sv.progress.instructor = response.data.rows[0].instructor;
             sv.progress.student = response.data.rows[0].student;
             sv.progress.date = response.data.rows[0].date;
@@ -118,5 +129,23 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             sv.progress.prompted = response.data.rows[0].prompted;
             sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
         });
-    }
+    };
+
+    sv.getSoloReport = function (word) {
+        sv.soloReportReqObj.student = sv.currentStudent;
+        sv.soloReportReqObj.instructor = firebase.auth().currentUser.uid;
+        sv.soloReportReqObj.word = word;
+        $http.post('/reporting/solochart', sv.soloReportReqObj)
+        .then((response) => {
+            console.log('logging solochart response -> ', response);
+            sv.soloProgress.instructor = response.data.rows[0].instructor;
+            sv.soloProgress.student = response.data.rows[0].student;
+            sv.soloProgress.date = response.data.rows[0].date;
+            sv.soloProgress.word = response.data.rows[0].word;
+            sv.soloProgress.totalAttempts = response.data.rows[0].totalattempts;
+            sv.soloProgress.satisfactory = response.data.rows[0].satisfactory;
+            sv.soloProgress.prompted = response.data.rows[0].prompted;
+            sv.soloProgress.unsatisfactory = response.data.rows[0].unsatisfactory;
+        });
+    };
 });

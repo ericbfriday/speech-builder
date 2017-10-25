@@ -38,6 +38,35 @@ router.post('/generate', function(req,res){
     });
 });
 
+router.post('/solochart', function(req, res){ 
+    // retrieves all reports for a given instructor, student, and word.
+    word = req.body.word;
+    instructor = req.body.instructor;
+    student = req.body.student.data;
+    pool.connect(function(conErr, client, done){
+        if(conErr){
+                console.log('Error -> ', conErr);
+                res.sendStatus(500);
+        } else {
+            values = [instructor, student, word];
+            queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 ORDER BY date DESC;";
+            client.query(queryString, values, function(error, result) {
+                done();
+                if (error) {
+                    console.log('Error in initial query for reporting.js POST route -> ', error);
+                    res.sendStatus(500);
+                } else if (result.rowCount === 0) {
+                    console.log('No results found!');
+                    res.status(204).send(result); // 204 sends 'no content' status message but indicates OK connection.
+                } else {
+                    console.log('logging result in reporting.js -> ', result);
+                    res.status(200).send(result);
+                }
+            });
+        }
+    });
+});
+
 router.post('/opportunityWord', function(req,res){
     console.log('Logging req.body in /opportunityWord -> ', req.body);
     word = req.body.word;
@@ -119,9 +148,9 @@ router.post('/', function (req, res) {
                             res.status(202).send(resultObj);
                         }
                     }); // end else for client.query if/else statement
-                }; // end else for client.query if/else statement
+                } // end else for client.query if/else statement
             }); // end client.query
-        }; // end else for pool.connect function in reporting.js POST route
+        } // end else for pool.connect function in reporting.js POST route
     }); // end pool.connect function in reporting.js POST route
 }); // end POST route
 

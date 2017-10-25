@@ -6,7 +6,7 @@
 // } // end navCtrl()
 
 myApp.controller('NavBarController', function ($location, WordService, ReportingService) {
-    console.log('navbar controller loaded');
+    // console.log('navbar controller loaded');
 
     var vm = this;
     vm.currentNavItem = $location.path();

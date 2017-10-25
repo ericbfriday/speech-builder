@@ -15,7 +15,6 @@ myApp.controller('WordController', function(WordService, ReportingService) {
     vm.wordSearch = function(wordIn) {
         vm.studyWord = wordIn;
         WordService.findDefinition(wordIn);
-        // vm.mp3URL = WordService.wordResponse.data.lexicalEntries.pronunciations[0].audioFile;
     };
 
     vm.playAudio = function() {
@@ -30,7 +29,7 @@ myApp.controller('WordController', function(WordService, ReportingService) {
 
     vm.getOpportunities = function(word){
         ReportingService.getOpportunities(word);
-    }
+    };
 
     vm.getReport = function(){
         console.log('logging vm.getReport Call');
