@@ -1,0 +1,32 @@
+<section ng-init="wc.getReport()">
+    <h1 style="color: rgba(0, 0, 0, 0.65); padding: 0em 1em 0em 1em;">Diction report for {{wc.report.data.rows[0].student}} as of {{wc.report.data.rows[0].date}}</h1>
+    <div layout="row"><div flex="10" layout-fill></div>
+    <div md-padding flex="80">
+        <md-table-container>
+            <table md-table>
+                <thead md-head md-order="myOrder">
+                    <th md-column>Word</th>
+                    <th md-column md-numeric>Total Attempts</th>
+                    <th md-column md-numeric>Satisfactory</th>
+                    <th md-column md-numeric>Prompted</th>
+                    <th md-column md-numeric>Unsatisfactory</th>
+                    <th md-column>Date</th>
+                </thead>
+                <tbody md-body>
+                    <tr style="margin: 4px 4px 4px 4px;"md-select="rows" md-select-id="word" md-auto-select ng-repeat="rows in wc.report.data.rows | orderBy:'-date' | limitTo: 10: (myPage - 1) * 10"> <!-- | limitTo: 10: (myPage - 1) * 10-->
+                        <td md-cell>{{rows.word}}</td>
+                        <td md-cell>{{rows.totalattempts}}</td>
+                        <td md-cell>{{rows.satisfactory}}</td>
+                        <td md-cell>{{rows.prompted}}</td>
+                        <td md-cell>{{rows.unsatisfactory}}</td>
+                        <td md-cell>{{rows.date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+        <md-table-pagination md-limit="wc.query.limit" md-limit-options="[10, 20, 50]" md-page="wc.query.page" md-total="{{wc.report.data.rows.length}}" md-page-select></md-table-pagination>        
+    </div>
+    
+    <div flex="10" layout-fill></div>
+</div>
+</section>

@@ -1,6 +1,5 @@
-myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll) {
-    console.log('in WordListController Controller');
-
+myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll, $http) {
+    // console.log('in WordListController Controller');
     const vm = this;
     vm.wordList = ListService.wordList;
     vm.definition = WordService.definition;
@@ -8,30 +7,30 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.mp3URL = WordService.mp3URL;
     vm.definitions = WordService.definitions;
     vm.phoneticSpelling = WordService.phoneticSpelling;
-
-    // testing transferering lettercontroller into wlc
+    vm.studyLetter = '';
     vm.lettersList = ListService.lettersList;
     vm.capitalLettersList = ListService.capitalLettersList;
 
-    vm.getLetters = function(){
-        console.log('Inside getLetters function/letters controller');
+    vm.getLetters = function () {
+        // console.log('Inside getLetters function/letters controller');
         ListService.getLetters();
     };
 
-    vm.getLetterWords = function(letter) {
-        console.log('letter ', letter);
+    vm.getLetterWords = function (letter) {
+        // console.log('letter ', letter);
         ListService.getWords(letter);
 
     };
-    // end test
 
     vm.getWordList = function () {
-        console.log('Inside getWordList function/WordList controller');
+        // console.log('Inside getWordList function/WordList controller');
         ListService.getWords();
     };
 
     vm.detailPopup = function (ev, word) {
-        // console.log('logging word in detailPopup ', word);    
+        // console.log('logging word in detailPopup ', word);   
+        vm.studyLetter = word.study_letter; 
+        // console.log('logging vm.studyLetter', vm.studyLetter);
 
         $mdDialog.show({
             controller: DialogController,
@@ -45,11 +44,10 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
         vm.wordSearch = function (word) {
             vm.studyWord = word.study_word;
             console.log('logging studyWord, ', vm.studyWord);
-              WordService.findDefinition(vm.studyWord);
+            WordService.findDefinition(vm.studyWord);
             vm.mp3URL = WordService.wordResponse.data.lexicalEntries.pronunciations[0].audioFile;
         };
 
-        // runs wordSearch on clicked word
         vm.wordSearch(word);
     };
 
@@ -58,10 +56,4 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
             $mdDialog.hide();
         };
     }
-
-    vm.scrollTo = function(id) {
-        $location.hash(id);
-        $anchorScroll();
-     };
-
 });

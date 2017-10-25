@@ -12,7 +12,7 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
         console.log("Authentication failed: ", error);
       });
     };
-  
+
     // This code runs whenever the user changes authentication states
     // e.g. whevenever the user logs in or logs out
     // this is where we put most of our logic so that we don't duplicate
@@ -40,8 +40,17 @@ myApp.controller("AuthController", function($firebaseAuth, $http) {
   
     // This code runs when the user logs out
     self.logOut = function(){
+      // OG sign out method below.
       auth.$signOut().then(function(){
         console.log('Logging the user out!');
+      // });
+      // new sign out method below.
+      // firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log('log out successful!');
+      }).catch(function(error) {
+        // An error happened.
+        console.log('error logging the user out with google!', error);
       });
     };
   });

@@ -5,7 +5,8 @@ myApp.service('WordService', function($http){
     sv.wordResponse = {data: []};
     sv.mp3URL = {};
     sv.definitions = {data: []};
-    sv.phoneticSpelling = {data: ""};
+    sv.phoneticSpelling = {data: ''};
+    sv.studentName = {data: ''};
 
     sv.findDefinition = function(wordIn) {
         // console.log('logging wordIn (service) ', wordIn);
@@ -40,9 +41,9 @@ myApp.service('WordService', function($http){
             // provides shorter location for array looping
             sv.definitionLocation = response.data.results[0].lexicalEntries[0].entries;
             // loops through arrays to extract definitions
-            for (var i = 0; i < sv.definitionLocation.length; i ++){
+            for (var i = 0; i <= sv.definitionLocation.length; i ++){
                 // console.log('logging definitions ', sv.definitionLocation[i]);
-                for (var j = 0; j < sv.definitionLocation[i].senses.length; i++){
+                for (var j = 0; j <= sv.definitionLocation[i].senses.length; i++){
                     // console.log('loggin senses ', sv.definitionLocation[i].senses[j].definitions[j]);
                     sv.definitions.data.push(sv.definitionLocation[i].senses[j].definitions[j]);
                     // console.log('loggin sv.definitions ->', sv.definitions); 

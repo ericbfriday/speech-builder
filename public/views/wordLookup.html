@@ -23,6 +23,12 @@
           <li>{{def}}.</li>
         </div>
       </ul>
+      <hr>
+      <h1>Opportunity Reporting</h1>
+      <div class="opportunity Reporting">
+          <md-button ng-click="wc.opportunityReport('satisfactory')">Satisfactory({{wc.progress.satisfactory}})</md-button><md-button ng-click="wc.opportunityReport('prompted')">Prompted({{wc.progress.prompted}})</md-button><md-button ng-click="wc.opportunityReport('unsatisfactory')">Unsatisfactory({{wc.progress.unsatisfactory}})</md-button><br>
+          <span style="padding: 0px 0px 0px 14px;">Total Attempts: {{wc.progress.totalAttempts}}</span>
+      </div>
     </md-card-content>
     </md-card>
   </md-content>

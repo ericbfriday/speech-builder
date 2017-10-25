@@ -7,25 +7,34 @@
 
   <!-- Other scripts below -->
   <script src="/vendors/angular.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script> -->
+
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script src="/vendors/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script> -->
   <!-- AngularFire -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js"></script>
+  <script src="/vendors/angularfire.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js"></script> -->
 
   <script src="/vendors/angular-route.min.js"></script>
   <script src="/vendors/angular-aria.min.js"></script>
   <script src="/vendors/angular-animate.min.js"></script>
   <script src="/vendors/angular-messages.min.js"></script>
   <script src="/vendors/angular-material.min.js"></script>
-  <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script> -->
-
   <!-- Basic Angular sourcing for live deploy -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.4/angular-messages.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script> -->
+
+  <!-- Charting scripts -->
+  <!-- <script src="/vendors/Chart.min.js"></script> -->
+  <!-- <script src="/vendors/angular-chart.min.js"></script> -->
+  <!-- Charting scripts CDNs for deployment -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script> -->
+  <script src="/vendors/md-data-table.min.js"></script>
 
   <!-- Firebase Config -->
   <script src="scripts/config.js"></script>
@@ -34,8 +43,11 @@
   <script src="scripts/client.js"></script>
 
   <!-- vv Required for angular material -->
-  <link rel="stylesheet" href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.css">
-  <!-- <link rel="stylesheet" href="unpkg.com/material-components-web@latest/dist/material-components-web.css"> -->
+  <link rel="stylesheet" href="/styles/angular-material.min.css">
+  <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.min.css"> -->
+
+  <link rel="stylesheet" href="/styles/angular-chart.min.css">
+  <link rel="stylesheet" href="/styles/md-data-table.min.css">
 
   <link rel="stylesheet" href="/styles/styles.css">
 
@@ -45,9 +57,11 @@
   <script src="/scripts/controller/navbar.controller.js"></script>
   <script src="/scripts/controller/letters.controller.js"></script>
   <script src="/scripts/controller/wordlist.controller.js"></script>
-  <script src="/scripts/controller/card.controller.js"></script>
+  <script src="/scripts/controller/reporting.controller.js"></script>
+  <script src="/scripts/controller/chart.controller.js"></script>
   <script src="/scripts/services/word.service.js"></script>
   <script src="/scripts/services/list.service.js"></script>
+  <script src="/scripts/services/reporting.service.js"></script>
 </head>
 
 <body ng-app="myApp" >

@@ -10,8 +10,14 @@
             <md-nav-item md-nav-href="#/wordlist" name="/wordlist" value="wordlist" aria-label="Word List">
                 Word Lists
             </md-nav-item>
+            <md-nav-item md-nav-href="#/reporting" name="/reporting" value="reporting" aria-label="Reporting">
+                Reports
+            </md-nav-item>
+            <!-- <md-nav-item md-nav-href="#/chart" name="/chart" value="chart" aria-label="Chart">
+                Chart
+            </md-nav-item> -->
             <md-nav-item md-nav-href="#/privateData" name="/privateData" value="privateData" aria-label="Authorization Testing">
-                Auth Test (Reporting)
+                Auth Test
             </md-nav-item>
             <md-nav-item md-nav-href="#/login" name="/login" value="login" aria-label="Log In or Log Out">
                 Login/Logout
@@ -19,6 +25,11 @@
             <md-nav-item md-nav-href="#/thanks" name="/thanks" value="thanks" aria-label="Thank you page">
                 Special Thanks
             </md-nav-item>
+            <md-input-container flex="15">
+                <label>Student Name</label>
+                <input name="name" ng-model="nc.student.name">
+            </md-input-container>
+            <md-button style="margin:0;padding:0;height:48px;" ng-click="nc.trackStudent(nc.student.name)">Track</md-button>
         </md-nav-bar>
     </md-content>
 </div>

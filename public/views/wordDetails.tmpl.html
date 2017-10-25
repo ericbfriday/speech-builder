@@ -1,5 +1,5 @@
 <md-dialog aria-label="Word details">
-    <form ng-cloak ng-controller="WordController as wc">
+    <form ng-cloak ng-controller="WordController as wc" ng-init="wc.getOpportunities(wc.studyWord)">
         <md-toolbar>
             <div class="md-toolbar-tools">
                 <h2 style="text-transform: uppercase;">{{wc.studyWord}}</h2>
@@ -15,22 +15,20 @@
                 <h3>Phonetic Spelling</h3>
                 <p>{{wc.phoneticSpelling.data}}</p>
                 <hr>
-                <!-- URL for MP3 Extraction -->
-                <h3>Audio</h3>
-                <!-- <p>{{wc.mp3URL.data}}</p> -->
+                <h3>Audio Pronunciation</h3>
                 <span flex></span><md-button ng-click="wc.playAudio()">Play Pronunciation</md-button>
-                <!-- <audio controls>
-                        <source id="player" ng-src="{{wc.mp3URL.data}}" type="audio/mpeg"> Your browser does not support the audio element.
-                      </audio>
-                    <div ng-repeat="audio in event.audios">
-                    <div audios code="audio"></div>
-                </div> -->
                 <hr>
-                <!-- Definition Lookup -->
                 <h3>Definition</h3>
                 <ul>
                 <div class="definition" ng-repeat="def in wc.definitions.data"><li>{{def}}.</li></div>
-            </ul>
+                </ul>
+                <hr>
+                <!-- Word Success Tracking -->
+                <h3>Opportunity Reporting</h3>
+                <div class="tracking-popup">
+                    <md-button ng-click="wc.opportunityReport('satisfactory')">Satisfactory({{wc.progress.satisfactory}})</md-button><md-button ng-click="wc.opportunityReport('prompted')">Prompted({{wc.progress.prompted}})</md-button><md-button ng-click="wc.opportunityReport('unsatisfactory')">Unsatisfactory({{wc.progress.unsatisfactory}})</md-button><br>
+                    <span style="padding: 0px 0px 0px 14px;">Total Attempts: {{wc.progress.totalAttempts}}</span>
+                </div>
             </div>
         </md-dialog-content>
 
