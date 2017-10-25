@@ -1,5 +1,5 @@
 <md-dialog aria-label="Word details">
-    <form ng-cloak ng-controller="WordController as wc">
+    <form ng-cloak ng-controller="WordController as wc" ng-init="wc.getOpportunities(wc.studyWord)">
         <md-toolbar>
             <div class="md-toolbar-tools">
                 <h2 style="text-transform: uppercase;">{{wc.studyWord}}</h2>

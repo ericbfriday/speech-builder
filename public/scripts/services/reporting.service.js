@@ -7,6 +7,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     sv.currentStudent = {
         data: ''
     };
+    sv.opportunityWord = {instructor: '', student: '', word: '', date: ''};
     sv.wordObj = {
         instructor: '',
         instructorName: '',
@@ -25,6 +26,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         prompted: 0,
         unsatisfactory: 0
     };
+
     sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''}
 
     var dateObj = new Date();
@@ -41,6 +43,10 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         sv.wordObj.word = studyWord;
         sv.wordObj.date = newdate;
         sv.wordObj.outcome = outcome;
+        sv.progress.totalAttempts = 0;
+        sv.progress.satisfactory = 0;
+        sv.progress.prompted = 0;
+        sv.progress.unsatisfactory = 0;
         console.log('logging wordObj -> ', sv.wordObj);
 
         $http.post('/reporting', sv.wordObj)
@@ -55,7 +61,6 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                     sv.progress.satisfactory = response.data.rows[0].satisfactory;
                     sv.progress.prompted = response.data.rows[0].prompted;
                     sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
-
                     // console.log('UPDATED! -> ', sv.progress);
                 } else if (response.status === 201) {
                     sv.progress.instructor = response.data.rows[0].instructor;
@@ -88,9 +93,30 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         .then((response)=>{
             // console.log('Logging response inside getReport POST function -> ', response);
             sv.report.data = response.data;
-
             console.log('logging report -> ', sv.report);
-            
         });
     }; // end sv.getReport
+
+    sv.getOpportunities = function(word) {
+        sv.opportunityWord.instructor =  firebase.auth().currentUser.uid;
+        sv.opportunityWord.student = sv.currentStudent.data;
+        sv.opportunityWord.word = word;
+        sv.opportunityWord.date = newdate;
+        sv.progress.totalAttempts = 0;
+        sv.progress.satisfactory = 0;
+        sv.progress.prompted = 0;
+        sv.progress.unsatisfactory = 0;
+        $http.post('/reporting/opportunityWord', sv.opportunityWord)
+        .then((response)=>{
+            console.log('logging response -> ', response);
+            sv.progress.instructor = response.data.rows[0].instructor;
+            sv.progress.student = response.data.rows[0].student;
+            sv.progress.date = response.data.rows[0].date;
+            sv.progress.word = response.data.rows[0].word;
+            sv.progress.totalAttempts = response.data.rows[0].totalattempts;
+            sv.progress.satisfactory = response.data.rows[0].satisfactory;
+            sv.progress.prompted = response.data.rows[0].prompted;
+            sv.progress.unsatisfactory = response.data.rows[0].unsatisfactory;
+        });
+    }
 });

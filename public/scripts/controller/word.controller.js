@@ -10,6 +10,7 @@ myApp.controller('WordController', function(WordService, ReportingService) {
     vm.phoneticSpelling = WordService.phoneticSpelling;
     vm.progress = ReportingService.progress;
     vm.report = ReportingService.report;
+    vm.opportunityWordCount = ReportingService.opportunityWordCount;
 
     vm.wordSearch = function(wordIn) {
         vm.studyWord = wordIn;
@@ -26,6 +27,10 @@ myApp.controller('WordController', function(WordService, ReportingService) {
         // console.log('Logging opportunity outcome', outcome);
         ReportingService.opportunityReport(vm.studyWord, outcome);
     }; 
+
+    vm.getOpportunities = function(word){
+        ReportingService.getOpportunities(word);
+    }
 
     vm.getReport = function(){
         console.log('logging vm.getReport Call');
