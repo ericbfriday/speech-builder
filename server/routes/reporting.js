@@ -47,7 +47,7 @@ router.post('/', function (req, res) {
     instructorName = req.body.instructorName;
     date = req.body.date;
 
-    updateQueryString = "UPDATE word_reports SET totalattempts = totalattempts + 1, " + outcome + " = " + outcome + " + 1 WHERE instructor = '" + instructor + "' AND student = '" + student + "' AND word = '" + word + "' RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
+    updateQueryString = "UPDATE word_reports SET totalattempts = totalattempts + 1, " + outcome + " = " + outcome + " + 1 WHERE instructor = '" + instructor + "' AND student = '" + student + "' AND word = '" + word + "'  AND date = '" + date + "'RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
     insertQueryString = "INSERT INTO word_reports (instructor, instructorname, student, word, date, totalattempts, " + outcome + ") VALUES ('" + instructor + "', '" + instructorName + "', '" + student + "','" + word + "', '" + date + "','1','1') RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
     searchQueryString = "FIND * FROM word_reports WHERE instructor = $1 student = $3 word = $4 date = $5;";
     // console.log('Logging reporting POST route variables word, student, outcome, instructor, date -> ', word, student, outcome, instructor, instructorName, date);
