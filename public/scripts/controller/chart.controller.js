@@ -17,24 +17,21 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
     ReportingService.getSoloReport(vm.studyWord);
     // console.log('log soloProgress ', vm.soloProgress);
   };
-
-
-  // Charts.js template chart below.
-
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-  $scope.series = ['Series A', 'Series B'];
+ 
+  // need to list dates in ascending order
+  // series labels correspond to $scope.data index 0, 1, 2.
+  $scope.labels = ['2017/10/22', '2017/10/23', '2017/10/24', '2017/10/25'];
+  $scope.series = ['Satisfactory', 'Prompted', 'Unsatisfactory'];
   $scope.data = [
-    [65, 59, 73, 65, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
+    [12,6,7,8],
+    [8,4,2,2],
+    [4,1,1,0]
   ];
-  $scope.onClick = function (points, evt) {
+
+    $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
-  $scope.datasetOverride = [{
-    yAxisID: 'y-axis-1'
-  }, {
-    yAxisID: 'y-axis-2'
-  }];
+
   $scope.options = {
     scales: {
       yAxes: [{
@@ -47,9 +44,56 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
           id: 'y-axis-2',
           type: 'linear',
           display: true,
+          position: 'left'
+        },
+        {
+          id: 'y-axis-3',
+          type: 'linear',
+          display: true,
           position: 'right'
         }
       ]
     }
   };
+
+  //   Ignoreing datasetOverride to see if it's relevant to my chart.
+  //   $scope.datasetOverride = [{
+  //   yAxisID: 'y-axis-1'
+  // }, {
+  //   yAxisID: 'y-axis-2'
+  // }];
+
+  // Charts.js template chart below.
+
+  // $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+  // $scope.series = ['Series A', 'Series B'];
+  // $scope.data = [
+  //   [65, 59, 73, 65, 56, 55, 40],
+  //   [28, 48, 40, 19, 86, 27, 90]
+  // ];
+  // $scope.onClick = function (points, evt) {
+  //   console.log(points, evt);
+  // };
+  // $scope.datasetOverride = [{
+  //   yAxisID: 'y-axis-1'
+  // }, {
+  //   yAxisID: 'y-axis-2'
+  // }];
+  // $scope.options = {
+  //   scales: {
+  //     yAxes: [{
+  //         id: 'y-axis-1',
+  //         type: 'linear',
+  //         display: true,
+  //         position: 'left'
+  //       },
+  //       {
+  //         id: 'y-axis-2',
+  //         type: 'linear',
+  //         display: true,
+  //         position: 'right'
+  //       }
+  //     ]
+  //   }
+  // };
 });
