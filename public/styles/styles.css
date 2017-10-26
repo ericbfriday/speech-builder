@@ -41,6 +41,11 @@
     text-transform: capitalize;
 }
 
+#homePageLogIn{
+    text-decoration: none;
+    color: blue;
+}
+
 .landing-page-text {
     padding: 20px 20px 20px 20px;
 }

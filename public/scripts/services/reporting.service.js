@@ -50,7 +50,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         sv.progress.satisfactory = 0;
         sv.progress.prompted = 0;
         sv.progress.unsatisfactory = 0;
-        console.log('logging wordObj -> ', sv.wordObj);
+        // console.log('logging wordObj -> ', sv.wordObj);
 
         return $http.post('/reporting', sv.wordObj)
             .then((response) => {
@@ -139,6 +139,9 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             sv.soloProgress = response.data.rows;
             console.log('logging sv.soloProgress -> ', sv.soloProgress);
             sv.chartDataUpdate(sv.soloProgress);
+        })
+        .catch(function(reason){
+            console.log('Catch activated in getSoloReport - reporting.service.js -> ', reason);
         });
     }; // end getSoloReport
 

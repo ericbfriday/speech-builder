@@ -13,7 +13,7 @@
                     <th md-column>Date</th>
                 </thead>
                 <tbody md-body>
-                    <tr style="margin: 4px 4px 4px 4px;"md-select="rows" md-select-id="word" md-auto-select ng-repeat="rows in wc.report.data.rows | orderBy:'-data'"> <!-- | limitTo: 10: (myPage - 1) * 10-->
+                    <tr style="margin: 4px 4px 4px 4px;"md-select="rows" md-select-id="word" md-auto-select ng-repeat="rows in wc.report.data.rows | orderBy:'-date'"> <!-- | limitTo: 10: (myPage - 1) * 10-->
                         <td md-cell>{{rows.word}}</td>
                         <td md-cell>{{rows.totalattempts}}</td>
                         <td md-cell>{{rows.satisfactory}}</td>
