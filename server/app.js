@@ -10,7 +10,6 @@ const wordList = require('./routes/words');
 const lettersList = require('./routes/letters');
 const reporting = require('./routes/reporting');
 const port = process.env.PORT || 8080;
-require('events').EventEmitter.prototype._maxListeners = 0; // <-- this is a cheat to avoid MaxListenersExceededWarning. Remove for deployment.
 
 app.get('/', function(req, res){
   res.sendFile(path.resolve('./public/index.html'));
