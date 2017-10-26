@@ -84,7 +84,6 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     }; // end sv.opportunityReport
 
     sv.studentTracker = function (name) {
-        // console.log('logging student name', name.name);
         sv.currentStudent.data = name.name;
     }; // end sv.studentTracker
 
@@ -150,7 +149,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             sv.labels.push(report[i].date); // working as intended
             sv.data[0].push(report[i].satisfactory);
             sv.data[1].push(report[i].prompted);
-            sv.data[2].push(report[i].prompted);
+            sv.data[2].push(report[i].unsatisfactory);
             // console.log('sv.data', sv.data);
         }
         // console.log('logging sv.labels and sv.data -> ', sv.labels, sv.data);

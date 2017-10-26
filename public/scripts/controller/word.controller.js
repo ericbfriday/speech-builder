@@ -39,7 +39,7 @@ myApp.controller('WordController', function(WordService, ReportingService) {
     vm.selected = [];
     vm.query = {
       order: 'word',
-      limit: 10,
+      limit: 15,
       page: 1
     };
  });
