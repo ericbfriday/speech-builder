@@ -1,69 +1,46 @@
-myApp.controller('ChartController', function ($scope) {
-  console.log('Inside ChartController');
+myApp.controller('ChartController', function ($scope, ReportingService) {
 
   const vm = this;
 
-  // begin google charts API code
-  google.charts.load('current', {
-    'packages': ['corechart']
-  });
-  google.charts.setOnLoadCallback(drawChart);
+  vm.report = ReportingService.report;
+  vm.progress = ReportingService.progress;
+  vm.currentStudent = ReportingService.currentStudent;
+  vm.opportunityWord = ReportingService.opportunityWord;
+  vm.wordObj = ReportingService.wordObj;
+  vm.studyWord = '';
+  vm.soloProgress = ReportingService.soloProgress;
 
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
-      ['2013', 1000, 400],
-      ['2014', 1170, 460],
-      ['2015', 660, 1120],
-      ['2016', 1030, 540]
-    ]);
+  vm.soloWordSearch = function (wordIn) {
+    vm.studyWord = wordIn;
+    ReportingService.getSoloReport(vm.studyWord);
+  };
 
-    var options = {
-      title: 'Company Performance',
-      hAxis: {
-        title: 'Year',
-        titleTextStyle: {
-          color: '#333'
+  // need to list dates in ascending order
+  // series labels correspond to $scope.data index 0, 1, 2.
+  $scope.series = ['Satisfactory', 'Prompted', 'Unsatisfactory'];
+  $scope.labels = ReportingService.labels;
+  $scope.data = ReportingService.data;
+
+  $scope.onClick = function (points, evt) {
+    console.log(points, evt);
+  };
+
+  $scope.options = {
+    scales: {
+      yAxes: [{
+          id: 'y-axis-1',
+          type: 'linear',
+          display: true,
+          position: 'left',
+          stacked: true,
+          ticks: {
+            min: 0
+          }
         }
-      },
-      vAxis: {
-        minValue: 0
-      }
-    };
-
-    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
+      ],
+      xAxes: [{
+        stacked: true,
+      }]
+    }
+  };
 });
-// end google charts API attempt
-
-// Charts.js code below.
-// $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-// $scope.series = ['Series A', 'Series B'];
-// $scope.data = [
-//   [65, 59, 73, 65, 56, 55, 40],
-//   [28, 48, 40, 19, 86, 27, 90]
-// ];
-// $scope.onClick = function (points, evt) {
-//   console.log(points, evt);
-// };
-// $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-// $scope.options = {
-//   scales: {
-//     yAxes: [
-//       {
-//         id: 'y-axis-1',
-//         type: 'linear',
-//         display: true,
-//         position: 'left'
-//       },
-//       {
-//         id: 'y-axis-2',
-//         type: 'linear',
-//         display: true,
-//         position: 'right'
-//       }
-//     ]
-//   }
-// };
-// });
