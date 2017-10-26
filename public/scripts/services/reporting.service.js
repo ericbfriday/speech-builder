@@ -148,12 +148,10 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     sv.chartDataUpdate = function (report) {
         console.log('logging report in chartDataUpdate -> ', report);
         for (let i = 0; i < report.length; i++){
-            // console.log('report[i].satisfactory', report[i].satisfactory);
             sv.labels.push(report[i].date); // working as intended
             sv.data[0].push(report[i].satisfactory);
             sv.data[1].push(report[i].prompted);
             sv.data[2].push(report[i].unsatisfactory);
-            // console.log('sv.data', sv.data);
         }
         // console.log('logging sv.labels and sv.data -> ', sv.labels, sv.data);
     }; // end chartDataUpdate

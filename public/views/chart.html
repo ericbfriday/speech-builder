@@ -1,13 +1,17 @@
 <!-- Chart.js code below (canvas element) -->
 <section>
   <div class="padding-20">
-  <h1>Search for results by word:</h1>
-    <input type="text" placeholder="Word to search for" ng-model="cc.wordIn">
-    <md-button class="md-raised" ng-click="cc.soloWordSearch(cc.wordIn)">Search</md-button>
+    <h1>Search for results by word:</h1>
+    <md-input-container>
+      <input type="text" placeholder="Word to search for" ng-model="cc.wordIn">
+      <md-button class="md-raised" ng-click="cc.soloWordSearch(cc.wordIn)">Search</md-button>
+    </md-input-container>
   </div>
-  <div class="padding-20">
-  <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options"
-    chart-dataset-override="datasetOverride" chart-click="onClick">
-  </canvas>
-</div>
+  <div layout="row">
+    <div flex="15" layout-fill></div>
+    <canvas flex="70" layout-fill id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series"
+      chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
+    <div flex="15" layout-fill></div>
+  </div>
 </section>

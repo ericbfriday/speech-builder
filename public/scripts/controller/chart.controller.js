@@ -32,32 +32,15 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
           type: 'linear',
           display: true,
           position: 'left',
+          stacked: true,
           ticks: {
             min: 0
           }
-        },
-        {
-          id: 'y-axis-2',
-          type: 'linear',
-          display: true,
-          position: 'left',
-          ticks: {
-            min: 0,
-            display: false
-          }
-
-        },
-        {
-          id: 'y-axis-3',
-          type: 'linear',
-          display: true,
-          position: 'left',
-          ticks: {
-            min: 0,
-            display: false
-          }
         }
-      ]
+      ],
+      xAxes: [{
+        stacked: true,
+      }]
     }
   };
 });
