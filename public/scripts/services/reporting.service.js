@@ -52,10 +52,10 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                 sv.groupDataSummary.data[i].word = sv.groupProgress[i].word;
                 for (let l = 0; l < sv.groupProgress.length; l ++){
                     if (sv.groupDataSummary.data[i].word === sv.groupProgress[l].word){
-                        sv.groupDataSummary.data[i].label.push(sv.groupProgress[l].date);
-                        sv.groupDataSummary.data[i].data[0].push(sv.groupProgress[l].unsatisfactory);
-                        sv.groupDataSummary.data[i].data[1].push(sv.groupProgress[l].prompted);
-                        sv.groupDataSummary.data[i].data[2].push(sv.groupProgress[l].satisfactory);
+                        sv.groupDataSummary.data[i].label.unshift(sv.groupProgress[l].date);
+                        sv.groupDataSummary.data[i].data[0].unshift(sv.groupProgress[l].unsatisfactory);
+                        sv.groupDataSummary.data[i].data[1].unshift(sv.groupProgress[l].prompted);
+                        sv.groupDataSummary.data[i].data[2].unshift(sv.groupProgress[l].satisfactory);
                         // console.log('logging sv.groupDatasummary -> ', sv.groupDataSummary);
 
                     }else {
@@ -63,7 +63,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                     }
                 }
             }
-            console.log('logging sv.groupDataSummary -> ', sv.groupDataSummary);
+            // console.log('logging sv.groupDataSummary -> ', sv.groupDataSummary);
         })
         .catch((reason) => {
             console.log('Catch activated in getReportingCharts - reporting.service.js -> ', reason);
