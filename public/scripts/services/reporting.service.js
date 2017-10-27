@@ -28,9 +28,20 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     };
     sv.reportReqObj = {instructor: '', instructorName:'',student: '', date:''};
     sv.soloReportReqObj = {instructor: '', word: '', student: ''};
+    sv.groupReportReqObj = {instructor: '', student: ''};
     sv.soloProgress = {data: []};
     sv.labels = [];
-    sv.data = [[],[],[]];
+    sv.soloData = [[],[],[]];
+    sv.groupData1 = [[],[],[]];
+    sv.groupData2 = [[],[],[]];
+    sv.groupData3 = [[],[],[]];
+    sv.groupData4 = [[],[],[]];
+    sv.groupData5 = [[],[],[]];
+    sv.groupData6 = [[],[],[]];
+    sv.groupData7 = [[],[],[]];
+    sv.groupData8 = [[],[],[]];
+    sv.groupData9 = [[],[],[]];
+    sv.groupData10 = [[],[],[]];
 
     var dateObj = new Date();
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -38,7 +49,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     var year = dateObj.getUTCFullYear();
     var newdate = year + "/" + month + "/" + day;
 
-    sv.opportunityReport = function (studyWord, outcome) {
+    sv.opportunityReport = (studyWord, outcome) => {
         // console.log('logging word, student, and outcome -> ', studyWord, sv.currentStudent.data, outcome);
         sv.wordObj.instructor = firebase.auth().currentUser.uid;
         sv.wordObj.instructorName = firebase.auth().currentUser.displayName;
@@ -78,16 +89,16 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                 } else {
                     console.log('Catching error in POST route reporting.service.js -> ', response);
                 }
-            }).catch(function(reason){
+            }).catch((reason) => {
                 console.log('Catch activated in reporting.service.js -> ', reason);
             }); // end POST
     }; // end sv.opportunityReport
 
-    sv.studentTracker = function (name) {
+    sv.studentTracker = (name) => {
         sv.currentStudent.data = name.name;
     }; // end sv.studentTracker
 
-    sv.getReport = function(){
+    sv.getReport = () => {
         console.log('logging sv.getReport call');
         sv.reportReqObj.instructor = firebase.auth().currentUser.uid;
         sv.reportReqObj.instructorName = firebase.auth().currentUser.displayName;
@@ -101,7 +112,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         });
     }; // end sv.getReport
 
-    sv.getOpportunities = function(word) {
+    sv.getOpportunities = (word) => {
         sv.opportunityWord.instructor =  firebase.auth().currentUser.uid;
         sv.opportunityWord.student = sv.currentStudent.data;
         sv.opportunityWord.word = word;
@@ -126,11 +137,11 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         });
     };
 
-    sv.getSoloReport = function (word) {
+    sv.getSoloReport = (word)  => {
         sv.labels.length = 0;
-        sv.data[0].length = 0;
-        sv.data[1].length = 0;
-        sv.data[2].length = 0;
+        sv.soloData[0].length = 0;
+        sv.soloData[1].length = 0;
+        sv.soloData[2].length = 0;
         sv.soloReportReqObj.student = sv.currentStudent;
         sv.soloReportReqObj.instructor = firebase.auth().currentUser.uid;
         sv.soloReportReqObj.word = word;
@@ -140,19 +151,33 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             console.log('logging sv.soloProgress -> ', sv.soloProgress);
             sv.chartDataUpdate(sv.soloProgress);
         })
-        .catch(function(reason){
+        .catch((reason) => {
             console.log('Catch activated in getSoloReport - reporting.service.js -> ', reason);
         });
     }; // end getSoloReport
 
-    sv.chartDataUpdate = function (report) {
+    sv.chartDataUpdate = (report) => {
         console.log('logging report in chartDataUpdate -> ', report);
         for (let i = 0; i < report.length; i++){
             sv.labels.push(report[i].date); // working as intended
-            sv.data[0].push(report[i].satisfactory);
-            sv.data[1].push(report[i].prompted);
-            sv.data[2].push(report[i].unsatisfactory);
+            sv.soloData[0].push(report[i].satisfactory);
+            sv.soloData[1].push(report[i].prompted);
+            sv.soloData[2].push(report[i].unsatisfactory);
         }
-        // console.log('logging sv.labels and sv.data -> ', sv.labels, sv.data);
+        // console.log('logging sv.labels and sv.soloData -> ', sv.labels, sv.soloData);
     }; // end chartDataUpdate
+
+    sv.getReportingCharts = () => {
+        sv.groupReportReqObj.instructor = firebase.auth().currentUser.uid;
+        sv.groupReportReqObj.student = sv.currentStudent;
+        return $http.post('/reporting/reportingCharts', sv.soloReportReqObj)
+        .then((response) => {
+            sv.soloProgress = response.data.rows;
+            console.log('logging sv.getReportingCharts - reporting.service.js -> ', sv.soloProgress);
+            sv.chartDataUpdate(sv.soloProgress);
+        })
+        .catch((reason) => {
+            console.log('Catch activated in getReportingCharts - reporting.service.js -> ', reason);
+        });
+    }; // end getReportingCharts
 });

@@ -32,6 +32,9 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, Ch
     }).when('/login', {
         templateUrl: 'views/login.html',
         controller: 'AuthController as ac'    
+    }).when('/group', {
+        templateUrl: 'views/group.html',
+        controller: 'ChartController as cc',
     }).when('/reporting', {
         templateUrl: 'views/reporting.html',
         controller: 'WordController as wc'

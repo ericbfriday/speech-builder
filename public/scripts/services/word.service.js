@@ -8,7 +8,7 @@ myApp.service('WordService', function($http){
     sv.phoneticSpelling = {data: ''};
     sv.studentName = {data: ''};
 
-    sv.findDefinition = function(wordIn) {
+    sv.findDefinition =(wordIn) => {
         // console.log('logging wordIn (service) ', wordIn);
         sv.wordToDefine = {
             word: wordIn,
@@ -21,7 +21,7 @@ myApp.service('WordService', function($http){
             method: 'POST',
             url: '/wordLookup',
             data: sv.wordToDefine
-        }).then(function (response) {
+        }).then((response) => {
             // console.log('response', response);
             sv.wordResponse.data = response.data.results[0];
 
@@ -49,11 +49,9 @@ myApp.service('WordService', function($http){
                     // console.log('loggin sv.definitions ->', sv.definitions); 
                 }
             }         
-
             // used below for troubleshooting
             // console.log('logging response.data.results.lexicalEntries in word.service POST route', sv.wordResponse);
             // console.log('logging sv.definitions ', sv.definitions);
-            
         });
     };
 });

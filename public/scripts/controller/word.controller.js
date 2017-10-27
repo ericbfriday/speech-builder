@@ -12,26 +12,26 @@ myApp.controller('WordController', function(WordService, ReportingService) {
     vm.report = ReportingService.report;
     vm.opportunityWordCount = ReportingService.opportunityWordCount;
 
-    vm.wordSearch = function(wordIn) {
+    vm.wordSearch = (wordIn) => {
         vm.studyWord = wordIn;
         WordService.findDefinition(wordIn);
     };
 
-    vm.playAudio = function() {
+    vm.playAudio = () => {
         var audio = new Audio(vm.mp3URL.data);
         audio.play();
     };
 
-    vm.opportunityReport = function(outcome) {
+    vm.opportunityReport = (outcome) => {
         // console.log('Logging opportunity outcome', outcome);
         ReportingService.opportunityReport(vm.studyWord, outcome);
     }; 
 
-    vm.getOpportunities = function(word){
+    vm.getOpportunities = (word) => {
         ReportingService.getOpportunities(word);
     };
 
-    vm.getReport = function(){
+    vm.getReport = () => {
         console.log('logging vm.getReport Call');
         ReportingService.getReport();
     };

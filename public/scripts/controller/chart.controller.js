@@ -10,7 +10,7 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
   vm.studyWord = '';
   vm.soloProgress = ReportingService.soloProgress;
 
-  vm.soloWordSearch = function (wordIn) {
+  vm.soloWordSearch = (wordIn) => {
     vm.studyWord = wordIn;
     ReportingService.getSoloReport(vm.studyWord);
   };
@@ -19,9 +19,9 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
   // series labels correspond to $scope.data index 0, 1, 2.
   $scope.series = ['Satisfactory', 'Prompted', 'Unsatisfactory'];
   $scope.labels = ReportingService.labels;
-  $scope.data = ReportingService.data;
+  $scope.data = ReportingService.soloData;
 
-  $scope.onClick = function (points, evt) {
+  $scope.onClick = (points, evt) => {
     console.log(points, evt);
   };
 

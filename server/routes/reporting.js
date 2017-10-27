@@ -5,14 +5,14 @@ const request = require('request');
 require('dotenv').config();
 const pool = require('../modules/pool');
 
-router.post('/generate', function (req, res) {
+router.post('/generate', (req, res) => {
     // console.log('Logging req.body in reporting/generate -> ', req.body);
     instructor = req.body.instructor;
     instructorName = req.body.instructorName;
     student = req.body.student;
     date = req.body.date;
 
-    pool.connect(function (conErr, client, done) {
+    pool.connect((conErr, client, done) => {
         if (conErr) {
             console.log(conErr);
             res.sendStatus(500);
@@ -21,7 +21,7 @@ router.post('/generate', function (req, res) {
             reportGenQueryString = "SELECT * FROM word_reports WHERE instructor = '" + instructor + "' AND student = '" + student + "';";
             // console.log('logging reportGenQueryString -> ', reportGenQueryString);
 
-            client.query(reportGenQueryString, values, function (error, result) {
+            client.query(reportGenQueryString, values, (error, result) => {
                 done();
                 if (error) {
                     console.log('Error in initial query for reporting.js POST route -> ', error);
@@ -38,19 +38,19 @@ router.post('/generate', function (req, res) {
     });
 });
 
-router.post('/solochart', function (req, res) {
+router.post('/solochart', (req, res) => {
     // retrieves all reports for a given instructor, student, and word.
     word = req.body.word;
     instructor = req.body.instructor;
     student = req.body.student.data;
-    pool.connect(function (conErr, client, done) {
+    pool.connect((conErr, client, done) => {
         if (conErr) {
             console.log('Error -> ', conErr);
             res.sendStatus(500);
         } else {
             values = [instructor, student, word];
             queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 ORDER BY date ASC;";
-            client.query(queryString, values, function (error, result) {
+            client.query(queryString, values, (error, result) => {
                 done();
                 if (error) {
                     console.log('Error in initial query for reporting.js POST route -> ', error);
@@ -67,17 +67,17 @@ router.post('/solochart', function (req, res) {
     });
 });
 
-router.post('/opportunityWord', function (req, res) {
+router.post('/opportunityWord', (req, res) => {
     console.log('Logging req.body in /opportunityWord -> ', req.body);
     word = req.body.word;
     instructor = req.body.instructor;
     student = req.body.student;
     date = req.body.date;
 
-    pool.connect().then(function (client) {
+    pool.connect().then((client) => {
         values = [instructor, student, word, date];
         queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 AND date = $4;";
-        client.query(queryString, values).then(function (result) {
+        client.query(queryString, values).then((result) => {
             client.release();
             if (result.rowCount === 0) {
                 console.log('No results found!');
@@ -96,7 +96,7 @@ router.post('/opportunityWord', function (req, res) {
     });
 });
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
     word = req.body.word;
     student = req.body.student;
     outcome = req.body.outcome;
@@ -106,14 +106,14 @@ router.post('/', function (req, res) {
 
     // cannot parameterize column head variables -- need to reconsider how to code that.
 
-    pool.connect(function (conErr, client, done) {
+    pool.connect((conErr, client, done) => {
         if (conErr) {
             console.log(conErr);
             res.sendStatus(500);
         } else {
             values = [instructor, student, word, date];
             searchQueryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 AND word = $3 AND date = $4;";
-            client.query(searchQueryString, values, function (error, result) {
+            client.query(searchQueryString, values, (error, result) => {
                 if (error) {
                     done();
                     console.log('Error in initial query for reporting.js POST route -> ', error);
@@ -123,7 +123,7 @@ router.post('/', function (req, res) {
                     insertQueryString = "INSERT INTO word_reports (instructor, instructorname, student, word, date, totalattempts, " + outcome + ") VALUES ($1, $2, $3, $4, $5, 1, 1) RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
                     // insertQueryString = "INSERT INTO word_reports (instructor, instructorname, student, word, date, totalattempts, " + outcome + ") VALUES ('" + instructor + "', '" + instructorName + "', '" + student + "','" + word + "', '" + date + "','1','1') RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
                     // console.log('Outcome not already in results DB -> ', result);
-                    client.query(insertQueryString, valueInsert, function (queryErr, resultObj) { // Queries DB to update appropriate outcomes
+                    client.query(insertQueryString, valueInsert, (queryErr, resultObj) => { // Queries DB to update appropriate outcomes
                         done();
                         if (queryErr) {
                             console.log(queryErr);
@@ -137,7 +137,7 @@ router.post('/', function (req, res) {
                 } else {
                     valueUpdate = [instructor, student, word, date];
                     updateQueryString = "UPDATE word_reports SET totalattempts = totalattempts + 1, " + outcome + " = " + outcome + " + 1 WHERE instructor = $1 AND student = $2 AND word = $3  AND date = $4 RETURNING instructor, student, word, date, totalattempts, satisfactory, prompted, unsatisfactory;";
-                    client.query(updateQueryString, valueUpdate, function (queryErr, resultObj) { // Queries DB to update appropriate outcomes
+                    client.query(updateQueryString, valueUpdate, (queryErr, resultObj) => { // Queries DB to update appropriate outcomes
                         done();
                         if (queryErr) {
                             console.log('update query error in reporting.js router -> ', queryErr);
@@ -152,5 +152,33 @@ router.post('/', function (req, res) {
         } // end else for pool.connect function in reporting.js POST route
     }); // end pool.connect function in reporting.js POST route
 }); // end POST route
+
+router.post('/reportingCharts', (req, res) => {
+    // retrieves all reports for a given instructor, student, and word.
+    instructor = req.body.instructor;
+    student = req.body.student.data;
+    pool.connect((conErr, client, done) => {
+        if (conErr) {
+            console.log('Error in reportingCharts -> ', conErr);
+            res.sendStatus(500);
+        } else {
+            values = [instructor, student];
+            queryString = "SELECT * FROM word_reports WHERE instructor = $1 AND student = $2 ORDER BY date DESC;";
+            client.query(queryString, values, (error, result) => {
+                done();
+                if (error) {
+                    console.log('Error in initial query for reporting.js reportingCharts POST route -> ', error);
+                    res.sendStatus(500);
+                } else if (result.rowCount === 0) {
+                    console.log('No results found in reportingCharts!');
+                    res.status(204).send(result); // 204 sends 'no content' status message but indicates OK connection.
+                } else {
+                    console.log('logging result in reporting.js reportingCharts -> ', result);
+                    res.status(200).send(result);
+                }
+            });
+        }
+    });
+});
 
 module.exports = router;
