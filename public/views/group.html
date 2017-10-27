@@ -1,14 +1,16 @@
 <section id="group" ng-init="cc.groupWordSearch()" layout="column">
-    <div layout="row" layout-wrap>
-    <md-card ng-repeat="chart in cc.groupDataSummary.data" flex="40" flex-wrap flex-fill>
-        <md-card-header>
-            {{chart.word}}
-        </md-card-header>
-        <md-card-content>
-            <canvas layout-fill id="line" class="chart chart-line" chart-data="chart.data" chart-labels="chart.label" chart-series="series"
-                chart-options="options" chart-click="onClick">
-            </canvas>
-        </md-card-content>
-    </md-card>
-</div>
+    <div layout="row" layout-wrap layout-margin layout-align="center center">
+        <!-- <div > -->
+        <md-card ng-repeat="chart in cc.groupDataSummary.data" flex="45" flex-wrap flex-fill layout-margin>
+            <md-card-title-text style="text-transform: uppercase;" layout-margin>
+                {{chart.word}}
+            </md-card-title-text>
+            <md-card-content>
+                <canvas layout-fill id="line" class="chart chart-line" chart-data="chart.data" chart-labels="chart.label" chart-series="series"
+                    chart-options="options" chart-click="onClick">
+                </canvas>
+            </md-card-content>
+        </md-card>
+    <!-- </div> -->
+    </div>
 </section>
