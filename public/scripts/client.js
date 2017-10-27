@@ -5,7 +5,7 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, Ch
   $locationProvider.hashPrefix('');
 
   ChartJsProvider
-  .setOptions({ chartColors: ['#64dd17', '#FDB45C', '#d32f2f', '#803690', '#00ADF9', '#949FB1', '#DCDCDC']});
+  .setOptions({ chartColors: ['#d32f2f', '#FDB45C', '#64dd17', '#803690', '#00ADF9', '#949FB1', '#DCDCDC']});
 
   $mdThemingProvider
   .theme('default')

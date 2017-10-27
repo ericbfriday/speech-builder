@@ -1,3 +1,57 @@
-<section id="group">
-    
+<section id="group" ng-init="cc.groupWordSearch()">
+    <div layout="row" flex layout-fill flex-wrap>
+        <div flex="10" layout-fill flex>{{wc.groupDataSummary.data[0].word}}</div>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData1" chart-labels="labels1" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData2" chart-labels="labels2" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <div flex="10" layout-fill flex></div>
+    </div>
+    <div layout="row" flex layout-fill flex-wrap>
+        <div flex="10" layout-fill flex></div>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData3" chart-labels="labels3" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData4" chart-labels="labels4" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <div flex="10" layout-fill flex></div>
+    </div>
+    <div layout="row" flex layout-fill flex-wrap>
+        <div flex="10" layout-fill flex></div>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData5" chart-labels="labels5" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData6" chart-labels="labels6" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <div flex="10" layout-fill flex></div>
+    </div>
+    <div layout="row" flex layout-fill flex-wrap>
+        <div flex="10" layout-fill flex></div>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData7" chart-labels="labels7" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData8" chart-labels="labels8" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <div flex="10" layout-fill flex></div>
+    </div>
+    <div layout="row" flex layout-fill flex-wrap>
+        <div flex="10" layout-fill flex></div>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData9" chart-labels="labels9" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData10" chart-labels="labels10" chart-series="series"
+            chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+        <div flex="10" layout-fill flex></div>
+    </div>
+    <!-- <div ng-repeat="chart in cc.chartHolder.data">
+        <canvas flex="40" layout-fill id="line" class="chart chart-line" chart-data="groupData[$index]" chart-labels="labels" chart-series="series"
+        chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick">
+        </canvas>
+    </div> -->
 </section>
