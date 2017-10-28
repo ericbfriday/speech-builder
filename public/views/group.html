@@ -10,7 +10,7 @@
                 </canvas>
             </md-card-content>
             <md-card-footer>
-                Satisfactory: {{chart.data[2][$index]}} Prompted: {{chart.data[1][$index]}} Unsatisfactory: {{chart.data[0][$index]}}
+                <div layout="row" layout-align="center center"><div flex="25">Total Attempts: {{(chart.data[2][chart.data[2].length-1])+(chart.data[1][chart.data[1].length-1])+(chart.data[0][chart.data[0].length-1])}}</div><div flex="25">Satisfactory: {{chart.data[2][chart.data[2].length-1]}}</div> <div flex="25">Prompted: {{chart.data[1][chart.data[1].length-1]}}</div> <div flex="25">Unsatisfactory: {{chart.data[0][chart.data[0].length-1]}}</div></div>
             </md-card-footer>
         </md-card>
     </div>
