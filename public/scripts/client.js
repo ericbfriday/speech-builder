@@ -23,9 +23,9 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, Ch
   }).when('/wordlist', {
       templateUrl: 'views/wordlist.html',
       controller: 'WordListController as wlc'
-    }).when('/privateData', {
-        templateUrl: 'views/privateData.html',
-        controller: 'AuthController as ac'    
+    // }).when('/privateData', {
+    //     templateUrl: 'views/privateData.html',
+    //     controller: 'AuthController as ac'    
     }).when('/chart', {
         templateUrl: 'views/chart.html',
         controller: 'ChartController as cc'  

@@ -9,6 +9,9 @@
                     chart-options="options" chart-click="onClick">
                 </canvas>
             </md-card-content>
+            <md-card-footer>
+                Satisfactory: {{chart.data[2][$index]}} Prompted: {{chart.data[1][$index]}} Unsatisfactory: {{chart.data[0][$index]}}
+            </md-card-footer>
         </md-card>
     </div>
 </section>

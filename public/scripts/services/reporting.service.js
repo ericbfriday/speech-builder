@@ -63,13 +63,11 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                         sv.groupDataSummary.data[i].data[1].unshift(sv.groupProgress[l].prompted);
                         sv.groupDataSummary.data[i].data[2].unshift(sv.groupProgress[l].satisfactory);
                         // console.log('logging sv.groupDatasummary -> ', sv.groupDataSummary);
-
                     }else {
                         console.log('No Hit!');
                     }
                 }
             }
-            // console.log('logging sv.groupDataSummary -> ', sv.groupDataSummary);
         })
         .catch((reason) => {
             console.log('Catch activated in getReportingCharts - reporting.service.js -> ', reason);
