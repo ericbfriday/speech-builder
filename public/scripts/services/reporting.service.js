@@ -42,6 +42,12 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     var newdate = year + "/" + month + "/" + day;
 
     sv.getReportingCharts = () => {
+        sv.groupDataSummary.data.forEach((element)=> {
+            element.word = '';
+            element.label.length = 0;
+            element.data = [[],[],[]];
+            console.log('logging element ', element);
+        });
         sv.groupReportReqObj.instructor = firebase.auth().currentUser.uid;
         sv.groupReportReqObj.student = sv.currentStudent;
         return $http.post('/reporting/reportingCharts', sv.groupReportReqObj)
@@ -52,18 +58,16 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
                 sv.groupDataSummary.data[i].word = sv.groupProgress[i].word;
                 for (let l = 0; l < sv.groupProgress.length; l ++){
                     if (sv.groupDataSummary.data[i].word === sv.groupProgress[l].word){
-                        sv.groupDataSummary.data[i].label.push(sv.groupProgress[l].date);
-                        sv.groupDataSummary.data[i].data[0].push(sv.groupProgress[l].unsatisfactory);
-                        sv.groupDataSummary.data[i].data[1].push(sv.groupProgress[l].prompted);
-                        sv.groupDataSummary.data[i].data[2].push(sv.groupProgress[l].satisfactory);
+                        sv.groupDataSummary.data[i].label.unshift(sv.groupProgress[l].date);
+                        sv.groupDataSummary.data[i].data[0].unshift(sv.groupProgress[l].unsatisfactory);
+                        sv.groupDataSummary.data[i].data[1].unshift(sv.groupProgress[l].prompted);
+                        sv.groupDataSummary.data[i].data[2].unshift(sv.groupProgress[l].satisfactory);
                         // console.log('logging sv.groupDatasummary -> ', sv.groupDataSummary);
-
                     }else {
                         console.log('No Hit!');
                     }
                 }
             }
-            console.log('logging sv.groupDataSummary -> ', sv.groupDataSummary);
         })
         .catch((reason) => {
             console.log('Catch activated in getReportingCharts - reporting.service.js -> ', reason);
@@ -187,15 +191,4 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         }
         // console.log('logging sv.labels and sv.soloData -> ', sv.labels, sv.soloData);
     }; // end chartDataUpdate
-
-    // sv.groupData1 = {word: '', data: [[],[],[]]};
-    // sv.groupData2 = {word: '', data: [[],[],[]]};
-    // sv.groupData3 = {word: '', data: [[],[],[]]};
-    // sv.groupData4 = {word: '', data: [[],[],[]]};
-    // sv.groupData5 = {word: '', data: [[],[],[]]};
-    // sv.groupData6 = {word: '', data: [[],[],[]]};
-    // sv.groupData7 = {word: '', data: [[],[],[]]};
-    // sv.groupData8 = {word: '', data: [[],[],[]]};
-    // sv.groupData9 = {word: '', data: [[],[],[]]};
-    // sv.groupData10 = {word: '', data: [[],[],[]]};
 });

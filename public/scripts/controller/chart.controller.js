@@ -11,28 +11,9 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
   vm.soloProgress = ReportingService.soloProgress; //  = {data: []};
   vm.groupDataSummary = ReportingService.groupDataSummary; // = {data: [{word: '', date:'', data: [[],[],[]]}, {word: '', date:'', data: [[],[],[]]},{word: '',date:'',  data: [[],[],[]]}, {word: '', date:'', data: [[],[],[]]}, {word: '', date:'', data: [[],[],[]]}, {word: '', date:'', data: [[],[],[]]},{word: '', date:'', data: [[],[],[]]},{word: '', date:'', data: [[],[],[]]},{word: '', date:'', data: [[],[],[]]},{word: '', date:'', data: [[],[],[]]}]};
   vm.groupLabels = ReportingService.groupLabels; // = [[],[],[],[],[],[],[],[],[],[]];
-
-  $scope.groupData1 = vm.groupDataSummary.data[0].data;
-  $scope.groupData2 = vm.groupDataSummary.data[1].data;
-  $scope.groupData3 = vm.groupDataSummary.data[2].data;
-  $scope.groupData4 = vm.groupDataSummary.data[3].data;
-  $scope.groupData5 = vm.groupDataSummary.data[4].data;
-  $scope.groupData6 = vm.groupDataSummary.data[5].data;
-  $scope.groupData7 = vm.groupDataSummary.data[6].data;
-  $scope.groupData8 = vm.groupDataSummary.data[7].data;
-  $scope.groupData9 = vm.groupDataSummary.data[8].data;
-  $scope.groupData10 = vm.groupDataSummary.data[9].data;
-
-  $scope.labels1 = vm.groupLabels[0];
-  $scope.labels2 = vm.groupLabels[1];
-  $scope.labels3 = vm.groupLabels[2];
-  $scope.labels4 = vm.groupLabels[3];
-  $scope.labels5 = vm.groupLabels[4];
-  $scope.labels6 = vm.groupLabels[5];
-  $scope.labels7 = vm.groupLabels[6];
-  $scope.labels8 = vm.groupLabels[7];
-  $scope.labels9 = vm.groupLabels[8];
-  $scope.labels10 = vm.groupLabels[9];
+  $scope.series = ['Unsatisfactory', 'Prompted', 'Satisfactory'];
+  $scope.labels = ReportingService.labels;
+  $scope.data = ReportingService.soloData;
 
   vm.soloWordSearch = (wordIn) => {
     vm.studyWord = wordIn;
@@ -47,12 +28,6 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
       console.log('catch activated in groupWordSearch -> ', caught);
     });
   };
-
-  // need to list dates in ascending order
-  // series labels correspond to $scope.data index 0, 1, 2.
-  $scope.series = ['Unsatisfactory', 'Prompted', 'Satisfactory'];
-  $scope.labels = ReportingService.labels;
-  $scope.data = ReportingService.soloData;
 
   $scope.onClick = (points, evt) => {
     console.log(points, evt);
@@ -72,19 +47,8 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
         }
       ],
       xAxes: [{
-        stacked: true,
+        stacked: true
       }]
     }
   };
-
-  // vm.groupData1 = ReportingService.groupData1.data;
-  // vm.groupData2 = ReportingService.groupData2.data;
-  // vm.groupData3 = ReportingService.groupData3.data;
-  // vm.groupData4 = ReportingService.groupData4.data;
-  // vm.groupData5 = ReportingService.groupData5.data;
-  // vm.groupData6 = ReportingService.groupData6.data;
-  // vm.groupData7 = ReportingService.groupData7.data;
-  // vm.groupData8 = ReportingService.groupData8.data;
-  // vm.groupData9 = ReportingService.groupData9.data;
-  // vm.groupData10 = ReportingService.groupData10.data;
 });
