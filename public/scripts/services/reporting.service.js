@@ -46,7 +46,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
             element.word = '';
             element.label.length = 0;
             element.data = [[],[],[]];
-            console.log('logging element ', element);
+            // console.log('logging element ', element);
         });
         sv.groupReportReqObj.instructor = firebase.auth().currentUser.uid;
         sv.groupReportReqObj.student = sv.currentStudent;
@@ -124,7 +124,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     }; // end sv.studentTracker
 
     sv.getReport = () => {
-        console.log('logging sv.getReport call');
+        // console.log('logging sv.getReport call');
         sv.reportReqObj.instructor = firebase.auth().currentUser.uid;
         sv.reportReqObj.instructorName = firebase.auth().currentUser.displayName;
         sv.reportReqObj.student = sv.currentStudent.data;
@@ -133,7 +133,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         .then((response)=>{
             // console.log('Logging response inside getReport POST function -> ', response);
             sv.report.data = response.data;
-            console.log('logging report -> ', sv.report);
+            // console.log('logging report -> ', sv.report);
         });
     }; // end sv.getReport
 
@@ -160,7 +160,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         }).catch(function(reason){
             console.log('Catch activated in reporting.service.js -> ', reason);
         });
-    };
+    }; // end getOpportunities
 
     sv.getSoloReport = (word)  => {
         sv.labels.length = 0;
@@ -173,7 +173,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         return $http.post('/reporting/solochart', sv.soloReportReqObj)
         .then((response) => {
             sv.soloProgress = response.data.rows;
-            console.log('logging sv.soloProgress -> ', sv.soloProgress);
+            // console.log('logging sv.soloProgress -> ', sv.soloProgress);
             sv.chartDataUpdate(sv.soloProgress);
         })
         .catch((reason) => {
@@ -182,7 +182,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
     }; // end getSoloReport
 
     sv.chartDataUpdate = (report) => {
-        console.log('logging report in chartDataUpdate -> ', report);
+        // console.log('logging report in chartDataUpdate -> ', report);
         for (let i = 0; i < report.length; i++){
             sv.labels.push(report[i].date); // working as intended
             sv.soloData[0].push(report[i].unsatisfactory);

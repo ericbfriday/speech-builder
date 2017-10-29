@@ -24,6 +24,6 @@ router.get('/', (req, res) => {
             });
         }
     });
-});
+}); // end get '/'
 
 module.exports = router;
