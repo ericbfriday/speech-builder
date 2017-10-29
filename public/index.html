@@ -52,20 +52,19 @@
   <link rel="stylesheet" href="/styles/styles.css">
 
   <script src="/scripts/controller/auth.controller.js"></script>
-  <script src="/scripts/controller/home.controller.js"></script>
   <script src="/scripts/controller/word.controller.js"></script>
   <script src="/scripts/controller/navbar.controller.js"></script>
-  <script src="/scripts/controller/letters.controller.js"></script>
   <script src="/scripts/controller/wordlist.controller.js"></script>
-  <script src="/scripts/controller/reporting.controller.js"></script>
   <script src="/scripts/controller/chart.controller.js"></script>
   <script src="/scripts/services/word.service.js"></script>
   <script src="/scripts/services/list.service.js"></script>
+  <script src="/scripts/services/auth.service.js"></script>
   <script src="/scripts/services/reporting.service.js"></script>
 </head>
 
 <body ng-app="myApp" >
   <header ng-include="'/views/navbar.html'"></header>
+  <span id="logoutAlert"></span>
   <ng-view>
   </ng-view>
 </body>

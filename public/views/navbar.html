@@ -19,15 +19,12 @@
             <md-nav-item md-nav-href="#/group" name="/group" value="group" aria-label="group">
                 Session Summary Charts
             </md-nav-item>
-            <!-- <md-nav-item md-nav-href="#/privateData" name="/privateData" value="privateData" aria-label="Authorization Testing">
-                Auth Test
-            </md-nav-item> -->
-            <md-nav-item md-nav-href="#/login" name="/login" value="login" aria-label="Log In">
-                Login/Logout
+            <md-nav-item md-nav-href="#/" name="/" value="login" aria-label="Log In" ng-click="nc.logIn()">
+                Login
             </md-nav-item>
-            <!-- <md-nav-item md-nav-href="#/logout" name="/logout" value="logout" aria-label="Log Out">
+            <md-nav-item  md-nav-href="#/" name="/" value="logout" aria-label="Log Out" ng-click="nc.logOut(); showAlert($event)">
                 Logout
-            </md-nav-item> -->
+            </md-nav-item>
             <md-nav-item md-nav-href="#/thanks" name="/thanks" value="thanks" aria-label="Thank you page">
                 Special Thanks
             </md-nav-item>

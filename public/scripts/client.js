@@ -15,8 +15,8 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, Ch
   .backgroundPalette('grey');
 
   $routeProvider.when('/', {
-      templateUrl: 'views/home.html',
-     controller: 'HomeController as hc'
+      templateUrl: 'views/home.html'//,
+    //  controller: 'HomeController as hc'
   }).when('/wordLookup', {
       templateUrl: 'views/wordLookup.html',
       controller: 'WordController as wc'
@@ -39,8 +39,8 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider, Ch
         templateUrl: 'views/reporting.html',
         controller: 'WordController as wc'
     }).when('/thanks', {
-        templateUrl: 'views/thanks.html',
-        controller: 'HomeController as hc'
+        templateUrl: 'views/thanks.html'//,
+        // controller: 'HomeController as hc'
   }).otherwise({
       redirectTo: '/'
   });

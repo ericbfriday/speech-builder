@@ -11,13 +11,13 @@ myApp.service('ListService', function ($http) {
         data: []
     };
 
-    sv.getWords = function (letterObj) {
+    sv.getWords = (letterObj) => {
         sv.letter = letterObj.letter;
         // console.log('in list.service.js getWords()', sv.letter);
         $http({
             method: 'GET',
             url: '/words/' + sv.letter
-        }).then(function (response) {
+        }).then( (response) => {
             // console.log('response', response);
             sv.wordList.data = response.data;
         });
@@ -28,7 +28,7 @@ myApp.service('ListService', function ($http) {
         $http({
             method: 'GET',
             url: '/letters'
-        }).then(function (response) {
+        }).then( (response) => {
             // console.log('response', response);
             sv.lettersList.data = response.data;
         });

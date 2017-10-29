@@ -1,11 +1,15 @@
 <!-- Chart.js code below (canvas element) -->
 <section>
-  <div class="padding-20">
+
+  <div flex="10" layout-fill></div>
+  <div class="padding-20" flex="80">
     <h1>Search for results by word:</h1>
     <md-input-container>
       <input type="text" placeholder="Word to search for" ng-model="cc.wordIn">
       <md-button class="md-raised" ng-click="cc.soloWordSearch(cc.wordIn)">Search</md-button>
     </md-input-container>
+    <div flex="10" layout-fill></div>
+
   </div>
   <div layout="row">
     <div flex="15" layout-fill></div>

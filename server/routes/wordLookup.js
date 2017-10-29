@@ -9,7 +9,7 @@ router.use(bodyParser.urlencoded({
   extended: true
 }));
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
   var searchWord = req.body.word;
   // console.log('logging searchWord -> ', searchWord);
   var wordDefinition = {
@@ -20,7 +20,7 @@ router.post('/', function (req, res) {
       "app_key": process.env.APP_KEY
     }
   };
-  request(wordDefinition, function (error, response, body) {
+  request(wordDefinition, (error, response, body) => {
     if (response && response.statusCode == 200) {
       // console.log('logging 200 inside wordLookup.js router ', response.statusCode);
       res.send(body);

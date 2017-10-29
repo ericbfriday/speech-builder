@@ -5,14 +5,14 @@ const request = require('request');
 require('dotenv').config();
 const pool = require('../modules/pool');
 
-router.get('/', function (req, res) {
+router.get('/', (req, res) => {
     // console.log('in the letters get');
-    pool.connect(function (conErr, client, done){
+    pool.connect( (conErr, client, done) => {
         if (conErr){
             console.log(conErr);
             res.sendStatus(500);
         } else {
-            client.query('SELECT * FROM letters_list ORDER BY id; ', function (queryErr, resultObj){
+            client.query('SELECT * FROM letters_list ORDER BY id; ', (queryErr, resultObj) => {
                 done();
                 if (queryErr){
                     console.log(queryErr);
