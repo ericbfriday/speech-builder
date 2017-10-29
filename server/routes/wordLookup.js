@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
       res.sendStatus(500);
       console.log('Logging 500 in wordLookup.js router ', error);
     }
-  });
-});
+  }); // end 'request'
+}); // end POST '/'
 
 module.exports = router;

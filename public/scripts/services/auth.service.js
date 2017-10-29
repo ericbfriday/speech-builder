@@ -1,12 +1,9 @@
 myApp.service('AuthService', function ($firebaseAuth, $http) {
 
-    console.log('In AuthService!');
     const sv = this;
     const auth = $firebaseAuth();
     sv.user = firebase.User; //firebase.auth().currentUser;
-    console.log('user -> ', sv.user);
   
-    // This code runs whenever the user logs in
     sv.logIn = () => {
       auth.$signInWithPopup("google")
       .then((firebaseUser) => {
@@ -14,7 +11,7 @@ myApp.service('AuthService', function ($firebaseAuth, $http) {
       }).catch(function(error) {
         console.log("Authentication failed: ", error);
       });
-    };
+    }; // end logIn
 
     // This code runs whenever the user changes authentication states
     // e.g. whevenever the user logs in or logs out
@@ -40,7 +37,7 @@ myApp.service('AuthService', function ($firebaseAuth, $http) {
         console.log('Not logged in or not authorized.');
         sv.secretData = "You are not authorized to view this content. Please log in.";
       }
-    });
+    }); // end auth.$onAuthStateChanged(
   
     sv.logOut = () => {
       auth.$signOut()
@@ -50,6 +47,6 @@ myApp.service('AuthService', function ($firebaseAuth, $http) {
       .catch((error) => {
         console.log('error logging the user out with google!', error);
       });
-    };
+    }; // end logOut
 
 });

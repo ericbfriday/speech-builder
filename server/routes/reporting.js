@@ -36,7 +36,7 @@ router.post('/generate', (req, res) => {
             });
         }
     });
-});
+}); // end POST '/generate'
 
 router.post('/solochart', (req, res) => {
     // retrieves all reports for a given instructor, student, and word.
@@ -65,7 +65,7 @@ router.post('/solochart', (req, res) => {
             });
         }
     });
-});
+});// end POST 'solochart'
 
 router.post('/opportunityWord', (req, res) => {
     console.log('Logging req.body in /opportunityWord -> ', req.body);
@@ -94,7 +94,7 @@ router.post('/opportunityWord', (req, res) => {
         console.log('error on connection -> ', e);
 
     });
-});
+});// end POST 'opportunityWord'
 
 router.post('/', (req, res) => {
     word = req.body.word;
@@ -151,7 +151,7 @@ router.post('/', (req, res) => {
             }); // end client.query
         } // end else for pool.connect function in reporting.js POST route
     }); // end pool.connect function in reporting.js POST route
-}); // end POST route
+}); // end POST '/'
 
 router.post('/reportingCharts', (req, res) => {
     // retrieves all reports for a given instructor, student, and word.
@@ -179,6 +179,6 @@ router.post('/reportingCharts', (req, res) => {
             });
         }
     });
-});
+}); // end POST 'reportingCharts'
 
 module.exports = router;

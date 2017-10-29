@@ -1,9 +1,6 @@
 myApp.service('ListService', function ($http) {
     const sv = this;
 
-    // sv.capitalLettersList = {
-    //     data: []
-    // };
     sv.lettersList = {
         data: []
     };
@@ -21,7 +18,7 @@ myApp.service('ListService', function ($http) {
             // console.log('response', response);
             sv.wordList.data = response.data;
         });
-    };
+    }; // end getWords
 
     sv.getLetters = function () {
         // console.log('in list.service.js getLetters()');
@@ -32,5 +29,5 @@ myApp.service('ListService', function ($http) {
             // console.log('response', response);
             sv.lettersList.data = response.data;
         });
-    };
+    }; // end getLetters
 });
