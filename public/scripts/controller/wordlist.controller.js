@@ -1,7 +1,6 @@
 myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll, $http) {
     // console.log('in WordListController Controller');
     const vm = this;
-    vm.wordList = ListService.wordList;
     vm.definition = WordService.definition;
     vm.wordResponse = WordService.wordResponse;
     vm.mp3URL = WordService.mp3URL;
@@ -11,21 +10,15 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
     vm.lettersList = ListService.lettersList;
     vm.capitalLettersList = ListService.capitalLettersList;
 
-    vm.getLetters = () => {
-        // console.log('Inside getLetters function/letters controller');
-        ListService.getLetters();
-    };
-
-    vm.getLetterWords = (letter) => {
-        // console.log('letter ', letter);
-        ListService.getWords(letter);
-
-    };
-
-    vm.getWordList = () => {
-        // console.log('Inside getWordList function/WordList controller');
-        ListService.getWords();
-    };
+    vm.listOneSyllable = ListService.listOneSyllable;
+    vm.listTwoSyllable = ListService.listTwoSyllable;
+    vm.listThreeSyllable = ListService.listThreeSyllable;
+    vm.listFourSyllable = ListService.listFourSyllable;
+    vm.listFiveSyllable = ListService.listFiveSyllable;
+    vm.listSixSyllable = ListService.listSixSyllable;
+    vm.listBeginningSyllable = ListService.listBeginningSyllable;
+    vm.listMiddleSyllable = ListService.listMiddleSyllable;
+    vm.listEndSyllable = ListService.listEndSyllable;
 
     vm.detailPopup = (ev, word) => {
         // console.log('logging word in detailPopup ', word);   
@@ -56,4 +49,24 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
             $mdDialog.hide();
         };
     }
+
+    vm.getLetters = () => {
+        // console.log('Inside getLetters function/letters controller');
+        ListService.getLetters();
+    };
+
+    vm.getLetterWords = (letter) => {
+        // console.log('letter ', letter);
+        ListService.getWords(letter);
+
+    };
+
+    vm.getWordList = () => {
+        // console.log('Inside getWordList function/WordList controller');
+        ListService.getWords();
+    };
+
+
+
+
 });
