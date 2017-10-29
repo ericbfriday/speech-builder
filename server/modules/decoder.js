@@ -13,8 +13,8 @@ admin.initializeApp({
     "auth_provider_x509_cert_url": process.env.FIREBASE_SERVICE_ACCOUNT_AUTH_PROVIDER_X509_CERT_URL,
     "client_x509_cert_url": process.env.FIREBASE_SERVICE_ACCOUNT_CLIENT_X509_CERT_URL
   }),
-  databaseURL: "https://speech-builder.firebaseio.com", // replace this line with your URL
-  customParameters: {
+  databaseURL: "https://speech-builder.firebaseio.com",
+  customParameters: { // sets it up so user selects account every time if there are multiple gOauth accounts
     prompt: 'select_account' 
   }
 });
@@ -22,14 +22,14 @@ admin.initializeApp({
 /* This is where the magic happens. We pull the id_token off of the request,
 verify it against our firebase service account private_key.
 Then we add the decodedToken */
-var tokenDecoder = function(req, res, next){
+var tokenDecoder = (req, res, next) => {
   if (req.headers.id_token) {
-    admin.auth().verifyIdToken(req.headers.id_token).then(function(decodedToken) {
+    admin.auth().verifyIdToken(req.headers.id_token).then( (decodedToken) => {
       // Adding the decodedToken to the request so that downstream processes can use it
       req.decodedToken = decodedToken;
       next();
     })
-    .catch(function(error) {
+    .catch( (error) => {
       // If the id_token isn't right, you end up in this callback function
       // Here we are returning a forbidden error
       console.log('User token could not be verified');

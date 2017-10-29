@@ -34,6 +34,9 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
   };
 
   $scope.options = {
+    legend: {
+      display: true
+  },
     scales: {
       yAxes: [{
           id: 'y-axis-1',
@@ -43,7 +46,8 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
           stacked: true,
           ticks: {
             min: 0
-          }
+          },
+          labelString: '# of Opportunities'
         }
       ],
       xAxes: [{
