@@ -162,7 +162,7 @@ myApp.service('ReportingService', function ($http, $firebaseAuth) {
         });
     }; // end getOpportunities
 
-    sv.getSoloReport = (word)  => {
+    sv.getSoloChart = (word)  => {
         sv.labels.length = 0;
         sv.soloData[0].length = 0;
         sv.soloData[1].length = 0;

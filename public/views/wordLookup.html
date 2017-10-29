@@ -4,7 +4,7 @@
       <md-card-title>
         <md-card-title-text>
           <input type="text" placeholder="Word to search for" ng-model="wc.wordIn">
-          <md-button class="md-raised" ng-click="wc.wordSearch(wc.wordIn)">Search</md-button>
+          <md-button class="md-raised" ng-click="wc.wordSearch(wc.wordIn); wc.getOpportunities(wc.studyWord)">Search</md-button>
         </md-card-title-text>
       </md-card-title>
       <md-card-content>

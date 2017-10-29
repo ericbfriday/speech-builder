@@ -17,13 +17,13 @@ myApp.controller('ChartController', function ($scope, ReportingService) {
 
   vm.soloWordSearch = (wordIn) => {
     vm.studyWord = wordIn;
-    ReportingService.getSoloReport(vm.studyWord);
+    ReportingService.getSoloChart(vm.studyWord);
   };
 
   vm.groupWordSearch = () => {
     ReportingService.getReportingCharts()
     .then(()=> {
-      console.log('Completed groupWordSearch - vm.groupDataSummary ->', vm.groupDataSummary);
+      // console.log('Completed groupWordSearch - vm.groupDataSummary ->', vm.groupDataSummary);
     }).catch((caught)=>{
       console.log('catch activated in groupWordSearch -> ', caught);
     });
