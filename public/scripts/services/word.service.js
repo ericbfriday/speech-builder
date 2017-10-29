@@ -52,6 +52,8 @@ myApp.service('WordService', function($http){
             // used below for troubleshooting
             // console.log('logging response.data.results.lexicalEntries in word.service POST route', sv.wordResponse);
             // console.log('logging sv.definitions ', sv.definitions);
+        }).catch((error) => {
+            console.log('logging error in word service -> ', error);
         });
     };
 });

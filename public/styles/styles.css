@@ -12,6 +12,11 @@
     vertical-align: middle;
 } */
 
+#repeat-container {
+    height: 500px;
+    width: 100%; 
+}
+
 .md-column {
     font-size: 16px !important;
 }

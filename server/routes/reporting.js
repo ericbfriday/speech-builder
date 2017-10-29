@@ -88,10 +88,10 @@ router.post('/opportunityWord', (req, res) => {
             }
         }).catch(e => {
             client.release();
-            console.log('query error ', e);
+            console.log('query error in /opportunityWord', e);
         });
     }).catch(e => {
-        console.log('error on connection -> ', e);
+        console.log('error on connection in /opportunityWord-> ', e);
 
     });
 });// end POST 'opportunityWord'
