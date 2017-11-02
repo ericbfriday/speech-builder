@@ -1,3 +1,7 @@
+#IntelliJ
+.idea/
+speech-builder.iml
+
 #NodeFire generated files
 .DS_Store
 node_modules
@@ -65,4 +69,5 @@ typings/
 
 # dotenv environment variables file
 .env
+
 

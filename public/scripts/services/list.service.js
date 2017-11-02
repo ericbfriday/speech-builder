@@ -1,7 +1,7 @@
 myApp.service('ListService', function ($http) {
     const sv = this;
-
     sv.lettersList = {data: []};
+
     sv.listOneSyllable = {data: []};
     sv.listTwoSyllable = {data: []};
     sv.listThreeSyllable = {data: []};

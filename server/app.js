@@ -19,10 +19,10 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 // Runs word lookup function
-app.use('/wordLookup', wordLookup);
-app.use('/words', wordList);
 app.use('/letters', lettersList);
 app.use('/reporting', reporting);
+app.use('/wordLookup', wordLookup);
+app.use('/words', wordList);
 
 // Decodes the token in the request header and attaches the decoded token to the request.
 app.use(decoder.token);

@@ -1,14 +1,14 @@
 myApp.controller('WordListController', function (ListService, WordService, $mdDialog, $scope, $location, $anchorScroll, $http) {
     // console.log('in WordListController Controller');
     const vm = this;
+    vm.capitalLettersList = ListService.capitalLettersList;
     vm.definition = WordService.definition;
-    vm.wordResponse = WordService.wordResponse;
-    vm.mp3URL = WordService.mp3URL;
     vm.definitions = WordService.definitions;
+    vm.lettersList = ListService.lettersList;
+    vm.mp3URL = WordService.mp3URL;
     vm.phoneticSpelling = WordService.phoneticSpelling;
     vm.studyLetter = '';
-    vm.lettersList = ListService.lettersList;
-    vm.capitalLettersList = ListService.capitalLettersList;
+    vm.wordResponse = WordService.wordResponse;
 
     vm.listOneSyllable = ListService.listOneSyllable;
     vm.listTwoSyllable = ListService.listTwoSyllable;
@@ -22,7 +22,7 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
 
     vm.detailPopup = (ev, word) => {
         // console.log('logging word in detailPopup ', word);   
-        vm.studyLetter = word.study_letter; 
+        vm.studyLetter = word.study_letter;
         // console.log('logging vm.studyLetter', vm.studyLetter);
 
         $mdDialog.show({
@@ -42,31 +42,29 @@ myApp.controller('WordListController', function (ListService, WordService, $mdDi
         };
 
         vm.wordSearch(word);
-    };
+    }; // end detailPopup
 
     function DialogController($scope, $mdDialog) {
         $scope.done = function () {
             $mdDialog.hide();
         };
-    }
+    } // end DialogController
 
     vm.getLetters = () => {
         // console.log('Inside getLetters function/letters controller');
         ListService.getLetters();
-    };
+    }; // end getLetters
 
     vm.getLetterWords = (letter) => {
         // console.log('letter ', letter);
         ListService.getWords(letter);
 
-    };
+    }; // end getLetterWords
 
     vm.getWordList = () => {
         // console.log('Inside getWordList function/WordList controller');
         ListService.getWords();
-    };
-
-
+    }; // end getWordList
 
 
 });
